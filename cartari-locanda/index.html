@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Cartari Locanda — Cucina di mercato e vini · Via dei Cartari 1, Palermo</title>
+<meta name="description" content="Cartari Locanda, Via dei Cartari 1, Palermo. Lavagna del giorno, cucina siciliana di mercato e una carta vini scritta col gesso. Aperti la sera, WhatsApp 348 743 0818.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Karla:ital,wght@0,400;0,500;0,700;1,400&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:clip}
+:root{--carta:#f7f2e8;--carta2:#efe7d6;--ink:#26221d;--mut:#8d8272;--vino:#6e1f2e;--line:#e2d8c2;--board:#23201d}
+body{background:var(--carta);color:var(--ink);font:16px/1.7 'Karla',sans-serif}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 5vw}
+.k{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--vino);font-weight:700}
+.rev{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rev.on{opacity:1;transform:none}
+.deckle{height:26px;background:radial-gradient(circle at 12px -6px,transparent 15px,var(--carta) 16px);background-size:24px 26px;margin-top:-1px}
+.deckle.inv{transform:scaleY(-1)}
+/* hero */
+header{position:relative;min-height:92svh;display:flex;align-items:flex-end;background:var(--board)}
+header .bg{position:absolute;inset:0;background:url('img/01.jpg') center/cover;opacity:.94}
+header .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(35,32,29,.04) 30%,rgba(35,32,29,.80) 100%)}
+.hin{position:relative;z-index:2;width:100%;max-width:1080px;margin:0 auto;padding:0 5vw 11vh;color:#f4eee2}
+.hcart{display:inline-block;background:var(--carta);color:var(--ink);padding:6px 16px;font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:20px;box-shadow:0 2px 0 rgba(0,0,0,.3)}
+h1{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(46px,8.4vw,96px);line-height:1;letter-spacing:.01em}
+h1 em{font-style:italic;color:#e8c9a0}
+.hsub{margin-top:14px;font-size:clamp(15px,1.9vw,18px);color:#d9cfbc;max-width:52ch}
+.hmeta{margin-top:22px;display:flex;gap:22px;flex-wrap:wrap;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#bfb39b}
+.hmeta b{color:#fff}
+/* story */
+.story{display:grid;grid-template-columns:1fr .82fr;gap:6vw;align-items:center;padding:90px 0 70px}
+.story h2{font-family:'Fraunces',serif;font-weight:350;font-size:clamp(30px,4.6vw,48px);line-height:1.1;margin:14px 0 18px}
+.story h2 em{font-style:italic;color:var(--vino)}
+.story p{color:#57503f;margin-bottom:14px}
+.story .en{font-style:italic;color:var(--mut);font-size:15px}
+.sfig{position:relative;padding:14px;background:#fff;box-shadow:0 14px 40px rgba(38,34,29,.14);transform:rotate(1.4deg)}
+.sfig img{aspect-ratio:3/3.8;object-fit:cover}
+.sfig figcaption{font-family:'Caveat',cursive;font-size:19px;color:#57503f;text-align:center;padding-top:10px}
+/* lavagna (board) */
+.board{background:var(--board);color:#efe8da;padding:84px 0 90px}
+.board .bhead{text-align:center;margin-bottom:40px}
+.board h2{font-family:'Fraunces',serif;font-weight:350;font-size:clamp(30px,4.6vw,46px)}
+.board .note{color:#a99d86;font-size:14px;margin-top:8px;max-width:60ch;margin-left:auto;margin-right:auto}
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;max-width:980px;margin:0 auto}
+.bcol h3{font-family:'Caveat',cursive;font-size:30px;margin-bottom:14px;border-bottom:2px dashed rgba(255,255,255,.18);padding-bottom:6px}
+.bcol.rossi h3{color:#f2a0b6}
+.bcol.bolle h3{color:#a6d8e8}
+.bcol.bianchi h3{color:#8fd8c8}
+.wi{display:flex;justify-content:space-between;gap:12px;align-items:baseline;padding:7px 0;font-size:14.5px}
+.wi span i{font-style:normal;display:block;font-size:12.5px;color:#a99d86}
+.wi b{font-family:'Fraunces',serif;font-weight:500;color:#e8c9a0;white-space:nowrap}
+.bfoot{text-align:center;margin-top:38px;font-family:'Caveat',cursive;font-size:23px;color:#c9bda4}
+/* cucina */
+.cucina{padding:84px 0 30px;text-align:center}
+.cucina h2{font-family:'Fraunces',serif;font-weight:350;font-size:clamp(28px,4.4vw,44px);margin:12px 0 16px}
+.cucina p{max-width:64ch;margin:0 auto 12px;color:#57503f}
+.cucina .en{font-style:italic;color:var(--mut);font-size:15px}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:44px 0 0;text-align:left}
+.ccard{background:#fff;border:1px solid var(--line);overflow:hidden;box-shadow:0 10px 30px rgba(38,34,29,.07)}
+.ccard img{height:230px;width:100%;object-fit:cover}
+.ccard .cb{padding:18px 20px 22px}
+.ccard h3{font-family:'Fraunces',serif;font-weight:500;font-size:19px;margin-bottom:6px}
+.ccard p{font-size:13.5px;color:var(--mut);margin:0;max-width:none}
+/* gallery */
+.gal{padding:60px 0 80px}
+.ggrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ggrid img{width:100%;aspect-ratio:16/10.5;object-fit:cover}
+.gcap{font-family:'Caveat',cursive;font-size:20px;color:var(--mut);text-align:center;margin-top:14px}
+/* reviews */
+.revs{background:var(--carta2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:80px 0}
+.revs h2{font-family:'Fraunces',serif;font-weight:350;font-size:clamp(28px,4.2vw,42px);margin:12px 0 30px}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rcard{background:#fff;border:1px solid var(--line);padding:26px;box-shadow:0 10px 26px rgba(38,34,29,.06)}
+.stars{color:#c79a2a;letter-spacing:2px}
+.rcard p{font-family:'Fraunces',serif;font-style:italic;font-weight:350;font-size:15.5px;color:#57503f;margin:12px 0 14px;line-height:1.6}
+.rcard .who{font-size:12.5px;color:var(--mut);letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+.gbadge{margin-top:26px;color:var(--mut);font-size:14px}
+.gbadge b{color:var(--ink)}
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:6vw;padding:84px 0 110px}
+.visit h2{font-family:'Fraunces',serif;font-weight:350;font-size:clamp(26px,4vw,40px);margin:12px 0 20px}
+.hours{width:100%;border-collapse:collapse;font-size:14.5px}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line);color:#57503f}
+.hours td:last-child{text-align:right;color:var(--ink);font-weight:700}
+.visit p{color:#57503f;margin-bottom:14px}
+.visit .adr{font-family:'Fraunces',serif;font-size:19px;font-weight:500}
+.btn{display:inline-block;background:#1f9d55;color:#fff;font-weight:700;padding:14px 26px;text-decoration:none;margin:6px 10px 0 0;font-size:15px}
+.btn.call{background:var(--vino)}
+.btn.o{background:transparent;color:var(--ink);border:1px solid #c9bda4}
+footer{background:var(--board);color:#a99d86;text-align:center;padding:30px 5vw 118px;font-size:12.5px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(35,32,29,.96);backdrop-filter:blur(8px);display:flex;z-index:50;border-top:1px solid rgba(255,255,255,.14)}
+.bar a{flex:1;text-align:center;padding:15px 6px;font-size:13.5px;font-weight:700;text-decoration:none;color:#f4eee2}
+.bar a.wa{background:#1f9d55}
+.bar a.call{background:var(--vino)}
+@media(max-width:860px){
+ .story{grid-template-columns:1fr;gap:34px}
+ .bgrid{grid-template-columns:1fr;gap:26px}
+ .cgrid,.rgrid{grid-template-columns:1fr}
+ .ggrid{grid-template-columns:1fr}
+ .visit{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="bg"></div><div class="veil"></div>
+ <div class="hin">
+  <span class="hcart">Via dei Cartari 1 · Palermo</span>
+  <h1>Cartari <em>locanda</em></h1>
+  <p class="hsub">Cucina siciliana di mercato e vini scritti col gesso, nella strada dove Palermo faceva la carta. <em>Market-driven Sicilian cooking and chalk-written wines, on the old papermakers' street.</em></p>
+  <div class="hmeta">
+   <span>★ <b data-edit="rating">4,7</b> — <span data-edit="revcount">424</span> recensioni</span>
+   <span>Solo la sera · Evenings only</span>
+  </div>
+ </div>
+</header>
+
+<section class="story wrap">
+ <div class="rev">
+  <span class="k">La casa · The house</span>
+  <h2>Carta gialla,<br><em>gesso bianco</em></h2>
+  <p>Via dei Cartari era la strada dei mastri cartai. Noi la carta la mettiamo ancora in tavola — quella gialla, da bottega — e il menù lo scriviamo col gesso: la lavagna cambia con il mercato di Palermo, ogni giorno.</p>
+  <p class="en">Via dei Cartari was the papermakers' street. We still lay paper on the table — the yellow butcher kind — and write the menu in chalk: the board follows Palermo's markets, every day.</p>
+  <p>Piatti semplici e rifiniti, pasta fresca, pescato e verdure di stagione. E una cantina che parla siciliano: Etna, Nero d'Avola, bolle artigianali.</p>
+ </div>
+ <figure class="sfig rev">
+  <img src="img/02.jpg" alt="La lavagna dei vini scritta col gesso">
+  <figcaption>la lavagna dei vini — scritta a mano, come la carta comanda</figcaption>
+ </figure>
+</section>
+
+<div class="deckle" style="background-color:var(--board)"></div>
+<section class="board">
+ <div class="wrap">
+  <div class="bhead">
+   <span class="k" style="color:#e8c9a0">Dalla lavagna · From the chalkboard</span>
+   <h2 class="rev">I vini, col gesso</h2>
+   <p class="note">Bottiglie reali dalla nostra lavagna — la lista gira spesso, il gesso si cancella. <em>Real bottles from our board — it turns often, chalk erases.</em></p>
+  </div>
+  <div class="bgrid">
+   <div class="bcol rossi rev">
+    <h3>Rossi ↓</h3>
+    <div class="wi"><span>CDC Blend<i>Nero d'Avola / Syrah</i></span><b>25</b></div>
+    <div class="wi"><span>CDC Adenzia Rosso</span><b>30</b></div>
+    <div class="wi"><span>Tenuta Ferrata<i>Etna Rosso</i></span><b>30</b></div>
+    <div class="wi"><span>Pietro Pulizzi<i>Vitrarolo</i></span><b>40</b></div>
+   </div>
+   <div class="bcol bolle rev">
+    <h3>Bolle ↓</h3>
+    <div class="wi"><span>Bartolomiol<i>Prior millesimato</i></span><b>25</b></div>
+    <div class="wi"><span>Solouva<i>Franciacorta Pas Dosé</i></span><b>45</b></div>
+    <div class="wi"><span>Tenuta Ferrata<i>Metodo Classico Rosé</i></span><b>50</b></div>
+   </div>
+   <div class="bcol bianchi rev">
+    <h3>Bianchi ↓</h3>
+    <div class="wi"><span>CDC Bianco<i>Grillo / Chardonnay / Inzolia</i></span><b>25</b></div>
+    <div class="wi"><span>Pietro Pulizzi<i>Grillo</i></span><b>26</b></div>
+    <div class="wi"><span>Tenuta Ferrata<i>Etna Bianco &amp; Rosato</i></span><b>26</b></div>
+    <div class="wi"><span>Necotium<i>Malvasia</i></span><b>26</b></div>
+   </div>
+  </div>
+  <p class="bfoot">quasi tutto anche al calice, 6–7 € — <em>most by the glass too</em></p>
+ </div>
+</section>
+<div class="deckle inv" style="background-color:var(--board)"></div>
+
+<div class="wrap">
+<section class="cucina">
+ <span class="k">La cucina · The kitchen</span>
+ <h2 class="rev">La lavagna del giorno</h2>
+ <p>Il menù non è stampato: sta sulla lavagna e segue le stagioni — antipasti, pasta fresca, pescato e carni del giorno. I prezzi li trovate scritti accanto, col gesso.</p>
+ <p class="en">The menu isn't printed: it lives on the board and follows the seasons — the day's prices are chalked right beside each dish.</p>
+ <div class="cgrid">
+  <div class="ccard rev"><img src="img/07.jpg" alt="Busiate con carciofi e ricotta"><div class="cb"><h3>Pasta fresca</h3><p>Busiate al torchio, carciofi e ricotta al pepe nero — quando il mercato le porta.</p></div></div>
+  <div class="ccard rev"><img src="img/04.jpg" alt="Polpettine in umido"><div class="cb"><h3>Cucina di casa</h3><p>Polpettine in umido con patate, servite nella ceramica siciliana.</p></div></div>
+  <div class="ccard rev"><img src="img/06.jpg" alt="Tavola con tagliatelle e calice"><div class="cb"><h3>Piatto &amp; calice</h3><p>Ogni piatto ha il suo vino: il servizio ve lo racconta e ci prende sempre.</p></div></div>
+ </div>
+</section>
+
+<section class="gal">
+ <div class="ggrid rev">
+  <img src="img/03.jpg" alt="Insalata di mare con gambero rosso">
+  <img src="img/05.jpg" alt="Pasta fresca del giorno">
+ </div>
+ <p class="gcap">crudo di mare, pasta al torchio, carta gialla sotto — <em>the yellow paper underneath, always</em></p>
+</section>
+</div>
+
+<section class="revs">
+ <div class="wrap">
+  <span class="k">Dicono di noi · What guests say</span>
+  <h2 class="rev">Dalle recensioni Google</h2>
+  <div class="rgrid">
+   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Best meal in Palermo! Food was refined yet simple, and the wine recommendations were spot on."</p><div class="who">Tom Low · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Local Sicilian food cooked fresh. The menu board is filled with tasty seasonal options."</p><div class="who">Matthew Drinkall · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p>"We walked by and thought it looked quite perfect! Pasta dishes were EXCELLENT — wine from Etna, icing on the cake."</p><div class="who">Kerry Armstrong · Google</div></div>
+  </div>
+  <p class="gbadge">★ <b>4,7 / 5</b> — 424 recensioni su Google</p>
+ </div>
+</section>
+
+<section class="visit wrap">
+ <div class="rev">
+  <span class="k">Orari · Hours</span>
+  <h2>Si cena, si beve</h2>
+  <table class="hours">
+   <tr><td>Lunedì – Mercoledì</td><td data-edit="h-monwed">18:00 – 24:00</td></tr>
+   <tr><td>Giovedì</td><td data-edit="h-thu">19:00 – 24:00</td></tr>
+   <tr><td>Venerdì – Sabato</td><td data-edit="h-frisat">19:00 – 01:00</td></tr>
+   <tr><td>Domenica</td><td data-edit="h-sun">Chiuso · Closed</td></tr>
+  </table>
+ </div>
+ <div class="rev">
+  <span class="k">Dove siamo · Find us</span>
+  <h2>Via dei Cartari 1</h2>
+  <p class="adr" data-edit="addr">Via dei Cartari 1, 90133 Palermo — a due passi dal Cassaro e dalla Cala</p>
+  <p>Siamo piccoli: un messaggio su WhatsApp e il tavolo è vostro. <em>We're small — one WhatsApp message and the table is yours.</em></p>
+  <a class="btn" href="https://wa.me/393487430818?text=Ciao%21%20Vorrei%20prenotare%20un%20tavolo%20da%20Cartari%20Locanda" rel="noopener">💬 WhatsApp</a>
+  <a class="btn call" href="tel:+393487430818">📞 <span data-edit="phone">348 743 0818</span></a>
+  <a class="btn o" href="https://maps.google.com/?q=Cartari+Locanda+Palermo" rel="noopener">Apri in Maps</a>
+ </div>
+</section>
+
+<footer>Cartari Locanda · Via dei Cartari 1, Palermo · <span data-edit="phone2">348 743 0818</span></footer>
+
+<div class="bar">
+ <a class="wa" href="https://wa.me/393487430818?text=Ciao%21%20Vorrei%20prenotare%20un%20tavolo%20da%20Cartari%20Locanda" rel="noopener">💬 WhatsApp</a>
+ <a class="call" href="tel:+393487430818">📞 Chiama</a>
+ <a href="https://maps.google.com/?q=Cartari+Locanda+Palermo" rel="noopener">📍 Mappa</a>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.rev:not(.on)').forEach(el=>el.classList.add('on')),1100);
+</script>
+</body>
+</html>

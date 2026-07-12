@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>La Lapa — Osteria Siciliana sul Cassaro · Palermo</title>
+<meta name="description" content="La Lapa Osteria Siciliana, Corso Vittorio Emanuele 291, Palermo. La Sicilia in tre ruote: piatti in dialetto, prodotti presidio e cucina aperta tutto il giorno. WhatsApp 378 003 9794.">
+<link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Albert+Sans:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:clip}
+:root{--giallo:#f2b705;--asfalto:#1e1c1a;--asfalto2:#2a2724;--crema:#faf4e6;--ink:#26221c;--mut:#94897a;--line:#eadfc8;--rosso:#d4482e}
+body{background:var(--crema);color:var(--ink);font:16px/1.65 'Albert Sans',sans-serif}
+img{max-width:100%;display:block}
+.wrap{max-width:1100px;margin:0 auto;padding:0 5vw}
+.disp{font-family:'Paytone One',sans-serif}
+.k{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--rosso);font-weight:800}
+.rev{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rev.on{opacity:1;transform:none}
+.strada{height:14px;background:repeating-linear-gradient(90deg,var(--asfalto) 0 46px,var(--giallo) 46px 78px)}
+/* hero */
+header{background:var(--giallo);position:relative;overflow:hidden}
+.hgrid{display:grid;grid-template-columns:1.02fr .98fr;min-height:88svh;max-width:1240px;margin:0 auto}
+.hleft{padding:9vh 4vw;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
+.targa{display:inline-flex;align-items:center;gap:10px;background:#fff;border:2px solid var(--asfalto);border-radius:8px;padding:8px 14px;width:max-content;font-weight:800;font-size:13px;letter-spacing:.12em;margin-bottom:22px;box-shadow:3px 3px 0 var(--asfalto)}
+.targa i{font-style:normal;background:var(--asfalto);color:var(--giallo);border-radius:4px;padding:2px 7px;font-size:11px}
+h1{font-family:'Paytone One',sans-serif;font-size:clamp(50px,9vw,110px);line-height:.96;color:var(--asfalto);letter-spacing:-.01em}
+h1 span{display:block;font-size:.26em;letter-spacing:.32em;color:var(--rosso)}
+.hsub{margin-top:16px;color:#4c4235;font-size:clamp(15px,1.9vw,18.5px);max-width:46ch;font-weight:600}
+.hmeta{margin-top:24px;display:flex;gap:20px;flex-wrap:wrap;font-size:13px;color:#6d5f49;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.hmeta b{color:var(--rosso)}
+.hright{position:relative;min-height:44vh}
+.hright img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;clip-path:polygon(12% 0,100% 0,100% 100%,0 100%)}
+/* story */
+.story{display:grid;grid-template-columns:1.05fr .95fr;gap:6vw;align-items:center;padding:90px 0 60px}
+.story h2{font-family:'Paytone One',sans-serif;font-size:clamp(28px,4.4vw,44px);line-height:1.06;margin:12px 0 18px}
+.story h2 em{color:var(--rosso);font-style:normal}
+.story p{color:#5d5142;margin-bottom:14px}
+.polo{position:relative}
+.polo img{border-radius:16px;aspect-ratio:4/4.4;object-fit:cover;border:3px solid var(--asfalto);box-shadow:8px 8px 0 var(--giallo)}
+/* highlights — road signs */
+.high{background:var(--asfalto);color:var(--crema);padding:80px 0}
+.high h2{font-family:'Paytone One',sans-serif;font-size:clamp(26px,4vw,40px);margin:10px 0 32px}
+.hgrid2{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.hcard{background:var(--asfalto2);border:1px solid #3d3833;border-radius:14px;overflow:hidden}
+.hcard img{height:210px;width:100%;object-fit:cover}
+.hcard .hb{padding:16px 18px 20px}
+.hcard h3{font-family:'Paytone One',sans-serif;font-size:18px;margin-bottom:6px;color:var(--giallo)}
+.hcard p{font-size:13.5px;color:#b7ac99}
+.hcard .pr{color:#fff;font-weight:800}
+/* menu — road signs */
+.menu{margin:80px 0 70px}
+.menu .mhead{text-align:center;margin-bottom:36px}
+.menu h2{font-family:'Paytone One',sans-serif;font-size:clamp(28px,4.4vw,44px)}
+.menu .note{color:var(--mut);font-size:13.5px;margin-top:6px}
+.mroad{max-width:760px;margin:0 auto}
+.mroad h3{font-family:'Paytone One',sans-serif;background:var(--asfalto);color:var(--giallo);display:inline-block;border-radius:8px;padding:8px 18px;font-size:14px;letter-spacing:.16em;text-transform:uppercase;margin:26px 0 16px}
+.mi{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px;display:flex;justify-content:space-between;gap:14px;align-items:baseline}
+.mi .nm{font-weight:800;font-size:16px}
+.mi .nm i{display:block;font-style:normal;font-weight:400;font-size:13px;color:var(--mut);margin-top:3px}
+.mi b{font-family:'Paytone One',sans-serif;color:var(--rosso);white-space:nowrap;font-size:17px}
+.mfoot{text-align:center;margin-top:24px;color:var(--mut);font-size:13px}
+/* gallery */
+.gal{padding:10px 0 70px}
+.gal h2{font-family:'Paytone One',sans-serif;font-size:clamp(26px,4vw,40px);margin:8px 0 26px}
+.ggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ggrid img{width:100%;aspect-ratio:1/1.05;object-fit:cover;border-radius:12px}
+/* reviews */
+.revs{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:70px 0 80px}
+.revs h2{font-family:'Paytone One',sans-serif;font-size:clamp(26px,4vw,40px);margin-bottom:30px}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rcard{background:var(--crema);border:1px solid var(--line);border-radius:14px;padding:24px}
+.stars{color:var(--giallo);letter-spacing:2px;text-shadow:0 1px 0 #c79a04}
+.rcard p{font-size:14.5px;color:#5d5142;margin:12px 0 14px;font-style:italic}
+.rcard .who{font-size:13px;color:var(--mut);font-weight:700}
+.gbadge{margin-top:26px;color:var(--mut);font-size:14px}
+.gbadge b{color:var(--ink)}
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:6vw;padding:80px 0 110px}
+.visit h2{font-family:'Paytone One',sans-serif;font-size:clamp(26px,4vw,40px);margin:8px 0 20px}
+.hours{width:100%;border-collapse:collapse;font-size:14.5px}
+.hours td{padding:9px 0;border-bottom:2px dotted var(--line);color:#5d5142}
+.hours td:last-child{text-align:right;color:var(--ink);font-weight:800}
+.visit p{color:#5d5142;margin-bottom:14px}
+.visit .adr{font-size:18px;font-weight:800}
+.btn{display:inline-block;background:#23a455;color:#fff;font-weight:800;border-radius:10px;padding:14px 26px;text-decoration:none;margin:6px 10px 0 0;font-size:15px;box-shadow:3px 3px 0 rgba(30,28,26,.25)}
+.btn.call{background:var(--asfalto);color:var(--giallo)}
+.btn.o{background:transparent;color:var(--ink);border:2px solid var(--line);box-shadow:none}
+footer{padding:0}
+footer .fin{padding:32px 5vw 116px;text-align:center;color:var(--mut);font-size:12.5px;background:#fff}
+.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(30,28,26,.96);backdrop-filter:blur(8px);display:flex;z-index:50;border-top:3px solid var(--giallo)}
+.bar a{flex:1;text-align:center;padding:15px 6px;font-size:13.5px;font-weight:800;text-decoration:none;color:#fff}
+.bar a.wa{background:#23a455}
+.bar a.call{background:var(--giallo);color:var(--asfalto)}
+@media(max-width:860px){
+ .hgrid{grid-template-columns:1fr}
+ .hright{min-height:36vh;order:-1}
+ .hright img{clip-path:none}
+ .story{grid-template-columns:1fr;gap:30px}
+ .hgrid2,.rgrid{grid-template-columns:1fr}
+ .ggrid{grid-template-columns:repeat(2,1fr)}
+ .visit{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="hgrid">
+  <div class="hleft">
+   <span class="targa"><i>PA</i> CORSO V. EMANUELE 291</span>
+   <h1><span>OSTERIA SICILIANA</span>La Lapa</h1>
+   <p class="hsub">Come l'Ape a tre ruote che gira per i mercati: piccola, rumorosa di sapori, impossibile da non notare. Cucina siciliana in dialetto, sul Cassaro.</p>
+   <div class="hmeta">
+    <span>★ <b data-edit="rating">4,5</b> · <span data-edit="revcount">397</span> RECENSIONI</span>
+    <span>10:00 – 24:00 · TUTTI I GIORNI</span>
+   </div>
+  </div>
+  <div class="hright"><img src="img/05.jpg" alt="Zuppa di mare de La Lapa"></div>
+ </div>
+</header>
+<div class="strada"></div>
+
+<section class="story wrap">
+ <div class="rev">
+  <span class="k">La nostra storia · Our story</span>
+  <h2>La Sicilia<br><em>a tre ruote</em></h2>
+  <p>"Lapa" è come i siciliani chiamano l'Ape Piaggio — il motocarro che porta il mercato in ogni vicolo. La nostra cucina fa lo stesso viaggio: piatti che si chiamano in dialetto, prodotti dei presìdi Slow Food, e il Cassaro fuori dalla porta.</p>
+  <p><em>"Lapa" is Sicilian for the three-wheeled Ape — the little truck that carries the market into every alley. Our kitchen makes the same trip: dialect-named dishes, Slow Food presidium ingredients, and Palermo's oldest street outside the door.</em></p>
+  <p>Dalla colazione lenta alla cena tarda: cucina aperta dalle 10 a mezzanotte, tutti i giorni.</p>
+ </div>
+ <div class="polo rev"><img src="img/07.jpg" alt="Pizza e sala"></div>
+</section>
+
+<section class="high">
+ <div class="wrap">
+  <span class="k" style="color:var(--giallo)">Segnaletica di bordo · Road signs</span>
+  <h2 class="rev">Le tappe obbligate</h2>
+  <div class="hgrid2">
+   <div class="hcard rev"><img src="img/05.jpg" alt="Zuppa di mare"><div class="hb"><h3>Spiedo di polpo</h3><p>Tentacoli rosticciati al rosmarino, mousse di bottarga, pomodorini — <span class="pr">23 €</span></p></div></div>
+   <div class="hcard rev"><img src="img/04.jpg" alt="Piatto"><div class="hb"><h3>Tonnara Siciliana</h3><p>Vele di tonno affumicato, caponata, cipolla fermentata — <span class="pr">20 €</span></p></div></div>
+   <div class="hcard rev"><img src="img/08.jpg" alt="Sala"><div class="hb"><h3>Pittinicchi cu sucu</h3><p>Ribs e salsiccia nel sugo di casa, crostoni all'aglio — <span class="pr">18 €</span></p></div></div>
+  </div>
+ </div>
+</section>
+
+<div class="wrap">
+<section class="menu rev">
+ <div class="mhead">
+  <h2>Il menù in dialetto</h2>
+  <p class="note">Prezzi reali dal nostro menù · <em>real prices from our menu</em></p>
+ </div>
+ <div class="mroad">
+  <h3>Secondi piatti</h3>
+  <div class="mi"><span class="nm">Pittinicchi cu sucu<i>ribs, salsiccia e spuntatura nel sugo della tradizione</i></span><b class="pr">18 €</b></div>
+  <div class="mi"><span class="nm">Tonnara Siciliana<i>tonno fresco affumicato agli agrumi, caponata, cipolla fermentata</i></span><b class="pr">20 €</b></div>
+  <div class="mi"><span class="nm">Baccalà a sfincione<i>gratinato in salsa sfincione — sapore di casa</i></span><b class="pr">20 €</b></div>
+  <div class="mi"><span class="nm">Spiedo di tentacoli di polpo<i>bottarga di tonno, polpo al rosmarino, pomodorini grigliati</i></span><b class="pr">23 €</b></div>
+  <div class="mi"><span class="nm">Filetto di pescato<i>crosta salina, verdure di stagione in due consistenze</i></span><b class="pr">24 €</b></div>
+  <div class="mi"><span class="nm">Panami la bistecca<i>entrecôte di manzo sicano, purè all'olio evo, salmoriglio</i></span><b class="pr">24 €</b></div>
+  <div class="mi"><span class="nm">Crastagnieddu — il carré d'agnello<i>CBT al Nero d'Avola, fagiolo Cosaruciaru (presidio Slow Food)</i></span><b class="pr">28 €</b></div>
+  <h3>Contorni</h3>
+  <div class="mi"><span class="nm">Verdurine di stagione saltate</span><b class="pr">7 €</b></div>
+  <div class="mi"><span class="nm">Chips con mayo alle mandorle e peperoncino</span><b class="pr">8 €</b></div>
+  <div class="mi"><span class="nm">Misto fritto caldo</span><b class="pr">10 €</b></div>
+ </div>
+ <p class="mfoot">Antipasti, primi e pizze del giorno: ve li racconta la lapa — <em>starters, pastas &amp; pizzas told at the table.</em></p>
+</section>
+</div>
+
+<section class="gal wrap">
+ <span class="k">Dal Cassaro · From the Cassaro</span>
+ <h2 class="rev">In bottega</h2>
+ <div class="ggrid rev">
+  <img src="img/01.jpg" alt="L'insegna gialla">
+  <img src="img/03.jpg" alt="Il piatto firmato">
+  <img src="img/06.jpg" alt="La sala rossa">
+ </div>
+</section>
+
+<section class="revs">
+ <div class="wrap">
+  <span class="k">Dicono di noi · What guests say</span>
+  <h2 class="rev">Dalle recensioni Google</h2>
+  <div class="rgrid">
+   <div class="rcard rev"><div class="stars">★★★★★</div><p>"We had dinner in this restaurant every single day. The pizza is super delicious, the other food amazing too!"</p><div class="who">豬豬豬 · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Delicious Sicilian food. Great friendly service. Loved the cocktails too."</p><div class="who">Gina Soden · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p>"We got invited in a very spontaneous and friendly way. An amazing dinner and a really great service."</p><div class="who">Milena M. · Google</div></div>
+  </div>
+  <p class="gbadge">★ <b>4,5 / 5</b> — 397 recensioni su Google</p>
+ </div>
+</section>
+
+<section class="visit wrap">
+ <div class="rev">
+  <span class="k">Orari · Hours</span>
+  <h2>Motore sempre acceso</h2>
+  <table class="hours">
+   <tr><td>Lunedì – Domenica</td><td data-edit="h-week">10:00 – 24:00</td></tr>
+   <tr><td>Cucina</td><td>Orario continuato · Non-stop kitchen</td></tr>
+  </table>
+ </div>
+ <div class="rev">
+  <span class="k">Dove siamo · Find us</span>
+  <h2>Cassaro 291</h2>
+  <p class="adr" data-edit="addr">Corso Vittorio Emanuele 291, 90133 Palermo — fra Cattedrale e Quattro Canti</p>
+  <p>Un messaggio su WhatsApp e la lapa vi tiene il posto. <em>One WhatsApp message and the lapa saves your seat.</em></p>
+  <a class="btn" href="https://wa.me/393780039794?text=Ciao%21%20Vorrei%20prenotare%20un%20tavolo%20a%20La%20Lapa" rel="noopener">💬 WhatsApp</a>
+  <a class="btn call" href="tel:+393780039794">📞 <span data-edit="phone">378 003 9794</span></a>
+  <a class="btn o" href="https://maps.google.com/?q=La+Lapa+Osteria+Siciliana+Palermo" rel="noopener">Apri in Maps</a>
+ </div>
+</section>
+
+<footer>
+ <div class="strada"></div>
+ <div class="fin">La Lapa — Osteria Siciliana · Corso Vittorio Emanuele 291, Palermo · <span data-edit="phone2">378 003 9794</span></div>
+</footer>
+
+<div class="bar">
+ <a class="wa" href="https://wa.me/393780039794?text=Ciao%21%20Vorrei%20prenotare%20un%20tavolo%20a%20La%20Lapa" rel="noopener">💬 WhatsApp</a>
+ <a class="call" href="tel:+393780039794">📞 Chiama</a>
+ <a href="https://maps.google.com/?q=La+Lapa+Osteria+Siciliana+Palermo" rel="noopener">📍 Mappa</a>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.rev:not(.on)').forEach(el=>el.classList.add('on')),1100);
+</script>
+</body>
+</html>

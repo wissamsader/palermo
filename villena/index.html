@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Osteria Villena — Spritz bar &amp; cucina siciliana ai Quattro Canti · Palermo</title>
+<meta name="description" content="Osteria Villena, Via Maqueda 176, Palermo. Pasta fresca, taglieri siciliani e spritz a due passi dai Quattro Canti. Tel 091 229 035.">
+<link href="https://fonts.googleapis.com/css2?family=Prata&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:clip}
+:root{--stone:#e9ddc8;--stone2:#f2ead9;--teal:#15505a;--teal2:#0e3b43;--gold:#a8843f;--ink:#26211a;--mut:#8b7f6a;--line:#d9caae}
+body{background:var(--stone);color:var(--ink);font:16px/1.7 'Lora',serif}
+img{max-width:100%;display:block}
+.wrap{max-width:1100px;margin:0 auto;padding:0 5vw}
+.disp{font-family:'Prata',serif}
+.k{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:600;font-family:'Lora',serif}
+.rev{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.rev.on{opacity:1;transform:none}
+.orna{text-align:center;color:var(--gold);font-size:20px;letter-spacing:.5em;padding:26px 0}
+/* hero */
+header{background:var(--teal);color:var(--stone2);position:relative;overflow:hidden}
+header::after{content:'';position:absolute;inset:auto 0 0 0;height:60px;background:radial-gradient(60px 60px at 50% 0,transparent 59px,var(--stone) 60px);background-size:120px 60px;background-position:center top}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;min-height:90svh;max-width:1240px;margin:0 auto}
+.hleft{padding:9vh 4vw;display:flex;flex-direction:column;justify-content:center}
+.crest{font-family:'Prata',serif;border:1px solid var(--gold);border-radius:50%;width:86px;height:86px;display:grid;place-content:center;color:var(--gold);font-size:26px;margin-bottom:26px}
+h1{font-family:'Prata',serif;font-size:clamp(44px,7.4vw,92px);line-height:1;letter-spacing:.01em}
+h1 small{display:block;font-size:.3em;letter-spacing:.42em;color:var(--gold);margin-bottom:14px}
+.hsub{margin-top:18px;color:#cfdcd4;font-size:clamp(15px,1.9vw,18.5px);max-width:46ch;font-style:italic}
+.hmeta{margin-top:26px;display:flex;gap:24px;flex-wrap:wrap;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#9fb8ac}
+.hmeta b{color:var(--gold)}
+.hright{position:relative;min-height:44vh}
+.hright img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hright::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--teal) 0,transparent 26%);z-index:1}
+/* story */
+.story{display:grid;grid-template-columns:.95fr 1.05fr;gap:6vw;align-items:center;padding:80px 0 60px}
+.arch{position:relative}
+.arch img{border-radius:200px 200px 10px 10px;aspect-ratio:3.6/4.6;object-fit:cover;border:1px solid var(--line)}
+.story h2{font-family:'Prata',serif;font-size:clamp(28px,4.4vw,44px);line-height:1.12;margin:12px 0 18px}
+.story p{color:#57503f;margin-bottom:14px}
+/* highlights */
+.high{padding:30px 0 40px}
+.high h2{font-family:'Prata',serif;font-size:clamp(26px,4vw,40px);text-align:center;margin:10px 0 34px}
+.hgrid2{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.hcard{background:var(--stone2);border:1px solid var(--line);border-radius:10px;overflow:hidden;text-align:center}
+.hcard img{height:220px;width:100%;object-fit:cover}
+.hcard .hb{padding:18px 18px 22px}
+.hcard h3{font-family:'Prata',serif;font-size:19px;margin-bottom:6px}
+.hcard p{font-size:13.5px;color:var(--mut)}
+.hcard .pr{color:var(--teal);font-weight:600}
+/* menu */
+.menu{margin:70px 0;background:var(--stone2);border:1px solid var(--line);border-radius:12px;padding:clamp(26px,5vw,58px)}
+.menu .mhead{text-align:center;margin-bottom:38px}
+.menu h2{font-family:'Prata',serif;font-size:clamp(28px,4.4vw,44px)}
+.menu .note{color:var(--mut);font-size:13px;margin-top:8px;letter-spacing:.06em}
+.mcols{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.msec h3{font-family:'Prata',serif;color:var(--teal);font-size:14px;letter-spacing:.28em;text-transform:uppercase;border-bottom:1px solid var(--line);padding-bottom:8px;margin:24px 0 14px}
+.msec h3:first-child{margin-top:0}
+.mi{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:11px;font-size:15px}
+.mi span{color:#57503f}
+.mi i{font-style:italic;color:var(--mut);font-size:12.5px;display:block}
+.mi b{font-weight:600;color:var(--ink);white-space:nowrap}
+.spritz{margin-top:34px;border:1px solid var(--gold);border-radius:10px;padding:20px 24px;text-align:center}
+.spritz h4{font-family:'Prata',serif;color:var(--gold);letter-spacing:.2em;font-size:13px;text-transform:uppercase;margin-bottom:8px}
+.spritz p{font-size:14.5px;color:#57503f}
+.mfoot{text-align:center;margin-top:26px;color:var(--mut);font-size:12.5px;font-style:italic}
+/* gallery */
+.gal{padding:10px 0 70px}
+.gal h2{font-family:'Prata',serif;font-size:clamp(26px,4vw,40px);margin:8px 0 28px;text-align:center}
+.ggrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ggrid img{width:100%;aspect-ratio:1/1.05;object-fit:cover;border-radius:8px;border:1px solid var(--line)}
+/* reviews */
+.revs{background:var(--teal2);color:var(--stone2);padding:80px 0}
+.revs h2{font-family:'Prata',serif;font-size:clamp(26px,4vw,40px);text-align:center;margin-bottom:34px}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rcard{background:rgba(233,221,200,.06);border:1px solid #27616b;border-radius:10px;padding:26px}
+.stars{color:var(--gold);letter-spacing:3px;font-size:13px}
+.rcard p{font-size:15px;color:#cfdcd4;margin:14px 0 14px;font-style:italic}
+.rcard .who{font-size:12px;color:#9fb8ac;letter-spacing:.12em;text-transform:uppercase}
+.gbadge{margin-top:28px;text-align:center;color:#9fb8ac;font-size:14px}
+.gbadge b{color:var(--stone2)}
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:6vw;padding:80px 0 110px}
+.visit h2{font-family:'Prata',serif;font-size:clamp(26px,4vw,40px);margin:8px 0 20px}
+.hours{width:100%;border-collapse:collapse;font-size:14.5px}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line);color:#57503f}
+.hours td:last-child{text-align:right;color:var(--ink)}
+.visit p{color:#57503f;margin-bottom:14px}
+.visit .adr{font-family:'Prata',serif;font-size:20px}
+.btn{display:inline-block;background:var(--teal);color:var(--stone2);font-weight:600;border-radius:6px;padding:14px 28px;text-decoration:none;margin:6px 10px 0 0;font-size:14.5px;font-family:'Lora',serif}
+.btn.o{background:transparent;color:var(--ink);border:1px solid var(--line)}
+footer{background:var(--teal2);padding:34px 5vw 116px;text-align:center;color:#7fa094;font-size:12.5px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(14,59,67,.96);backdrop-filter:blur(8px);border-top:1px solid var(--gold);display:flex;z-index:50}
+.bar a{flex:1;text-align:center;padding:15px 6px;font-size:13.5px;font-weight:600;text-decoration:none;color:var(--stone2)}
+.bar a.call{background:var(--gold);color:#241c0d}
+@media(max-width:860px){
+ .hgrid{grid-template-columns:1fr}
+ .hright{min-height:36vh;order:-1}
+ .story{grid-template-columns:1fr;gap:28px}
+ .hgrid2,.rgrid{grid-template-columns:1fr}
+ .mcols{grid-template-columns:1fr}
+ .ggrid{grid-template-columns:repeat(2,1fr)}
+ .visit{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="hgrid">
+  <div class="hleft">
+   <div class="crest">V</div>
+   <h1><small>OSTERIA · SPRITZ BAR</small>Villena</h1>
+   <p class="hsub">Ai Quattro Canti — piazza Villena, per chi la chiama col suo vero nome. Pasta fresca ogni giorno, taglieri siciliani e spritz fino a mezzanotte.</p>
+   <div class="hmeta">
+    <span>★ <b data-edit="rating">4,6</b> · <span data-edit="revcount">2.845</span> recensioni</span>
+    <span>Via Maqueda 176</span>
+    <span>12:00 – 24:00</span>
+   </div>
+  </div>
+  <div class="hright"><img src="img/07.jpg" alt="Il piatto Villena"></div>
+ </div>
+</header>
+
+<p class="orna">✦ ✦ ✦</p>
+
+<section class="story wrap">
+ <div class="arch rev"><img src="img/01.jpg" alt="L'ingresso ad arco"></div>
+ <div class="rev">
+  <span class="k">La nostra storia · Our story</span>
+  <h2>La piazza che ha<br>due nomi</h2>
+  <p>I turisti li chiamano Quattro Canti; i palermitani sanno che il nome vero è piazza Villena. Noi stiamo lì in mezzo, su Via Maqueda: pasta fatta fresca ogni mattina, il tagliere siciliano da dividere e lo spritz che accompagna il passeggio.</p>
+  <p><em>Tourists say Quattro Canti; Palermitans know the square's true name is Piazza Villena. We sit right there on Via Maqueda — fresh pasta made daily, Sicilian sharing boards, and spritz for the evening stroll.</em></p>
+  <p>Piatti serviti sulle maioliche, barocco fuori dalla finestra.</p>
+ </div>
+</section>
+
+<section class="high wrap">
+ <span class="k" style="display:block;text-align:center">Le firme · Signatures</span>
+ <h2 class="rev">Dalla pasta fresca</h2>
+ <div class="hgrid2">
+  <div class="hcard rev"><img src="img/09.jpg" alt="Pasta alla Norma"><div class="hb"><h3>Pasta alla Norma</h3><p>Pomodoro, melanzane, ricotta salata — <span class="pr">14 €</span></p></div></div>
+  <div class="hcard rev"><img src="img/12.jpg" alt="Bruschette"><div class="hb"><h3>Tagliere siciliano ×2</h3><p>Panelle, arancinette, caponata, sfincione — <span class="pr">18 €</span></p></div></div>
+  <div class="hcard rev"><img src="img/10.jpg" alt="Gnocchi"><div class="hb"><h3>Gnocchi melanzane e noci</h3><p>Crema di melanzane, pesto e noci — <span class="pr">16 €</span></p></div></div>
+ </div>
+</section>
+
+<div class="wrap">
+<section class="menu rev">
+ <div class="mhead">
+  <h2>La carta</h2>
+  <p class="note">PREZZI REALI DAL NOSTRO MENÙ · <em>REAL PRICES FROM OUR MENU</em></p>
+ </div>
+ <div class="mcols">
+  <div class="msec">
+   <h3>Assaggetti</h3>
+   <div class="mi"><span>Sfincione alla palermitana <i>antica ricetta</i></span><b class="pr">7 €</b></div>
+   <div class="mi"><span>Fritto tipico di panelle e crocchè</span><b class="pr">8 €</b></div>
+   <div class="mi"><span>Arancinette</span><b class="pr">8 €</b></div>
+   <h3>Antipasti</h3>
+   <div class="mi"><span>Caponata alla siciliana</span><b class="pr">9 €</b></div>
+   <div class="mi"><span>Parmigiana di melanzane</span><b class="pr">10 €</b></div>
+   <div class="mi"><span>Burrata, pomodorini e pesto</span><b class="pr">12 €</b></div>
+   <div class="mi"><span>Fiori di zucca fritti in pastella</span><b class="pr">12 €</b></div>
+   <div class="mi"><span>Tagliere siciliano (×2)</span><b class="pr">18 €</b></div>
+  </div>
+  <div class="msec">
+   <h3>Pasta fresca</h3>
+   <div class="mi"><span>Pasta alla Norma</span><b class="pr">14 €</b></div>
+   <div class="mi"><span>Spaghettoni cacio, pepe e zucchine</span><b class="pr">16 €</b></div>
+   <div class="mi"><span>Pasta con sarde e finocchietto</span><b class="pr">16 €</b></div>
+   <div class="mi"><span>Spaghettoni con cozze e pomodorini</span><b class="pr">18 €</b></div>
+   <div class="mi"><span>Paccheri con pesce spada e melanzane</span><b class="pr">20 €</b></div>
+   <h3>Secondi</h3>
+   <div class="mi"><span>Villena burger <i>scottona, scamorza affumicata</i></span><b class="pr">15 €</b></div>
+   <div class="mi"><span>Spiedini di vitello alla palermitana</span><b class="pr">15 €</b></div>
+   <div class="mi"><span>Pesce spada panato alla palermitana</span><b class="pr">20 €</b></div>
+   <div class="mi"><span>Entrecôte di scottona al rosmarino</span><b class="pr">23 €</b></div>
+  </div>
+ </div>
+ <div class="spritz">
+  <h4>Spritz &amp; Cocktail</h4>
+  <p>Aperol · Campari · Hugo · Limoncello spritz <b class="pr">9 €</b> — Negroni · Mojito · Moscow Mule <b class="pr">10 €</b> — Espresso Martini · Margarita <b class="pr">12 €</b></p>
+ </div>
+ <p class="mfoot">Coperto 2,50 € — la carta completa vi aspetta al tavolo.</p>
+</section>
+</div>
+
+<section class="gal wrap">
+ <span class="k" style="display:block;text-align:center">In tavola · On the table</span>
+ <h2 class="rev">Barocco nel piatto</h2>
+ <div class="ggrid rev">
+  <img src="img/04.jpg" alt="Pasta">
+  <img src="img/08.jpg" alt="Al tavolo">
+  <img src="img/11.jpg" alt="Fritti">
+ </div>
+</section>
+
+<section class="revs">
+ <div class="wrap">
+  <span class="k" style="display:block;text-align:center">Dicono di noi · What guests say</span>
+  <h2 class="rev">Dalle recensioni Google</h2>
+  <div class="rgrid">
+   <div class="rcard rev"><div class="stars">★★★★★</div><p>"The host at the entrance was very welcoming, and so were the waiters and staff."</p><div class="who">Alex Vermaak · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p>"From the very first evening everything impressed us so much that we came back every single day for dinner."</p><div class="who">Andreea Gabor · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Even in a tourist area, the food was outstanding. Impeccable, attentive service — the 'cannolo scomposto' is highly recommended."</p><div class="who">Andrea Sboner · Google</div></div>
+  </div>
+  <p class="gbadge">★ <b>4,6 / 5</b> — 2.845 recensioni su Google</p>
+ </div>
+</section>
+
+<section class="visit wrap">
+ <div class="rev">
+  <span class="k">Orari · Hours</span>
+  <h2>Sempre in piazza</h2>
+  <table class="hours">
+   <tr><td>Lunedì – Domenica</td><td data-edit="h-week">12:00 – 24:00</td></tr>
+   <tr><td>Cucina</td><td>Orario continuato · All-day kitchen</td></tr>
+  </table>
+ </div>
+ <div class="rev">
+  <span class="k">Dove siamo · Find us</span>
+  <h2>Via Maqueda 176</h2>
+  <p class="adr" data-edit="addr">Via Maqueda 176, 90134 Palermo — 1 minuto dai Quattro Canti</p>
+  <p>Chiamateci per il tavolo, dentro o sotto le stelle di Maqueda. <em>Call us for a table, inside or under the Maqueda stars.</em></p>
+  <a class="btn" href="tel:+39091229035">📞 <span data-edit="phone">091 229 035</span></a>
+  <a class="btn o" href="https://maps.google.com/?q=Villena+Via+Maqueda+176+Palermo" rel="noopener">Apri in Maps</a>
+ </div>
+</section>
+
+<footer>Osteria Villena · Via Maqueda 176, Palermo · <span data-edit="phone2">091 229 035</span></footer>
+
+<div class="bar">
+ <a class="call" href="tel:+39091229035">📞 Chiama · Call</a>
+ <a href="https://maps.google.com/?q=Villena+Via+Maqueda+176+Palermo" rel="noopener">📍 Mappa</a>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.rev:not(.on)').forEach(el=>el.classList.add('on')),1100);
+</script>
+</body>
+</html>

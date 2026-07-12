@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Antica Trattoria Da Pino — Solo pranzo, dal 1974 · Palermo</title>
+<meta name="description" content="Antica Trattoria Da Pino, Via dello Spezio 6, Palermo. La trattoria del pranzo: cucina di casa, mezze porzioni, il menù con ancora la colonna in lire. WhatsApp 349 633 7358.">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:clip}
+:root{--paper:#efe5d0;--paper2:#f7f0e0;--red:#b3271e;--ink:#2c2419;--type:#3a3227;--mut:#8d8066;--line:#d9cbae}
+body{background:var(--paper);color:var(--ink);font:16px/1.65 'Libre Franklin',sans-serif}
+img{max-width:100%;display:block}
+.wrap{max-width:1000px;margin:0 auto;padding:0 5vw}
+.type{font-family:'Courier Prime',monospace}
+.k{font-family:'Courier Prime',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);font-weight:700}
+.rev{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rev.on{opacity:1;transform:none}
+/* hero — the placemat */
+header{padding:40px 5vw 70px;max-width:1000px;margin:0 auto}
+.mat{background:var(--paper2);border:1px solid var(--line);border-radius:6px;padding:clamp(22px,5vw,54px);position:relative;box-shadow:0 24px 60px -34px rgba(44,36,25,.45)}
+.mat::before{content:'';position:absolute;inset:12px;border:2px solid var(--line);border-radius:3px;pointer-events:none}
+.stamp{position:absolute;top:22px;right:26px;border:3px solid var(--red);color:var(--red);font-family:'Courier Prime',monospace;font-weight:700;letter-spacing:.14em;font-size:clamp(10px,1.6vw,14px);padding:8px 12px;transform:rotate(7deg);border-radius:4px;background:rgba(179,39,30,.04)}
+.mtop{font-family:'Courier Prime',monospace;text-align:center;color:var(--mut);font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+h1{font-family:'Courier Prime',monospace;font-weight:700;text-align:center;font-size:clamp(34px,6.4vw,64px);line-height:1.05;margin:16px 0 8px}
+h1 span{display:block;font-size:.42em;letter-spacing:.3em;color:var(--red)}
+.hsub{text-align:center;color:#5d5442;max-width:56ch;margin:10px auto 0;font-size:clamp(14.5px,1.8vw,17px)}
+.hmeta{display:flex;justify-content:center;gap:26px;flex-wrap:wrap;margin-top:22px;font-family:'Courier Prime',monospace;font-size:13px;color:var(--mut)}
+.hmeta b{color:var(--ink)}
+.heroimg{margin-top:30px;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.heroimg img{width:100%;height:clamp(260px,44vh,430px);object-fit:cover}
+/* story */
+.story{display:grid;grid-template-columns:.95fr 1.05fr;gap:6vw;align-items:center;padding:40px 0 60px}
+.story img{border-radius:6px;border:1px solid var(--line);aspect-ratio:4/4.4;object-fit:cover}
+.story h2{font-family:'Courier Prime',monospace;font-weight:700;font-size:clamp(24px,3.8vw,38px);line-height:1.1;margin:12px 0 18px}
+.story p{color:#5d5442;margin-bottom:14px}
+.badge0405{display:inline-block;background:var(--red);color:#fff;font-family:'Courier Prime',monospace;font-size:12.5px;padding:9px 14px;border-radius:4px;transform:rotate(-2deg);margin-top:8px}
+/* menu — typed sheet */
+.menu{margin:60px 0 70px;background:var(--paper2);border:1px solid var(--line);border-radius:6px;padding:clamp(24px,5vw,54px);position:relative}
+.menu .fold{position:absolute;top:0;bottom:0;left:50%;width:1px;background:linear-gradient(180deg,transparent,var(--line),transparent)}
+.menu h2{font-family:'Courier Prime',monospace;font-weight:700;text-align:center;font-size:clamp(24px,4vw,38px)}
+.menu .note{font-family:'Courier Prime',monospace;text-align:center;color:var(--mut);font-size:12.5px;margin:8px 0 30px}
+.mcols{display:grid;grid-template-columns:1fr 1fr;gap:44px;position:relative}
+.msec h3{font-family:'Courier Prime',monospace;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);border-bottom:1px solid var(--line);padding-bottom:7px;margin:20px 0 6px}
+.msec h3:first-child{margin-top:0}
+.msec{min-width:0}
+.mhead-row{display:flex;justify-content:flex-end;gap:0;font-family:'Courier Prime',monospace;font-size:10.5px;color:var(--mut);letter-spacing:.08em;margin-bottom:8px}
+.mhead-row span{width:64px;text-align:right}
+.mi{display:flex;align-items:baseline;font-family:'Courier Prime',monospace;font-size:14px;margin-bottom:9px;color:var(--type)}
+.mi .nm{flex:1;overflow:hidden;white-space:nowrap;text-overflow:clip}
+.mi .nm::after{content:' ..........................................................';color:#c4b494;letter-spacing:2px}
+.mi b{width:64px;text-align:right;font-weight:700;color:var(--ink)}
+.nb{font-family:'Courier Prime',monospace;font-size:12.5px;color:var(--mut);margin-top:26px;text-align:center;font-style:italic}
+/* gallery */
+.gal{padding:10px 0 60px}
+.gal h2{font-family:'Courier Prime',monospace;font-weight:700;font-size:clamp(22px,3.4vw,34px);margin:8px 0 24px}
+.ggrid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:165px;gap:10px}
+.ggrid img{width:100%;height:100%;object-fit:cover;border-radius:4px;border:1px solid var(--line)}
+.ggrid img:nth-child(1){grid-column:span 2;grid-row:span 2}
+/* reviews */
+.revs{padding:20px 0 70px}
+.revs h2{font-family:'Courier Prime',monospace;font-weight:700;font-size:clamp(22px,3.4vw,34px);margin-bottom:26px}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.rcard{background:var(--paper2);border:1px solid var(--line);border-radius:6px;padding:22px}
+.stars{color:var(--red);letter-spacing:2px;font-size:13px}
+.rcard p{font-size:14px;color:#5d5442;margin:12px 0 12px;font-style:italic}
+.rcard .who{font-family:'Courier Prime',monospace;font-size:12px;color:var(--mut)}
+.gbadge{margin-top:22px;color:var(--mut);font-size:14px}
+.gbadge b{color:var(--ink)}
+/* visit */
+.visit{background:#241e14;color:var(--paper);padding:70px 0 110px}
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;max-width:1000px;margin:0 auto;padding:0 5vw}
+.visit h2{font-family:'Courier Prime',monospace;font-weight:700;font-size:clamp(22px,3.4vw,34px);margin:8px 0 18px}
+.clock{font-family:'Courier Prime',monospace;font-size:clamp(30px,5vw,46px);color:#e8b64c;font-weight:700}
+.visit p{color:#cbbfa4;margin-bottom:14px}
+.visit .adr{font-size:17.5px;color:var(--paper);font-weight:600}
+.hours{width:100%;border-collapse:collapse;font-size:14.5px;font-family:'Courier Prime',monospace}
+.hours td{padding:8px 0;border-bottom:1px dashed #453b2a;color:#cbbfa4}
+.hours td:last-child{text-align:right;color:var(--paper)}
+.btn{display:inline-block;background:#23a455;color:#fff;font-weight:700;border-radius:6px;padding:13px 24px;text-decoration:none;margin:6px 10px 0 0;font-size:14.5px}
+.btn.call{background:var(--red)}
+.btn.o{background:transparent;color:var(--paper);border:1px solid #453b2a}
+footer{background:#1b1610;padding:28px 5vw 112px;text-align:center;color:#7d7154;font-size:12.5px;font-family:'Courier Prime',monospace}
+.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(36,30,20,.96);backdrop-filter:blur(8px);display:flex;z-index:50;border-top:2px solid var(--red)}
+.bar a{flex:1;text-align:center;padding:15px 6px;font-size:13.5px;font-weight:700;text-decoration:none;color:#fff}
+.bar a.wa{background:#23a455}
+.bar a.call{background:var(--red)}
+@media(max-width:860px){
+ .story{grid-template-columns:1fr;gap:26px}
+ .mcols{grid-template-columns:1fr;gap:10px}
+ .menu .fold{display:none}
+ .rgrid{grid-template-columns:1fr}
+ .ggrid{grid-template-columns:repeat(2,1fr);grid-auto-rows:135px}
+ .vgrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="mat rev on">
+  <span class="stamp">SOLO PRANZO<br>12:00 – 15:30</span>
+  <p class="mtop">Via dello Spezio 6 · Borgo Vecchio · Palermo</p>
+  <h1><span>ANTICA TRATTORIA</span>"Da Pino"</h1>
+  <p class="hsub">La trattoria che apre solo a pranzo — cucina di casa, mezze porzioni, e un menù così storico che ha ancora la colonna dei prezzi in lire. <em>Lunch only: home cooking, half portions, and a menu so old it still shows prices in lire.</em></p>
+  <div class="hmeta">
+   <span>★ <b data-edit="rating">4,5</b> GOOGLE · <b data-edit="revcount">1.277</b> RECENSIONI</span>
+   <span>DOM CHIUSO</span>
+  </div>
+  <div class="heroimg"><img src="img/06.jpg" alt="La sala di Da Pino a pranzo"></div>
+ </div>
+</header>
+
+<section class="story wrap">
+ <img class="rev" src="img/08.jpg" alt="La sala con le foto alle pareti">
+ <div class="rev">
+  <span class="k">La nostra storia · Our story</span>
+  <h2>Il pranzo è una<br>cosa seria</h2>
+  <p>Da Pino non fa cena, non fa aperitivo, non insegue le mode: fa il pranzo, e lo fa da sempre. Involtini, spezzatino, spaghetti alla carrettiera — la pausa pranzo come la facevano i palermitani quando i prezzi erano ancora in lire.</p>
+  <p><em>No dinner, no aperitivo, no trends: Da Pino does lunch, and has done forever. The Palermo lunch break as it was when prices were still in lire.</em></p>
+  <span class="badge0405 type">★ Segnalata dalla guida "Nella Vecchia Trattoria" 2004/2005</span>
+ </div>
+</section>
+
+<div class="wrap">
+<section class="menu rev">
+ <div class="fold"></div>
+ <h2>Il menù in bacheca</h2>
+ <p class="note">porzione INTERA · MEZZA — prezzi reali dalla nostra bacheca · <em>real prices from our window case</em></p>
+ <div class="mcols">
+  <div class="msec">
+   <h3>Antipasti</h3>
+   <div class="mhead-row"><span>INT.</span><span>½</span></div>
+   <div class="mi"><span class="nm">Caponata alla siciliana</span><b class="pr">8,00</b><b class="pr">4,00</b></div>
+   <div class="mi"><span class="nm">Insalata di mare</span><b class="pr">8,00</b><b class="pr">4,00</b></div>
+   <div class="mi"><span class="nm">Antipasto all'italiana</span><b class="pr">8,00</b><b class="pr">4,00</b></div>
+   <div class="mi"><span class="nm">Sarde a beccafico</span><b class="pr">8,00</b><b class="pr">6,00</b></div>
+   <h3>Primi piatti</h3>
+   <div class="mi"><span class="nm">Spaghetti al pomodoro</span><b class="pr">5,00</b><b class="pr">3,00</b></div>
+   <div class="mi"><span class="nm">Spaghetti alla carrettiera</span><b class="pr">5,00</b><b class="pr">3,00</b></div>
+   <div class="mi"><span class="nm">Spaghetti alla matriciana</span><b class="pr">5,00</b><b class="pr">3,00</b></div>
+   <div class="mi"><span class="nm">Spaghetti alla Don Giovanni</span><b class="pr">5,00</b><b class="pr">3,00</b></div>
+   <div class="mi"><span class="nm">Spaghetti con sarde</span><b class="pr">6,00</b><b class="pr">4,00</b></div>
+   <div class="mi"><span class="nm">Spaghetti alla marinara</span><b class="pr">6,00</b><b class="pr">4,00</b></div>
+   <div class="mi"><span class="nm">Risotto ai funghi</span><b class="pr">5,00</b><b class="pr">—</b></div>
+   <div class="mi"><span class="nm">Risotto alla marinara</span><b class="pr">6,00</b><b class="pr">—</b></div>
+  </div>
+  <div class="msec">
+   <h3>Secondi di carne</h3>
+   <div class="mhead-row"><span>EURO</span></div>
+   <div class="mi"><span class="nm">Lesso di vitello</span><b class="pr">7,00</b></div>
+   <div class="mi"><span class="nm">Spezzatino</span><b class="pr">7,00</b></div>
+   <div class="mi"><span class="nm">Arrosto alla palermitana</span><b class="pr">8,00</b></div>
+   <div class="mi"><span class="nm">Spiedini alla siciliana</span><b class="pr">8,00</b></div>
+   <div class="mi"><span class="nm">Agnello al forno</span><b class="pr">10,00</b></div>
+   <h3>Secondi di pesce</h3>
+   <div class="mi"><span class="nm">Pesce spada</span><b class="pr">8,00</b></div>
+   <div class="mi"><span class="nm">Trance di cernia / ricciola</span><b class="pr">8,00</b></div>
+   <div class="mi"><span class="nm">Orate · spigole</span><b class="pr">8,00</b></div>
+   <div class="mi"><span class="nm">Gamberoni</span><b class="pr">9,00</b></div>
+   <h3>Contorni</h3>
+   <div class="mi"><span class="nm">Verdure cotte · fagioli · fave</span><b class="pr">1,50</b></div>
+   <div class="mi"><span class="nm">Insalate · patate</span><b class="pr">1,50</b></div>
+  </div>
+ </div>
+ <p class="nb">N.B. Il piatto del giorno lo decide il mercato — chiedete a Pino. · <em>The daily special follows the market — ask Pino.</em></p>
+</section>
+</div>
+
+<section class="gal wrap">
+ <span class="k">Dalla cucina · From the kitchen</span>
+ <h2 class="rev">Il pranzo di oggi</h2>
+ <div class="ggrid rev">
+  <img src="img/07.jpg" alt="Involtini al sugo">
+  <img src="img/04.jpg" alt="Calamaro alla griglia">
+  <img src="img/09.jpg" alt="Pesce del giorno">
+  <img src="img/10.jpg" alt="Pasta">
+  <img src="img/11.jpg" alt="Patate al forno">
+  <img src="img/12.jpg" alt="Dolce della casa">
+ </div>
+</section>
+
+<section class="revs wrap">
+ <span class="k">Dicono di noi · What guests say</span>
+ <h2 class="rev">Dalle recensioni Google</h2>
+ <div class="rgrid">
+  <div class="rcard rev"><div class="stars">★★★★★</div><p>"One of the best meals of my life! Our server was so kind in sending to the table whatever they thought was their recommendation."</p><div class="who">Cassandra Peterson · Google</div></div>
+  <div class="rcard rev"><div class="stars">★★★★★</div><p>"Undoubtedly the best meal in two weeks of driving around Sicily — in particular the caponata and the spaghetti with aubergine and sausage."</p><div class="who">David Walston · Google</div></div>
+  <div class="rcard rev"><div class="stars">★★★★★</div><p>"This charming, family-run trattoria is a true local gem, open only for lunch. Delicious food at genuine local prices."</p><div class="who">Anton · Google</div></div>
+ </div>
+ <p class="gbadge">★ <b>4,5 / 5</b> — 1.277 recensioni su Google</p>
+</section>
+
+<section class="visit">
+ <div class="vgrid">
+  <div class="rev">
+   <span class="k">Orari · Hours</span>
+   <h2>Si pranza e basta</h2>
+   <p class="clock type">12:00 → 15:30</p>
+   <table class="hours">
+    <tr><td>Lunedì – Sabato</td><td data-edit="h-week">12:00 – 15:30</td></tr>
+    <tr><td>Domenica</td><td data-edit="h-sun">Chiuso · Closed</td></tr>
+    <tr><td>La sera</td><td>Si riposa · We rest</td></tr>
+   </table>
+  </div>
+  <div class="rev">
+   <span class="k">Dove siamo · Find us</span>
+   <h2>Via dello Spezio 6</h2>
+   <p class="adr" data-edit="addr">Via dello Spezio 6, 90139 Palermo — Borgo Vecchio, a 5 minuti dal Politeama</p>
+   <p>Un messaggio su WhatsApp e il tavolo del pranzo è vostro. <em>One WhatsApp message and your lunch table is set.</em></p>
+   <a class="btn" href="https://wa.me/393496337358?text=Ciao%20Pino%21%20Un%20tavolo%20per%20pranzo%2C%20per%20favore" rel="noopener">💬 WhatsApp</a>
+   <a class="btn call" href="tel:+393496337358">📞 <span data-edit="phone">349 633 7358</span></a>
+   <a class="btn o" href="https://maps.google.com/?q=Trattoria+da+Pino+Palermo+Via+dello+Spezio" rel="noopener">Apri in Maps</a>
+  </div>
+ </div>
+</section>
+
+<footer>Antica Trattoria "Da Pino" · Via dello Spezio 6, Palermo · <span data-edit="phone2">349 633 7358</span></footer>
+
+<div class="bar">
+ <a class="wa" href="https://wa.me/393496337358?text=Ciao%20Pino%21%20Un%20tavolo%20per%20pranzo%2C%20per%20favore" rel="noopener">💬 WhatsApp</a>
+ <a class="call" href="tel:+393496337358">📞 Chiama</a>
+ <a href="https://maps.google.com/?q=Trattoria+da+Pino+Palermo+Via+dello+Spezio" rel="noopener">📍 Mappa</a>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.rev:not(.on)').forEach(el=>el.classList.add('on')),1100);
+</script>
+</body>
+</html>

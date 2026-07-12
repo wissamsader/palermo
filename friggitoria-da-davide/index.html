@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Friggitoria da Davide — Specialità Siciliane · Palermo</title>
+<meta name="description" content="Friggitoria da Davide, Viale Croce Rossa 199/201, Palermo. Arancine, pizza fritta e coppo siciliano di Davide e Riccardo. WhatsApp 329 092 6747 · tel 091 746 2706.">
+<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Barlow:ital,wght@0,400;0,600;0,800;1,400&family=Barlow+Condensed:wght@600;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:clip}
+:root{--navy:#12233d;--navy2:#1a3153;--rosso:#d92b2b;--bianco:#f7f5f0;--ink:#1c2333;--mut:#7d8494;--line:#e2e0d8;--oro:#e8b93c}
+body{background:var(--bianco);color:var(--ink);font:16px/1.65 'Barlow',sans-serif}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 5vw}
+.race{font-family:'Racing Sans One',cursive}
+.k{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--rosso);font-weight:800}
+.rev{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rev.on{opacity:1;transform:none}
+.bande{height:12px;background:repeating-linear-gradient(135deg,var(--rosso) 0 26px,#fff 26px 40px,var(--navy) 40px 66px)}
+/* hero */
+header{position:relative;min-height:92svh;display:flex;align-items:flex-end;background:var(--navy)}
+header .bg{position:absolute;inset:0;background:url('img/01.jpg') center/cover;opacity:.82}
+header .veil{position:absolute;inset:0;background:linear-gradient(185deg,rgba(18,35,61,.2) 30%,rgba(18,35,61,.93) 95%)}
+.hin{position:relative;z-index:2;width:100%;max-width:1080px;margin:0 auto;padding:0 5vw 9vh;color:#f2f4f8}
+.ribbon{display:inline-block;background:var(--oro);color:#3a2c05;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;padding:8px 18px;margin-bottom:20px;clip-path:polygon(0 0,100% 0,calc(100% - 10px) 50%,100% 100%,0 100%,10px 50%)}
+h1{font-family:'Racing Sans One',cursive;font-size:clamp(42px,7.6vw,88px);line-height:1;font-style:italic}
+h1 span{color:var(--oro)}
+.hsub{margin-top:14px;font-size:clamp(15px,1.9vw,18px);color:#c8d2e2;max-width:54ch;font-weight:500}
+.hmeta{margin-top:22px;display:flex;gap:22px;flex-wrap:wrap;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#93a3bd}
+.hmeta b{color:#fff}
+/* story */
+.story{display:grid;grid-template-columns:1fr .92fr;gap:6vw;align-items:center;padding:90px 0 70px}
+.story h2{font-family:'Racing Sans One',cursive;font-size:clamp(28px,4.4vw,44px);line-height:1.08;margin:14px 0 18px;font-style:italic}
+.story h2 em{font-style:italic;color:var(--rosso)}
+.story p{color:#4a5162;margin-bottom:14px}
+.story .en{font-style:italic;color:var(--mut);font-size:15px}
+.sfig{border:4px solid var(--navy);box-shadow:12px 12px 0 var(--rosso);position:relative}
+.sfig img{aspect-ratio:3/3.6;object-fit:cover}
+.sfig .tag{position:absolute;bottom:-16px;left:18px;background:var(--navy);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:800;letter-spacing:.1em;font-size:14px;padding:8px 16px;text-transform:uppercase}
+/* scoreboard menu */
+.menu{background:var(--navy);color:#f2f4f8;padding:86px 0 90px}
+.menu .mhead{text-align:center;margin-bottom:42px}
+.menu h2{font-family:'Racing Sans One',cursive;font-size:clamp(30px,4.6vw,48px);font-style:italic}
+.menu h2 span{color:var(--oro)}
+.menu .note{color:#93a3bd;font-size:14px;margin-top:8px}
+.board{max-width:880px;margin:0 auto;background:var(--navy2);border:2px solid #2a4470;padding:10px 26px 24px}
+.board h3{font-family:'Barlow Condensed',sans-serif;font-weight:800;letter-spacing:.2em;font-size:15px;text-transform:uppercase;color:var(--oro);border-bottom:2px solid #2a4470;padding:16px 0 8px;margin-bottom:4px}
+.mi{display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:8px 0;border-bottom:1px dashed rgba(255,255,255,.12)}
+.mi .nm{font-weight:600;font-size:15px}
+.mi .nm i{display:block;font-style:normal;font-weight:400;font-size:13px;color:#93a3bd;margin-top:2px}
+.mi b{font-family:'Barlow Condensed',sans-serif;font-weight:800;color:#fff;background:#0c1830;border:1px solid #2a4470;padding:2px 12px;white-space:nowrap;font-size:16px}
+.mfoot{text-align:center;margin-top:32px;color:#93a3bd;font-size:13.5px}
+/* highlights */
+.high{padding:86px 0 30px}
+.high h2{font-family:'Racing Sans One',cursive;font-size:clamp(26px,4vw,40px);margin:12px 0 28px;font-style:italic}
+.hgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.hcard{background:#fff;border:1px solid var(--line);overflow:hidden;box-shadow:0 12px 30px rgba(18,35,61,.08)}
+.hcard img{height:225px;width:100%;object-fit:cover}
+.hcard .hb{padding:16px 18px 20px}
+.hcard h3{font-family:'Racing Sans One',cursive;font-size:18px;margin-bottom:6px;color:var(--navy)}
+.hcard p{font-size:13.5px;color:var(--mut)}
+.hcard .pz{color:var(--rosso);font-weight:800}
+/* reviews */
+.revs{background:#eef0ea;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:80px 0;margin-top:50px}
+.revs h2{font-family:'Racing Sans One',cursive;font-size:clamp(24px,3.8vw,38px);margin:12px 0 30px;font-style:italic}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rcard{background:#fff;border:1px solid var(--line);padding:26px;border-top:6px solid var(--navy)}
+.stars{color:#d8a410;letter-spacing:2px}
+.rcard p{font-size:14.5px;color:#4a5162;margin:12px 0 14px;font-style:italic;line-height:1.6}
+.rcard .who{font-size:12.5px;color:var(--mut);letter-spacing:.1em;text-transform:uppercase;font-weight:800}
+.gbadge{margin-top:26px;color:var(--mut);font-size:14px}
+.gbadge b{color:var(--ink)}
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:6vw;padding:84px 0 110px}
+.visit h2{font-family:'Racing Sans One',cursive;font-size:clamp(22px,3.6vw,36px);margin:12px 0 20px;font-style:italic}
+.hours{width:100%;border-collapse:collapse;font-size:14.5px}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line);color:#4a5162}
+.hours td:last-child{text-align:right;color:var(--ink);font-weight:800}
+.visit p{color:#4a5162;margin-bottom:14px}
+.visit .adr{font-size:18px;font-weight:800}
+.btn{display:inline-block;background:#1f9d55;color:#fff;font-weight:800;padding:14px 26px;text-decoration:none;margin:6px 10px 0 0;font-size:15px}
+.btn.call{background:var(--navy)}
+.btn.o{background:transparent;color:var(--ink);border:2px solid var(--line)}
+footer{background:var(--navy);color:#93a3bd;text-align:center;padding:30px 5vw 118px;font-size:12.5px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(18,35,61,.97);backdrop-filter:blur(8px);display:flex;z-index:50;border-top:3px solid var(--oro)}
+.bar a{flex:1;text-align:center;padding:15px 6px;font-size:13.5px;font-weight:800;text-decoration:none;color:#f2f4f8}
+.bar a.wa{background:#1f9d55}
+.bar a.call{background:var(--rosso)}
+@media(max-width:860px){
+ .story{grid-template-columns:1fr;gap:34px}
+ .hgrid,.rgrid{grid-template-columns:1fr}
+ .visit{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="bg"></div><div class="veil"></div>
+ <div class="hin">
+  <span class="ribbon">★ Premiata in una gara TV di street food ★</span>
+  <h1>Friggitoria <span>da Davide</span></h1>
+  <p class="hsub">Specialità siciliane su Viale Croce Rossa: arancine, pizza fritta con farina Caputo e il coppo che ha fatto il giro delle recensioni. Di Davide e Riccardo. <em>Davide &amp; Riccardo's fry house — arancine, fried pizza, and the coppo everyone writes home about.</em></p>
+  <div class="hmeta">
+   <span>★ <b data-edit="rating">4,2</b> — <span data-edit="revcount">2.869</span> recensioni</span>
+   <span>Colazione → sera · Dom chiuso</span>
+  </div>
+ </div>
+</header>
+<div class="bande"></div>
+
+<section class="story wrap">
+ <div class="rev">
+  <span class="k">La squadra · The team</span>
+  <h2>Davide, Riccardo<br><em>e la Sicilia fritta</em></h2>
+  <p>I clienti lo raccontano meglio di noi: quattro insegne hanno vinto la gara di street food di un programma TV, e questa è una di quelle. Qui il fritto arriva sul tagliere a forma di Sicilia — arancine, montanarine, panelle e pizza fritta come a casa.</p>
+  <p class="en">Guests tell it best: four spots won a TV street-food competition, and this is one of them. The fried gold lands on a Sicily-shaped board — arancine, montanarine, panelle and fried pizza.</p>
+  <p>Aperti dalla colazione: c'è chi qui ha fatto colazione col fritto ogni mattina per una settimana. Vera storia, sta nelle recensioni.</p>
+ </div>
+ <figure class="sfig rev">
+  <img src="img/03.jpg" alt="Il tagliere a forma di Sicilia">
+  <span class="tag">Il tagliere-Sicilia</span>
+ </figure>
+</section>
+
+<section class="menu">
+ <div class="wrap">
+  <div class="mhead">
+   <span class="k" style="color:var(--oro)">Il tabellone · The scoreboard</span>
+   <h2 class="rev">Prezzi veri, <span>dal menù</span></h2>
+   <p class="note">Dal nostro menù esposto — lista completa al banco. <em>From our posted menu; full list at the counter.</em></p>
+  </div>
+  <div class="board rev">
+   <h3>Arancina</h3>
+   <div class="mi"><span class="nm">Con carne<i>ragù bianco con carote e piselli</i></span><b>€ 2,50</b></div>
+   <div class="mi"><span class="nm">Con burro<i>prosciutto cotto, besciamella e mozzarella</i></span><b>€ 2,50</b></div>
+   <div class="mi"><span class="nm">Salsiccia, funghi, mozzarella e besciamella</span><b>€ 2,80</b></div>
+   <div class="mi"><span class="nm">Riso nero venere<i>carote, piselli, zucchine — vegan</i></span><b>€ 3,00</b></div>
+   <div class="mi"><span class="nm">Pistacchio<i>besciamella, mozzarella, pesto e panatura ai pistacchi</i></span><b>€ 3,50</b></div>
+   <h3>Antipasti &amp; coppi</h3>
+   <div class="mi"><span class="nm">Panelle e crocchè<i>12 pezzi</i></span><b>€ 4,00</b></div>
+   <div class="mi"><span class="nm">Crocchè di latte<i>besciamella e noce moscata, 6 pezzi</i></span><b>€ 4,00</b></div>
+   <div class="mi"><span class="nm">Coppo siciliano<i>12 pezzi: panelle, raschiature, crocchè e arancinette</i></span><b>€ 6,00</b></div>
+   <div class="mi"><span class="nm">Tris montanarine</span><b>€ 8,00</b></div>
+   <h3>Panini</h3>
+   <div class="mi"><span class="nm">Panelle e crocchè</span><b>€ 2,50</b></div>
+   <div class="mi"><span class="nm">Milza "schietta"<i>con solo limone e/o caciocavallo</i></span><b>€ 3,00</b></div>
+   <div class="mi"><span class="nm">Milza "maritata"<i>con ricotta fresca e caciocavallo</i></span><b>€ 3,80</b></div>
+   <h3>Pizza fritta</h3>
+   <div class="mi"><span class="nm">Margherita</span><b>€ 3,50</b></div>
+   <div class="mi"><span class="nm">Siciliana<i>acciughe, pomodoro a fette, tuma</i></span><b>€ 4,50</b></div>
+   <div class="mi"><span class="nm">Antica<i>cicoli, ricotta fresca, provola affumicata di Agerola</i></span><b>€ 5,50</b></div>
+   <div class="mi"><span class="nm">Verace<i>salsiccia, friarielli e provola affumicata</i></span><b>€ 5,50</b></div>
+   <div class="mi"><span class="nm">Sofia — gourmet<i>mortadella, bufala, pistacchi tostati e pesto</i></span><b>€ 8,00</b></div>
+   <div class="mi"><span class="nm">Prestigiosa — gourmet<i>mortadella al tartufo, noci, bufala e miele</i></span><b>€ 9,00</b></div>
+  </div>
+  <p class="mfoot">Impasto con farina Caputo · opzioni vegan segnate sul menù</p>
+ </div>
+</section>
+
+<div class="wrap">
+<section class="high">
+ <span class="k">In campo · On the board</span>
+ <h2 class="rev">I titolari</h2>
+ <div class="hgrid">
+  <div class="hcard rev"><img src="img/05.jpg" alt="Pizza fritta"><div class="hb"><h3>La pizza fritta</h3><p>Gonfia, dorata, condita in uscita — dalla margherita alla Prestigiosa — <span class="pz">€ 3,50 – 9</span></p></div></div>
+  <div class="hcard rev"><img src="img/04.jpg" alt="Pane e panelle con arancinette"><div class="hb"><h3>Pane e panelle</h3><p>La mafalda al sesamo con le arancinette accanto — <span class="pz">€ 2,50</span></p></div></div>
+  <div class="hcard rev"><img src="img/06.jpg" alt="Fritto misto con spritz"><div class="hb"><h3>L'aperitivo fritto</h3><p>Calamari, panelle e pizzette sul tagliere, spritz alla mano.</p></div></div>
+ </div>
+</section>
+</div>
+
+<section class="revs">
+ <div class="wrap">
+  <span class="k">Dicono di noi · What guests say</span>
+  <h2 class="rev">Dalle recensioni Google</h2>
+  <div class="rgrid">
+   <div class="rcard rev"><div class="stars">★★★★★</div><p>"There are 4 restaurants that won the food competition on a TV programme, and this was one of them. Known for its fried food."</p><div class="who">TheKaKaNow · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p>"During my week in Palermo I had breakfast here almost every morning. You have to try all the Sicilian fried food!"</p><div class="who">Dušan Filipović · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Best customer service, great and fresh food, and affordable price. Thanks to Davide and Riccardo."</p><div class="who">Peter Tocco · Google</div></div>
+  </div>
+  <p class="gbadge">★ <b>4,2 / 5</b> — 2.869 recensioni su Google</p>
+ </div>
+</section>
+
+<section class="visit wrap">
+ <div class="rev">
+  <span class="k">Orari · Hours</span>
+  <h2>Dalla colazione alla sera</h2>
+  <table class="hours">
+   <tr><td>Lunedì</td><td data-edit="h-mon">8:00 – 18:00</td></tr>
+   <tr><td>Martedì – Venerdì</td><td data-edit="h-tuefri">8:00 – 23:00</td></tr>
+   <tr><td>Sabato</td><td data-edit="h-sat">8:00 – 23:30</td></tr>
+   <tr><td>Domenica</td><td data-edit="h-sun">Chiuso · Closed</td></tr>
+  </table>
+ </div>
+ <div class="rev">
+  <span class="k">Dove siamo · Find us</span>
+  <h2>Croce Rossa 199</h2>
+  <p class="adr" data-edit="addr">Viale Croce Rossa 199/201, 90144 Palermo</p>
+  <p>Il WhatsApp è quello stampato sulle nostre tovagliette. <em>The WhatsApp number printed on our placemats.</em></p>
+  <a class="btn" href="https://wa.me/393290926747?text=Ciao%21%20Vorrei%20ordinare%20dalla%20Friggitoria%20da%20Davide" rel="noopener">💬 WhatsApp</a>
+  <a class="btn call" href="tel:+390917462706">📞 <span data-edit="phone">091 746 2706</span></a>
+  <a class="btn o" href="https://maps.google.com/?q=Friggitoria+da+Davide+Palermo" rel="noopener">Apri in Maps</a>
+ </div>
+</section>
+
+<footer>Friggitoria da Davide · Viale Croce Rossa 199/201, Palermo · <span data-edit="phone2">091 746 2706</span> · WhatsApp <span data-edit="phone3">329 092 6747</span></footer>
+
+<div class="bar">
+ <a class="wa" href="https://wa.me/393290926747?text=Ciao%21%20Vorrei%20ordinare%20dalla%20Friggitoria%20da%20Davide" rel="noopener">💬 WhatsApp</a>
+ <a class="call" href="tel:+390917462706">📞 Chiama</a>
+ <a href="https://maps.google.com/?q=Friggitoria+da+Davide+Palermo" rel="noopener">📍 Mappa</a>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.rev:not(.on)').forEach(el=>el.classList.add('on')),1100);
+</script>
+</body>
+</html>

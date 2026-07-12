@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Odori e Sapori al Vecchio Monte — Ristorante · Palermo</title>
+<meta name="description" content="Odori e Sapori al Vecchio Monte, Via dello Spirito Santo 13, Palermo. Cucina siciliana di terra e di mare, porzioni generose, vicino al mercato del Capo. WhatsApp 389 042 9248.">
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Mulish:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:clip}
+:root{--paper:#f5f3ea;--paper2:#ecead9;--ink:#26301f;--mut:#7d8270;--salvia:#3e5a3c;--bottiglia:#24361f;--terra:#b45f3a;--line:#dcd9c4}
+body{background:var(--paper);color:var(--ink);font:16px/1.7 'Mulish',sans-serif}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 5vw}
+.fell{font-family:'IM Fell English',serif}
+.k{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--terra);font-weight:800}
+.rev{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rev.on{opacity:1;transform:none}
+.sprig{text-align:center;color:var(--salvia);font-size:18px;letter-spacing:.6em;padding:8px 0}
+/* hero */
+header{position:relative;min-height:92svh;display:flex;align-items:flex-end;background:var(--bottiglia)}
+header .bg{position:absolute;inset:0;background:url('img/04.jpg') center/cover;opacity:.85}
+header .veil{position:absolute;inset:0;background:linear-gradient(185deg,rgba(36,54,31,.15) 30%,rgba(36,54,31,.9) 95%)}
+.hin{position:relative;z-index:2;width:100%;max-width:1080px;margin:0 auto;padding:0 5vw 10vh;color:#f2f0e4}
+.etichetta{display:inline-block;background:var(--paper);color:var(--salvia);border:1px solid var(--salvia);padding:7px 18px;font-family:'IM Fell English',serif;font-style:italic;font-size:15px;margin-bottom:20px;box-shadow:0 3px 0 rgba(0,0,0,.25)}
+h1{font-family:'IM Fell English',serif;font-weight:400;font-size:clamp(42px,7.6vw,88px);line-height:1.02}
+h1 em{font-style:italic;color:#cfe0a8}
+.hsub{margin-top:14px;font-size:clamp(15px,1.9vw,18px);color:#d5d9c2;max-width:54ch}
+.hmeta{margin-top:22px;display:flex;gap:22px;flex-wrap:wrap;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#aab594}
+.hmeta b{color:#fff}
+/* story */
+.story{display:grid;grid-template-columns:1fr .88fr;gap:6vw;align-items:center;padding:90px 0 60px}
+.story h2{font-family:'IM Fell English',serif;font-weight:400;font-size:clamp(30px,4.6vw,48px);line-height:1.08;margin:14px 0 18px}
+.story h2 em{font-style:italic;color:var(--salvia)}
+.story p{color:#4c5540;margin-bottom:14px}
+.story .en{font-style:italic;color:var(--mut);font-size:15px}
+.sfig{background:#fff;padding:14px 14px 18px;box-shadow:0 16px 40px rgba(38,48,31,.15);transform:rotate(-1.2deg)}
+.sfig img{aspect-ratio:3/3.7;object-fit:cover}
+.sfig figcaption{font-family:'IM Fell English',serif;font-style:italic;text-align:center;color:#4c5540;padding-top:12px;font-size:16px}
+/* menu — apothecary labels */
+.menu{background:var(--paper2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:84px 0 90px}
+.menu .mhead{text-align:center;margin-bottom:44px}
+.menu h2{font-family:'IM Fell English',serif;font-weight:400;font-size:clamp(30px,4.6vw,48px)}
+.menu .note{color:var(--mut);font-size:14px;margin-top:8px;max-width:64ch;margin-left:auto;margin-right:auto}
+.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:980px;margin:0 auto}
+.mcol{background:var(--paper);border:1px solid var(--salvia);outline:4px solid var(--paper);outline-offset:-8px;padding:30px 28px 32px}
+.mcol h3{font-family:'IM Fell English',serif;font-style:italic;font-size:24px;color:var(--salvia);text-align:center;margin-bottom:4px}
+.mcol .sub{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mut);text-align:center;margin-bottom:18px;font-weight:800}
+.mi{display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:8px 0;border-bottom:1px dotted var(--line)}
+.mi:last-child{border-bottom:none}
+.mi .nm{font-weight:600;font-size:15px}
+.mi .nm i{display:block;font-style:italic;font-weight:400;font-size:13px;color:var(--mut);font-family:'IM Fell English',serif}
+.mi b{font-family:'IM Fell English',serif;color:var(--terra);white-space:nowrap;font-size:17px}
+.mfoot{text-align:center;margin-top:32px;color:var(--mut);font-size:13.5px;font-style:italic}
+/* highlights */
+.high{padding:86px 0 30px}
+.high h2{font-family:'IM Fell English',serif;font-weight:400;font-size:clamp(26px,4vw,42px);margin:12px 0 30px}
+.hgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.hcard{background:#fff;border:1px solid var(--line);overflow:hidden;box-shadow:0 12px 30px rgba(38,48,31,.08)}
+.hcard img{height:220px;width:100%;object-fit:cover}
+.hcard .hb{padding:16px 18px 20px}
+.hcard h3{font-family:'IM Fell English',serif;font-size:19px;margin-bottom:6px;color:var(--bottiglia)}
+.hcard p{font-size:13.5px;color:var(--mut)}
+.hcard .pz{color:var(--terra);font-weight:800}
+/* reviews — 2 only */
+.revs{padding:60px 0 80px}
+.revs h2{font-family:'IM Fell English',serif;font-weight:400;font-size:clamp(26px,4vw,40px);margin:12px 0 30px}
+.rgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.rcard{background:#fff;border:1px solid var(--line);padding:28px;box-shadow:0 10px 24px rgba(38,48,31,.06)}
+.stars{color:#c79a2a;letter-spacing:2px}
+.rcard p{font-family:'IM Fell English',serif;font-style:italic;font-size:17px;color:#4c5540;margin:12px 0 14px;line-height:1.55}
+.rcard .who{font-size:12.5px;color:var(--mut);letter-spacing:.1em;text-transform:uppercase;font-weight:800}
+.gbadge{margin-top:26px;color:var(--mut);font-size:14px}
+.gbadge b{color:var(--ink)}
+/* visit */
+.visit{background:var(--bottiglia);color:#e9ecd8;padding:84px 0 110px}
+.visit .vgrid{display:grid;grid-template-columns:1fr 1fr;gap:6vw}
+.visit h2{font-family:'IM Fell English',serif;font-weight:400;font-size:clamp(26px,4vw,40px);margin:12px 0 20px}
+.hours{width:100%;border-collapse:collapse;font-size:14.5px}
+.hours td{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.14);color:#c6ccab}
+.hours td:last-child{text-align:right;color:#fff;font-weight:800}
+.visit p{color:#c6ccab;margin-bottom:14px}
+.visit .adr{font-family:'IM Fell English',serif;font-size:19px;color:#fff}
+.btn{display:inline-block;background:#1f9d55;color:#fff;font-weight:800;padding:14px 26px;text-decoration:none;margin:6px 10px 0 0;font-size:15px}
+.btn.call{background:var(--terra)}
+.btn.o{background:transparent;color:#e9ecd8;border:1px solid rgba(255,255,255,.4)}
+footer{background:#1a2817;color:#8f9a7c;text-align:center;padding:30px 5vw 118px;font-size:12.5px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(36,54,31,.97);backdrop-filter:blur(8px);display:flex;z-index:50;border-top:1px solid rgba(255,255,255,.18)}
+.bar a{flex:1;text-align:center;padding:15px 6px;font-size:13.5px;font-weight:800;text-decoration:none;color:#f2f0e4}
+.bar a.wa{background:#1f9d55}
+.bar a.call{background:var(--terra)}
+@media(max-width:860px){
+ .story{grid-template-columns:1fr;gap:34px}
+ .mgrid{grid-template-columns:1fr}
+ .hgrid{grid-template-columns:1fr}
+ .rgrid{grid-template-columns:1fr}
+ .visit .vgrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="bg"></div><div class="veil"></div>
+ <div class="hin">
+  <span class="etichetta">Via dello Spirito Santo 13 · al mercato del Capo</span>
+  <h1>Odori <em>e</em> Sapori</h1>
+  <p class="hsub">al Vecchio Monte — cucina siciliana di terra e di mare, porzioni generose e il mazzetto di odori del Capo dentro ogni pentola. <em>Sicilian cooking, land and sea, with the Capo market's herb bundle in every pot.</em></p>
+  <div class="hmeta">
+   <span>★ <b data-edit="rating">4,6</b> — <span data-edit="revcount">817</span> recensioni</span>
+   <span>Martedì – Domenica · 9:00 – 22:00</span>
+  </div>
+ </div>
+</header>
+<div class="sprig">✿ ❀ ✿</div>
+
+<section class="story wrap">
+ <div class="rev">
+  <span class="k">Gli odori · The herb bundle</span>
+  <h2>Il mazzetto<br><em>che profuma tutto</em></h2>
+  <p>A Palermo "gli odori" sono il mazzetto che il mercato ti regala: basilico, prezzemolo, sedano, alloro. La nostra cucina parte da lì — dal Capo, a due passi — e da ricette che non hanno mai avuto bisogno di essere moderne.</p>
+  <p class="en">In Palermo, "gli odori" is the herb bundle the market hands you for free: basil, parsley, celery, bay. Our kitchen starts there — at the Capo market, steps away — with recipes that never needed to be modern.</p>
+  <p>Spaghetti con le sarde, polpette di sarde, arrosti e il piatto di mare grande: tutto abbondante, come si usa qui.</p>
+ </div>
+ <figure class="sfig rev">
+  <img src="img/06.jpg" alt="Antipasto siciliano della casa">
+  <figcaption>l'antipasto siciliano — "porzioni generose, sapori veri"</figcaption>
+ </figure>
+</section>
+
+<section class="menu">
+ <div class="wrap">
+  <div class="mhead">
+   <span class="k">Dal nostro menù in strada · From our street board</span>
+   <h2 class="rev">Terra &amp; Mare</h2>
+   <p class="note">Prezzi reali dal nostro menù esposto. <em>Real prices from our posted menu.</em></p>
+  </div>
+  <div class="mgrid">
+   <div class="mcol rev">
+    <h3>di Terra</h3>
+    <div class="sub">Land · Erbe e cortile</div>
+    <div class="mi"><span class="nm">Insalata siciliana<i>arancia, aringa, finocchio e cipolla</i></span><b>€ 6</b></div>
+    <div class="mi"><span class="nm">Involtini di melanzane</span><b>€ 6</b></div>
+    <div class="mi"><span class="nm">Maccheroni con i broccoli</span><b>€ 8</b></div>
+    <div class="mi"><span class="nm">Gnocchi al pomodoro</span><b>€ 8</b></div>
+    <div class="mi"><span class="nm">Gnocchi alla bolognese</span><b>€ 9</b></div>
+    <div class="mi"><span class="nm">Spiedini di carne</span><b>€ 8</b></div>
+    <div class="mi"><span class="nm">Arrosto di vitello</span><b>€ 10</b></div>
+    <div class="mi"><span class="nm">Antipasto siciliano<i>il tagliere di benvenuto</i></span><b>€ 15</b></div>
+   </div>
+   <div class="mcol rev">
+    <h3>di Mare</h3>
+    <div class="sub">Sea · Dal banco del pesce</div>
+    <div class="mi"><span class="nm">Ostrica<i>al pezzo</i></span><b>€ 3</b></div>
+    <div class="mi"><span class="nm">Polpette di sarde</span><b>€ 8</b></div>
+    <div class="mi"><span class="nm">Spaghetti sarde e finocchietto</span><b>€ 10</b></div>
+    <div class="mi"><span class="nm">Paccheri pesce spada, gamberi e ciliegino</span><b>€ 14</b></div>
+    <div class="mi"><span class="nm">Spaghetti allo scoglio<i>polipo, cozze, vongole, gambero, spada</i></span><b>€ 15</b></div>
+    <div class="mi"><span class="nm">Risotto alla marinara</span><b>€ 15</b></div>
+    <div class="mi"><span class="nm">Fetta di pesce spada</span><b>€ 15</b></div>
+    <div class="mi"><span class="nm">Antipasto di mare<i>cozze, polipo, gambero rosso</i></span><b>€ 15</b></div>
+    <div class="mi"><span class="nm">Piatto di mare<i>ostriche, gambero rosso, salmone, spada, polipo</i></span><b>€ 25</b></div>
+   </div>
+  </div>
+  <p class="mfoot">La lista completa è sulla lavagna in strada — coi contorni dell'orto. <em>The full board stands outside, garden sides included.</em></p>
+ </div>
+</section>
+
+<div class="wrap">
+<section class="high">
+ <span class="k">Dalla cucina · From the kitchen</span>
+ <h2 class="rev">Piatti che tornano nei racconti</h2>
+ <div class="hgrid">
+  <div class="hcard rev"><img src="img/05.jpg" alt="Spaghetti sarde e finocchietto"><div class="hb"><h3>Sarde e finocchietto</h3><p>Lo spaghetto palermitano per eccellenza, con gli odori del Capo — <span class="pz">€ 10</span></p></div></div>
+  <div class="hcard rev"><img src="img/03.jpg" alt="Cozze pepate"><div class="hb"><h3>Cozze pepate</h3><p>Una montagna di cozze, pepe nero e prezzemolo — <span class="pz">€ 5</span></p></div></div>
+  <div class="hcard rev"><img src="img/02.jpg" alt="Orata arrostita"><div class="hb"><h3>Orata arrostita</h3><p>Intera, alle erbe, col limone — <span class="pz">€ 10</span></p></div></div>
+ </div>
+</section>
+
+<section class="revs">
+ <span class="k">Dicono di noi · What guests say</span>
+ <h2 class="rev">Dalle recensioni Google</h2>
+ <div class="rgrid">
+  <div class="rcard rev"><div class="stars">★★★★★</div><p>"Generous portions and everything is very, very tasty. The Sicilian salad with herring and orange impressed me."</p><div class="who">Tatiana Ko · Google</div></div>
+  <div class="rcard rev"><div class="stars">★★★★★</div><p>"Good food, decent service, and fair prices!"</p><div class="who">R. · Google</div></div>
+ </div>
+ <p class="gbadge">★ <b>4,6 / 5</b> — 817 recensioni su Google</p>
+</section>
+</div>
+
+<section class="visit">
+ <div class="wrap vgrid">
+  <div class="rev">
+   <span class="k" style="color:#cfe0a8">Orari · Hours</span>
+   <h2>Dalla colazione alla cena</h2>
+   <table class="hours">
+    <tr><td>Martedì – Domenica</td><td data-edit="h-week">9:00 – 22:00</td></tr>
+    <tr><td>Lunedì</td><td data-edit="h-mon">Chiuso · Closed</td></tr>
+   </table>
+  </div>
+  <div class="rev">
+   <span class="k" style="color:#cfe0a8">Dove siamo · Find us</span>
+   <h2>Spirito Santo 13</h2>
+   <p class="adr" data-edit="addr">Via dello Spirito Santo 13, 90133 Palermo — quartiere del Capo</p>
+   <p>Scriveteci su WhatsApp per il tavolo — è il numero sulla nostra lavagna. <em>WhatsApp us for a table — same number as on our board.</em></p>
+   <a class="btn" href="https://wa.me/393890429248?text=Ciao%21%20Vorrei%20prenotare%20un%20tavolo%20da%20Odori%20e%20Sapori" rel="noopener">💬 WhatsApp</a>
+   <a class="btn call" href="tel:+393890429248">📞 <span data-edit="phone">389 042 9248</span></a>
+   <a class="btn o" href="https://maps.google.com/?q=Odori+e+sapori+al+vecchio+monte+Palermo" rel="noopener">Apri in Maps</a>
+  </div>
+ </div>
+</section>
+
+<footer>Odori e Sapori al Vecchio Monte · Via dello Spirito Santo 13, Palermo · <span data-edit="phone2">389 042 9248</span></footer>
+
+<div class="bar">
+ <a class="wa" href="https://wa.me/393890429248?text=Ciao%21%20Vorrei%20prenotare%20un%20tavolo%20da%20Odori%20e%20Sapori" rel="noopener">💬 WhatsApp</a>
+ <a class="call" href="tel:+393890429248">📞 Chiama</a>
+ <a href="https://maps.google.com/?q=Odori+e+sapori+al+vecchio+monte+Palermo" rel="noopener">📍 Mappa</a>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.rev:not(.on)').forEach(el=>el.classList.add('on')),1100);
+</script>
+</body>
+</html>

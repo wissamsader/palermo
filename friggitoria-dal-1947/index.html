@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Antica Friggitoria Dal 1947 — Palermo</title>
+<meta name="description" content="Antica Friggitoria Dal 1947, Via Niccolò Palmeri 4, Palermo. Panelle, crocché, arancine e rascatura fritte come una volta, dal 1947. WhatsApp 329 839 8377.">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:clip}
+:root{--giallo:#f2c400;--nero:#141311;--nero2:#1f1d19;--crema:#fbf7ea;--ink:#1f1d19;--mut:#8a8271;--line:#e8dfc2;--rosso:#c9401f}
+body{background:var(--crema);color:var(--ink);font:16px/1.65 'Archivo',sans-serif}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 5vw}
+.blk{font-family:'Archivo Black',sans-serif}
+.k{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--rosso);font-weight:800}
+.rev{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rev.on{opacity:1;transform:none}
+.stripe{height:16px;background:repeating-linear-gradient(45deg,var(--nero) 0 22px,var(--giallo) 22px 44px)}
+/* hero */
+header{position:relative;min-height:92svh;display:flex;align-items:flex-end;background:var(--nero)}
+header .bg{position:absolute;inset:0;background:url('img/01.jpg') center/cover;opacity:.8}
+header .veil{position:absolute;inset:0;background:linear-gradient(185deg,rgba(20,19,17,.2) 30%,rgba(20,19,17,.92) 95%)}
+.hin{position:relative;z-index:2;width:100%;max-width:1080px;margin:0 auto;padding:0 5vw 9vh;color:var(--crema)}
+.since{display:inline-block;background:var(--giallo);color:var(--nero);font-family:'Archivo Black',sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;padding:8px 16px;margin-bottom:20px}
+h1{font-family:'Archivo Black',sans-serif;font-size:clamp(38px,6.8vw,76px);line-height:1;text-transform:uppercase}
+h1 .anno{display:block;color:var(--giallo);font-size:clamp(64px,13vw,150px);letter-spacing:-.02em;line-height:.9}
+.hsub{margin-top:14px;font-size:clamp(15px,1.9vw,18px);color:#d9d2bd;max-width:52ch;font-weight:600}
+.hmeta{margin-top:22px;display:flex;gap:22px;flex-wrap:wrap;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:#a89f88}
+.hmeta b{color:#fff}
+/* story */
+.story{display:grid;grid-template-columns:1fr .9fr;gap:6vw;align-items:center;padding:90px 0 70px}
+.story h2{font-family:'Archivo Black',sans-serif;font-size:clamp(26px,4.2vw,42px);line-height:1.08;margin:14px 0 18px;text-transform:uppercase}
+.story h2 em{font-style:normal;color:var(--rosso)}
+.story p{color:#55503f;margin-bottom:14px}
+.story .en{font-style:italic;color:var(--mut);font-size:15px}
+.sfig{border:4px solid var(--nero);box-shadow:10px 10px 0 var(--giallo)}
+.sfig img{aspect-ratio:4/3.4;object-fit:cover}
+/* coppo — fried list */
+.coppo{background:var(--nero);color:var(--crema);padding:84px 0 90px}
+.coppo .chead{text-align:center;margin-bottom:40px}
+.coppo h2{font-family:'Archivo Black',sans-serif;font-size:clamp(28px,4.4vw,46px);text-transform:uppercase}
+.coppo h2 span{color:var(--giallo)}
+.coppo .note{color:#a89f88;font-size:14px;margin-top:8px;max-width:60ch;margin-left:auto;margin-right:auto}
+.fgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:920px;margin:0 auto}
+.fitem{border:2px dashed rgba(242,196,0,.5);padding:20px 18px;text-align:center}
+.fitem .blk{font-size:17px;color:var(--giallo);text-transform:uppercase;letter-spacing:.04em}
+.fitem p{font-size:13px;color:#bdb49a;margin-top:6px}
+.cfoot{text-align:center;margin-top:34px;color:#bdb49a;font-size:14px}
+.cfoot b{color:var(--giallo)}
+/* listino bibite — ticket stubs */
+.bibite{padding:86px 0 60px}
+.bibite h2{font-family:'Archivo Black',sans-serif;font-size:clamp(26px,4vw,42px);margin:12px 0 8px;text-transform:uppercase}
+.bibite .note{color:var(--mut);font-size:14px;margin-bottom:28px}
+.tgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:860px}
+.tik{display:flex;justify-content:space-between;align-items:center;gap:14px;background:#fff;border:1px solid var(--line);border-left:10px solid var(--giallo);padding:13px 18px;position:relative}
+.tik:before{content:"";position:absolute;left:-6px;top:50%;width:10px;height:10px;background:var(--crema);border-radius:50%;transform:translateY(-50%)}
+.tik .nm{font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.04em}
+.tik b{font-family:'Archivo Black',sans-serif;color:var(--rosso);white-space:nowrap}
+/* highlights */
+.high{padding:40px 0 30px}
+.high h2{font-family:'Archivo Black',sans-serif;font-size:clamp(24px,3.8vw,38px);margin:12px 0 28px;text-transform:uppercase}
+.hgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.hcard{background:#fff;border:1px solid var(--line);overflow:hidden;box-shadow:0 12px 30px rgba(20,19,17,.08)}
+.hcard img{height:220px;width:100%;object-fit:cover}
+.hcard .hb{padding:16px 18px 20px}
+.hcard h3{font-family:'Archivo Black',sans-serif;font-size:15px;text-transform:uppercase;margin-bottom:6px}
+.hcard p{font-size:13.5px;color:var(--mut)}
+/* reviews */
+.revs{background:#f4eeda;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:80px 0;margin-top:50px}
+.revs h2{font-family:'Archivo Black',sans-serif;font-size:clamp(24px,3.8vw,38px);margin:12px 0 30px;text-transform:uppercase}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rcard{background:#fff;border:1px solid var(--line);padding:26px;border-top:6px solid var(--giallo)}
+.stars{color:#d8a410;letter-spacing:2px}
+.rcard p{font-size:14.5px;color:#55503f;margin:12px 0 14px;font-style:italic;line-height:1.6}
+.rcard .who{font-size:12.5px;color:var(--mut);letter-spacing:.1em;text-transform:uppercase;font-weight:800}
+.gbadge{margin-top:26px;color:var(--mut);font-size:14px}
+.gbadge b{color:var(--ink)}
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:6vw;padding:84px 0 110px}
+.visit h2{font-family:'Archivo Black',sans-serif;font-size:clamp(22px,3.6vw,36px);margin:12px 0 20px;text-transform:uppercase}
+.hours{width:100%;border-collapse:collapse;font-size:14.5px}
+.hours td{padding:9px 0;border-bottom:2px dotted var(--line);color:#55503f}
+.hours td:last-child{text-align:right;color:var(--ink);font-weight:800}
+.visit p{color:#55503f;margin-bottom:14px}
+.visit .adr{font-size:18px;font-weight:800}
+.btn{display:inline-block;background:#1f9d55;color:#fff;font-weight:800;padding:14px 26px;text-decoration:none;margin:6px 10px 0 0;font-size:15px}
+.btn.call{background:var(--nero);color:var(--giallo)}
+.btn.o{background:transparent;color:var(--ink);border:2px solid var(--line)}
+footer{padding:0}
+footer .fin{background:var(--nero);color:#a89f88;text-align:center;padding:30px 5vw 118px;font-size:12.5px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(20,19,17,.97);backdrop-filter:blur(8px);display:flex;z-index:50;border-top:3px solid var(--giallo)}
+.bar a{flex:1;text-align:center;padding:15px 6px;font-size:13.5px;font-weight:800;text-decoration:none;color:var(--crema)}
+.bar a.wa{background:#1f9d55}
+.bar a.call{background:var(--giallo);color:var(--nero)}
+@media(max-width:860px){
+ .story{grid-template-columns:1fr;gap:34px}
+ .fgrid{grid-template-columns:1fr 1fr}
+ .tgrid{grid-template-columns:1fr}
+ .hgrid,.rgrid{grid-template-columns:1fr}
+ .visit{grid-template-columns:1fr}
+}
+@media(max-width:520px){.fgrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="bg"></div><div class="veil"></div>
+ <div class="hin">
+  <span class="since">Via Niccolò Palmeri 4 · Palermo</span>
+  <h1>Antica Friggitoria<span class="anno">dal 1947</span></h1>
+  <p class="hsub">Panelle, crocché, arancine e rascatura: il chiosco giallo e nero che frigge da tre quarti di secolo. <em>Palermo's yellow-and-black fry kiosk, at it since 1947.</em></p>
+  <div class="hmeta">
+   <span>★ <b data-edit="rating">4,5</b> — <span data-edit="revcount">255</span> recensioni</span>
+   <span>Lun – Sab · dalle 7:00</span>
+  </div>
+ </div>
+</header>
+<div class="stripe"></div>
+
+<section class="story wrap">
+ <div class="rev">
+  <span class="k">La storia · Since 1947</span>
+  <h2>Il fritto<br><em>non si cambia</em></h2>
+  <p>Il nome dice tutto: qui si frigge dal 1947. Panelle di ceci, crocché di patate, arancine e la rascatura — quella vera, fatta con quel che resta dell'impasto, come vuole la tradizione delle friggitorie palermitane.</p>
+  <p class="en">The name says it all: frying since 1947. Chickpea panelle, potato crocché, arancine and the real rascatura — made from the last scrapes of the batter, the way Palermo's fry shops always did.</p>
+  <p>Si mangia sui fusti neri davanti al chiosco, col coppo in mano e il limone spremuto sopra.</p>
+ </div>
+ <figure class="sfig rev"><img src="img/06.jpg" alt="Coppo di crocché e pane e panelle"></figure>
+</section>
+
+<section class="coppo">
+ <div class="wrap">
+  <div class="chead">
+   <span class="k" style="color:var(--giallo)">Il coppo · The paper cone</span>
+   <h2 class="rev">Cosa si frigge <span>oggi</span></h2>
+   <p class="note">Il coppo si compone a voce, al banco — i prezzi sono esposti al chiosco. <em>Build your cone at the counter — prices are posted at the kiosk.</em></p>
+  </div>
+  <div class="fgrid">
+   <div class="fitem rev"><div class="blk">Panelle</div><p>le frittelle di ceci, da sole o nel pane</p></div>
+   <div class="fitem rev"><div class="blk">Crocché</div><p>patate, menta e buccia croccante</p></div>
+   <div class="fitem rev"><div class="blk">Arancine</div><p>alla carne e non solo, dalla vetrina calda</p></div>
+   <div class="fitem rev"><div class="blk">Rascatura</div><p>il fritto povero che i palermitani conoscono</p></div>
+   <div class="fitem rev"><div class="blk">Pane e panelle</div><p>la mafalda al sesamo, riempita al momento</p></div>
+   <div class="fitem rev"><div class="blk">Arancinette dolci</div><p>la sorpresa zuccherata di fine giro</p></div>
+  </div>
+  <p class="cfoot">Colazione dei fritti dalle <b>7 del mattino</b> — come si usa solo a Palermo.</p>
+ </div>
+</section>
+
+<div class="wrap">
+<section class="bibite">
+ <span class="k">Listino bibite · Drinks board</span>
+ <h2 class="rev">Prezzi veri, dal listino</h2>
+ <p class="note">Dal nostro listino esposto — sì, la birra piccola costa un euro. <em>From our posted board — yes, the small beer is one euro.</em></p>
+ <div class="tgrid">
+  <div class="tik rev"><span class="nm">Gazzosa</span><b>€ 0,70</b></div>
+  <div class="tik rev"><span class="nm">Acqua piccola</span><b>€ 0,80</b></div>
+  <div class="tik rev"><span class="nm">Coca Cola · Chinotto · Aranciata</span><b>€ 1,00</b></div>
+  <div class="tik rev"><span class="nm">Birra piccola</span><b>€ 1,00</b></div>
+  <div class="tik rev"><span class="nm">Thè limone o pesca · Succo</span><b>€ 1,00</b></div>
+  <div class="tik rev"><span class="nm">Birra grande · Acqua grande</span><b>€ 1,50</b></div>
+  <div class="tik rev"><span class="nm">Aranciata bottiglia grande</span><b>€ 2,00</b></div>
+  <div class="tik rev"><span class="nm">Coca Cola bottiglia grande</span><b>€ 2,50</b></div>
+ </div>
+</section>
+
+<section class="high">
+ <span class="k">Dalla vetrina · From the hot case</span>
+ <h2 class="rev">Le tre mosse giuste</h2>
+ <div class="hgrid">
+  <div class="hcard rev"><img src="img/04.jpg" alt="Arancine in vetrina"><div class="hb"><h3>L'arancina</h3><p>"Got the arancina which was great" — la vetrina parla da sola.</p></div></div>
+  <div class="hcard rev"><img src="img/03.jpg" alt="Pane e panelle"><div class="hb"><h3>Pane e panelle</h3><p>La mafalda al sesamo con le panelle calde, mangiata in piedi.</p></div></div>
+  <div class="hcard rev"><img src="img/05.jpg" alt="Arancinette dolci"><div class="hb"><h3>Il finale dolce</h3><p>Arancinette zuccherate sulla maiolica gialla del chiosco.</p></div></div>
+ </div>
+</section>
+</div>
+
+<section class="revs">
+ <div class="wrap">
+  <span class="k">Dicono di noi · What guests say</span>
+  <h2 class="rev">Dalle recensioni Google</h2>
+  <div class="rgrid">
+   <div class="rcard rev"><div class="stars">★★★★★</div><p>"The first food we had when we arrived in Sicily was here — and we made sure to visit again before leaving. Excellent taste, affordable."</p><div class="who">Amari Rae Pulido · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Perfect for a quick beer and lunch. The Rascatura were really tasty, the Arancina — meat and more."</p><div class="who">James Redfern · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Really nice food. Got the arancina which was great."</p><div class="who">Steven Barrowman · Google</div></div>
+  </div>
+  <p class="gbadge">★ <b>4,5 / 5</b> — 255 recensioni su Google</p>
+ </div>
+</section>
+
+<section class="visit wrap">
+ <div class="rev">
+  <span class="k">Orari · Hours</span>
+  <h2>Dalle 7 del mattino</h2>
+  <table class="hours">
+   <tr><td>Lunedì – Venerdì</td><td data-edit="h-week">7:00 – 19:30</td></tr>
+   <tr><td>Sabato</td><td data-edit="h-sat">7:00 – 18:00</td></tr>
+   <tr><td>Domenica</td><td data-edit="h-sun">Chiuso · Closed</td></tr>
+  </table>
+ </div>
+ <div class="rev">
+  <span class="k">Dove siamo · Find us</span>
+  <h2>Palmeri 4</h2>
+  <p class="adr" data-edit="addr">Via Niccolò Palmeri 4, 90133 Palermo</p>
+  <p>Ordinate su WhatsApp e il coppo vi aspetta caldo. <em>Order on WhatsApp and your cone waits for you hot.</em></p>
+  <a class="btn" href="https://wa.me/393298398377?text=Ciao%21%20Vorrei%20ordinare%20alla%20Friggitoria%20Dal%201947" rel="noopener">💬 WhatsApp</a>
+  <a class="btn call" href="tel:+393298398377">📞 <span data-edit="phone">329 839 8377</span></a>
+  <a class="btn o" href="https://maps.google.com/?q=Antica+Friggitoria+Dal+1947+Palermo" rel="noopener">Apri in Maps</a>
+ </div>
+</section>
+
+<footer>
+ <div class="stripe"></div>
+ <div class="fin">Antica Friggitoria Dal 1947 · Via Niccolò Palmeri 4, Palermo · <span data-edit="phone2">329 839 8377</span></div>
+</footer>
+
+<div class="bar">
+ <a class="wa" href="https://wa.me/393298398377?text=Ciao%21%20Vorrei%20ordinare%20alla%20Friggitoria%20Dal%201947" rel="noopener">💬 WhatsApp</a>
+ <a class="call" href="tel:+393298398377">📞 Chiama</a>
+ <a href="https://maps.google.com/?q=Antica+Friggitoria+Dal+1947+Palermo" rel="noopener">📍 Mappa</a>
+</div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.rev:not(.on)').forEach(el=>el.classList.add('on')),1100);
+</script>
+</body>
+</html>
