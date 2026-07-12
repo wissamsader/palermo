@@ -84,9 +84,6 @@ h1 span{color:var(--oro)}
 .btn{display:inline-block;background:#b1782a;color:#fff;font-weight:700;padding:14px 26px;text-decoration:none;margin:6px 10px 0 0;font-size:15px}
 .btn.o{background:transparent;color:var(--ink);border:1px solid var(--oro)}
 footer{background:var(--bronzo);color:#bfa878;text-align:center;padding:30px 5vw 118px;font-size:12.5px}
-.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(36,22,8,.97);backdrop-filter:blur(8px);display:flex;z-index:50;border-top:2px solid var(--oro)}
-.bar a{flex:1;text-align:center;padding:15px 6px;font-size:13.5px;font-weight:700;text-decoration:none;color:#f6ecd6}
-.bar a.call{background:var(--oro);color:var(--bronzo)}
 @media(max-width:860px){
  .story{grid-template-columns:1fr;gap:34px}
  .sgrid{grid-template-columns:1fr}
@@ -94,16 +91,34 @@ footer{background:var(--bronzo);color:#bfa878;text-align:center;padding:30px 5vw
  .duo{grid-template-columns:1fr}
  .visit{grid-template-columns:1fr}
 }
+
+/* mobile hard-rules (07-13): text never at the screen edge + no blue tap flash */
+*{-webkit-tap-highlight-color:transparent}
+@media(max-width:860px){.wrap{padding-left:5vw!important;padding-right:5vw!important}}
+
+/* targa d'oro */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#171310;display:flex;align-items:center;justify-content:center;gap:18px;padding:12px 10px calc(12px + env(safe-area-inset-bottom));border-top:1px solid #c9a35c}
+.bar a.call{text-decoration:none;font-family:'Cinzel',serif;font-weight:700;font-size:13.5px;letter-spacing:.16em;color:#171310;background:linear-gradient(160deg,#e3c078,#c9a35c 60%,#a97f35);padding:13px 26px;border-radius:3px;box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 6px 18px -6px rgba(201,163,92,.5);animation:antglow 3.2s ease-in-out infinite}
+@keyframes antglow{0%,100%{filter:brightness(1)}50%{filter:brightness(1.12)}}
+.bar a.map{text-decoration:none;font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#c9a35c;border-bottom:1px solid #c9a35c;padding-bottom:2px}
+
+/* IT/EN toggle (07-13) */
+html.en .it{display:none!important}
+html:not(.en) .tr{display:none!important}
+.lgx{position:fixed;top:calc(12px + env(safe-area-inset-top));right:12px;z-index:80;cursor:pointer;border:0;font-weight:700;font-size:11.5px;letter-spacing:.14em;padding:9px 14px;border-radius:999px;line-height:1}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.lgx{background:#171310;color:#c9a35c;border:1px solid #c9a35c;font-family:'Cinzel',serif}
 </style>
 </head>
 <body>
 
+<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it">EN</span><span class="tr">IT</span></button>
 <header>
  <div class="bg"></div><div class="veil"></div>
  <div class="hin">
   <span class="corona">✦ Un carretto · una specialità ✦</span>
   <h1>Antonello <span>Street Food</span></h1>
-  <p class="hsub">Il carretto delle arancine a Porta di Castro: fritte al momento, una alla volta, davanti a voi. <em>The arancina cart by Porta di Castro — fried to order, one at a time, right in front of you.</em></p>
+  <p class="hsub"><span class="it">Il carretto delle arancine a Porta di Castro: fritte al momento, una alla volta, davanti a voi.</span> <em class="tr">The arancina cart by Porta di Castro — fried to order, one at a time, right in front of you.</em></p>
   <div class="hmeta">
    <span>★ <b data-edit="rating">4,9</b> — <span data-edit="revcount">114</span> recensioni</span>
    <span>Tutti i giorni · 8:00 – 16:00</span>
@@ -114,10 +129,10 @@ footer{background:var(--bronzo);color:#bfa878;text-align:center;padding:30px 5vw
 
 <section class="story wrap">
  <div class="rev">
-  <span class="k">Il carretto · The cart</span>
+  <span class="k"><span class="it">Il carretto</span><span class="tr">The cart</span></span>
   <h2>Una cosa sola,<br><em>fatta d'oro</em></h2>
-  <p>Niente sala, niente menù lungo: un carretto, l'olio buono e il riso che diventa oro. Antonello frigge al momento — e se c'è da aspettare due minuti, è perché la vostra arancina non esiste ancora.</p>
-  <p class="en">No dining room, no long menu: one cart, good oil, and rice turned to gold. Antonello fries to order — if you wait two minutes, it's because your arancina doesn't exist yet.</p>
+  <p class="it">Niente sala, niente menù lungo: un carretto, l'olio buono e il riso che diventa oro. Antonello frigge al momento — e se c'è da aspettare due minuti, è perché la vostra arancina non esiste ancora.</p>
+  <p class="en tr">No dining room, no long menu: one cart, good oil, and rice turned to gold. Antonello fries to order — if you wait two minutes, it's because your arancina doesn't exist yet.</p>
   <p>I clienti lo scrivono da soli: la migliore di Palermo, meglio di certe insegne famose. E chi chiede, finisce pure a friggere in cucina con lui.</p>
  </div>
  <figure class="sfig rev">
@@ -130,7 +145,7 @@ footer{background:var(--bronzo);color:#bfa878;text-align:center;padding:30px 5vw
  <div class="wrap">
   <span class="k" style="color:var(--oro)">Dal cartello del carretto · From the cart's own sign</span>
   <h2 class="rev">Le <span>arancine</span></h2>
-  <p class="note">Quello che c'è scritto sul vetro è quello che esce dall'olio. <em>What's written on the glass is what comes out of the oil.</em></p>
+  <p class="note"><span class="it">Quello che c'è scritto sul vetro è quello che esce dall'olio.</span> <em class="tr">What's written on the glass is what comes out of the oil.</em></p>
   <div class="sgrid">
    <div class="scard rev"><h3>Con carne</h3><p>Il ragù di casa dentro la crosta dorata — la regina del carretto.</p><b data-edit="p-carne">€ 1,50</b></div>
    <div class="scard rev"><h3>Con burro</h3><p>Prosciutto e mozzarella filante, la più morbida delle due scuole.</p><b data-edit="p-burro">€ 1,50</b></div>
@@ -143,7 +158,7 @@ footer{background:var(--bronzo);color:#bfa878;text-align:center;padding:30px 5vw
 <section class="cat wrap">
  <div class="box rev">
   <h2>Feste &amp; catering</h2>
-  <p>Arancine e mignon su ordinazione per feste, uffici e ricorrenze — il numero è quello scritto sul carretto. <em>Party trays to order — the number painted on the cart.</em></p>
+  <p><span class="it">Arancine e mignon su ordinazione per feste, uffici e ricorrenze — il numero è quello scritto sul carretto.</span> <em class="tr">Party trays to order — the number painted on the cart.</em></p>
   <a class="tel" href="tel:+393290075058" data-edit="phone">329 007 5058</a>
  </div>
 </section>
@@ -153,12 +168,12 @@ footer{background:var(--bronzo);color:#bfa878;text-align:center;padding:30px 5vw
  <img src="img/03.jpg" alt="Arancina nella carta">
  <img src="img/02.jpg" alt="Arancine appena fritte">
 </section>
-<p class="duocap">fritte al momento, nella carta — <em>straight from the oil, into the paper</em></p>
+<p class="duocap"><span class="it">fritte al momento, nella carta —</span> <em class="tr">straight from the oil, into the paper</em></p>
 </div>
 
 <section class="revs">
  <div class="wrap">
-  <span class="k">Dicono di noi · What guests say</span>
+  <span class="k"><span class="it">Dicono di noi</span><span class="tr">What guests say</span></span>
   <h2 class="rev">Dalle recensioni Google</h2>
   <div class="rgrid">
    <div class="rcard rev"><div class="stars">★★★★★</div><p>"In my opinion the best arancini in Palermo. Just a small cart but freshly made, lots of filling and a delicate crust!"</p><div class="who">Lisa G · Google</div></div>
@@ -171,18 +186,18 @@ footer{background:var(--bronzo);color:#bfa878;text-align:center;padding:30px 5vw
 
 <section class="visit wrap">
  <div class="rev">
-  <span class="k">Orari · Hours</span>
+  <span class="k"><span class="it">Orari</span><span class="tr">Hours</span></span>
   <h2>Sette giorni su sette</h2>
   <table class="hours">
-   <tr><td>Lunedì – Domenica</td><td data-edit="h-week">8:00 – 16:00</td></tr>
+   <tr><td><span class="it">Lunedì – Domenica</span><span class="tr">Mon – Sun</span></td><td data-edit="h-week">8:00 – 16:00</td></tr>
    <tr><td>Il fritto</td><td>Al momento, finché c'è riso</td></tr>
   </table>
  </div>
  <div class="rev">
-  <span class="k">Dove siamo · Find us</span>
+  <span class="k"><span class="it">Dove siamo</span><span class="tr">Find us</span></span>
   <h2>Porta di Castro 62</h2>
   <p class="adr" data-edit="addr">Via Porta di Castro 62, 90134 Palermo — dietro Palazzo Reale</p>
-  <p>Al carretto non si prenota: si viene, si aspetta il giro d'olio, si mangia caldo. Per ordinazioni grandi c'è il telefono del catering. <em>No bookings at the cart — walk up and eat it hot. For big orders, the catering line.</em></p>
+  <p><span class="it">Al carretto non si prenota: si viene, si aspetta il giro d'olio, si mangia caldo. Per ordinazioni grandi c'è il telefono del catering.</span> <em class="tr">No bookings at the cart — walk up and eat it hot. For big orders, the catering line.</em></p>
   <a class="btn" href="tel:+393290075058">📞 <span data-edit="phone2">329 007 5058</span></a>
   <a class="btn o" href="https://maps.google.com/?q=Antonello+Street+Food+Arancine+Palermo" rel="noopener">Apri in Maps</a>
  </div>
@@ -190,10 +205,7 @@ footer{background:var(--bronzo);color:#bfa878;text-align:center;padding:30px 5vw
 
 <footer>Antonello Street Food — Specialità Arancine · Via Porta di Castro 62, Palermo · ordinazioni <span data-edit="phone3">329 007 5058</span></footer>
 
-<div class="bar">
- <a class="call" href="tel:+393290075058">📞 Ordinazioni</a>
- <a href="https://maps.google.com/?q=Antonello+Street+Food+Arancine+Palermo" rel="noopener">📍 Mappa</a>
-</div>
+<div class="bar"><a class="call" href="tel:+393290075058">✆ <span class="it">ORDINAZIONI</span><span class="tr">TO ORDER</span></a><a class="map" href="https://maps.google.com/?q=Antonello+Street+Food+Arancine+Palermo" rel="noopener"><span class="it">Il carretto</span><span class="tr">The cart</span> ➤</a></div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});

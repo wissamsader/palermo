@@ -83,10 +83,6 @@ h1 span{display:block;font-size:.42em;letter-spacing:.3em;color:var(--red)}
 .btn.call{background:var(--red)}
 .btn.o{background:transparent;color:var(--paper);border:1px solid #453b2a}
 footer{background:#1b1610;padding:28px 5vw 112px;text-align:center;color:#7d7154;font-size:12.5px;font-family:'Courier Prime',monospace}
-.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(36,30,20,.96);backdrop-filter:blur(8px);display:flex;z-index:50;border-top:2px solid var(--red)}
-.bar a{flex:1;text-align:center;padding:15px 6px;font-size:13.5px;font-weight:700;text-decoration:none;color:#fff}
-.bar a.wa{background:#23a455}
-.bar a.call{background:var(--red)}
 @media(max-width:860px){
  .story{grid-template-columns:1fr;gap:26px}
  .mcols{grid-template-columns:1fr;gap:10px}
@@ -95,16 +91,35 @@ footer{background:#1b1610;padding:28px 5vw 112px;text-align:center;color:#7d7154
  .ggrid{grid-template-columns:repeat(2,1fr);grid-auto-rows:135px}
  .vgrid{grid-template-columns:1fr}
 }
+
+/* mobile hard-rules (07-13): text never at the screen edge + no blue tap flash */
+*{-webkit-tap-highlight-color:transparent}
+@media(max-width:860px){.wrap{padding-left:5vw!important;padding-right:5vw!important}}
+
+/* scontrino receipt strip */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#f7f0e0;padding:12px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:14px;justify-content:center;box-shadow:0 -10px 30px -16px rgba(44,36,25,.5)}
+.bar::before{content:'';position:absolute;top:-7px;left:0;right:0;height:8px;background:radial-gradient(circle at 7px 0,transparent 5px,#f7f0e0 5.5px);background-size:14px 8px}
+.bar a{font-family:'Courier Prime',monospace;font-weight:700;font-size:13.5px;color:#2c2419;text-decoration:none;padding:10px 6px;letter-spacing:.04em;border-bottom:2px dotted #b3a988}
+.bar a.call{color:#b3271e}
+.bar a.wa{color:#1d7a43}
+
+/* IT/EN toggle (07-13) */
+html.en .it{display:none!important}
+html:not(.en) .tr{display:none!important}
+.lgx{position:fixed;top:calc(12px + env(safe-area-inset-top));right:12px;z-index:80;cursor:pointer;border:0;font-weight:700;font-size:11.5px;letter-spacing:.14em;padding:9px 14px;border-radius:999px;line-height:1}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.lgx{background:#f7f0e0;color:#b3271e;border:1.5px dashed #b3271e;font-family:'Courier Prime',monospace}
 </style>
 </head>
 <body>
 
+<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it">EN</span><span class="tr">IT</span></button>
 <header>
  <div class="mat rev on">
   <span class="stamp">SOLO PRANZO<br>12:00 – 15:30</span>
   <p class="mtop">Via dello Spezio 6 · Borgo Vecchio · Palermo</p>
   <h1><span>ANTICA TRATTORIA</span>"Da Pino"</h1>
-  <p class="hsub">La trattoria che apre solo a pranzo — cucina di casa, mezze porzioni, e un menù così storico che ha ancora la colonna dei prezzi in lire. <em>Lunch only: home cooking, half portions, and a menu so old it still shows prices in lire.</em></p>
+  <p class="hsub"><span class="it">La trattoria che apre solo a pranzo — cucina di casa, mezze porzioni, e un menù così storico che ha ancora la colonna dei prezzi in lire.</span> <em class="tr">Lunch only: home cooking, half portions, and a menu so old it still shows prices in lire.</em></p>
   <div class="hmeta">
    <span>★ <b data-edit="rating">4,5</b> GOOGLE · <b data-edit="revcount">1.277</b> RECENSIONI</span>
    <span>DOM CHIUSO</span>
@@ -116,10 +131,10 @@ footer{background:#1b1610;padding:28px 5vw 112px;text-align:center;color:#7d7154
 <section class="story wrap">
  <img class="rev" src="img/08.jpg" alt="La sala con le foto alle pareti">
  <div class="rev">
-  <span class="k">La nostra storia · Our story</span>
+  <span class="k"><span class="it">La nostra storia</span><span class="tr">Our story</span></span>
   <h2>Il pranzo è una<br>cosa seria</h2>
-  <p>Da Pino non fa cena, non fa aperitivo, non insegue le mode: fa il pranzo, e lo fa da sempre. Involtini, spezzatino, spaghetti alla carrettiera — la pausa pranzo come la facevano i palermitani quando i prezzi erano ancora in lire.</p>
-  <p><em>No dinner, no aperitivo, no trends: Da Pino does lunch, and has done forever. The Palermo lunch break as it was when prices were still in lire.</em></p>
+  <p class="it">Da Pino non fa cena, non fa aperitivo, non insegue le mode: fa il pranzo, e lo fa da sempre. Involtini, spezzatino, spaghetti alla carrettiera — la pausa pranzo come la facevano i palermitani quando i prezzi erano ancora in lire.</p>
+  <p class="tr"><em>No dinner, no aperitivo, no trends: Da Pino does lunch, and has done forever. The Palermo lunch break as it was when prices were still in lire.</em></p>
   <span class="badge0405 type">★ Segnalata dalla guida "Nella Vecchia Trattoria" 2004/2005</span>
  </div>
 </section>
@@ -128,7 +143,7 @@ footer{background:#1b1610;padding:28px 5vw 112px;text-align:center;color:#7d7154
 <section class="menu rev">
  <div class="fold"></div>
  <h2>Il menù in bacheca</h2>
- <p class="note">porzione INTERA · MEZZA — prezzi reali dalla nostra bacheca · <em>real prices from our window case</em></p>
+ <p class="note"><span class="it">porzione INTERA · MEZZA — prezzi reali dalla nostra bacheca ·</span> <em class="tr">real prices from our window case</em></p>
  <div class="mcols">
   <div class="msec">
    <h3>Antipasti</h3>
@@ -165,12 +180,12 @@ footer{background:#1b1610;padding:28px 5vw 112px;text-align:center;color:#7d7154
    <div class="mi"><span class="nm">Insalate · patate</span><b class="pr">1,50</b></div>
   </div>
  </div>
- <p class="nb">N.B. Il piatto del giorno lo decide il mercato — chiedete a Pino. · <em>The daily special follows the market — ask Pino.</em></p>
+ <p class="nb"><span class="it">N.B. Il piatto del giorno lo decide il mercato — chiedete a Pino. ·</span> <em class="tr">The daily special follows the market — ask Pino.</em></p>
 </section>
 </div>
 
 <section class="gal wrap">
- <span class="k">Dalla cucina · From the kitchen</span>
+ <span class="k"><span class="it">Dalla cucina</span><span class="tr">From the kitchen</span></span>
  <h2 class="rev">Il pranzo di oggi</h2>
  <div class="ggrid rev">
   <img src="img/07.jpg" alt="Involtini al sugo">
@@ -183,7 +198,7 @@ footer{background:#1b1610;padding:28px 5vw 112px;text-align:center;color:#7d7154
 </section>
 
 <section class="revs wrap">
- <span class="k">Dicono di noi · What guests say</span>
+ <span class="k"><span class="it">Dicono di noi</span><span class="tr">What guests say</span></span>
  <h2 class="rev">Dalle recensioni Google</h2>
  <div class="rgrid">
   <div class="rcard rev"><div class="stars">★★★★★</div><p>"One of the best meals of my life! Our server was so kind in sending to the table whatever they thought was their recommendation."</p><div class="who">Cassandra Peterson · Google</div></div>
@@ -196,20 +211,20 @@ footer{background:#1b1610;padding:28px 5vw 112px;text-align:center;color:#7d7154
 <section class="visit">
  <div class="vgrid">
   <div class="rev">
-   <span class="k">Orari · Hours</span>
+   <span class="k"><span class="it">Orari</span><span class="tr">Hours</span></span>
    <h2>Si pranza e basta</h2>
    <p class="clock type">12:00 → 15:30</p>
    <table class="hours">
-    <tr><td>Lunedì – Sabato</td><td data-edit="h-week">12:00 – 15:30</td></tr>
-    <tr><td>Domenica</td><td data-edit="h-sun">Chiuso · Closed</td></tr>
-    <tr><td>La sera</td><td>Si riposa · We rest</td></tr>
+    <tr><td><span class="it">Lunedì – Sabato</span><span class="tr">Mon – Sat</span></td><td data-edit="h-week">12:00 – 15:30</td></tr>
+    <tr><td><span class="it">Domenica</span><span class="tr">Sunday</span></td><td data-edit="h-sun">Chiuso · Closed</td></tr>
+    <tr><td><span class="it">La sera</span><span class="tr">Evenings</span></td><td><span class="it">Si riposa</span><span class="tr">We rest</span></td></tr>
    </table>
   </div>
   <div class="rev">
-   <span class="k">Dove siamo · Find us</span>
+   <span class="k"><span class="it">Dove siamo</span><span class="tr">Find us</span></span>
    <h2>Via dello Spezio 6</h2>
    <p class="adr" data-edit="addr">Via dello Spezio 6, 90139 Palermo — Borgo Vecchio, a 5 minuti dal Politeama</p>
-   <p>Un messaggio su WhatsApp e il tavolo del pranzo è vostro. <em>One WhatsApp message and your lunch table is set.</em></p>
+   <p><span class="it">Un messaggio su WhatsApp e il tavolo del pranzo è vostro.</span> <em class="tr">One WhatsApp message and your lunch table is set.</em></p>
    <a class="btn" href="https://wa.me/393496337358?text=Ciao%20Pino%21%20Un%20tavolo%20per%20pranzo%2C%20per%20favore" rel="noopener">💬 WhatsApp</a>
    <a class="btn call" href="tel:+393496337358">📞 <span data-edit="phone">349 633 7358</span></a>
    <a class="btn o" href="https://maps.google.com/?q=Trattoria+da+Pino+Palermo+Via+dello+Spezio" rel="noopener">Apri in Maps</a>
@@ -219,11 +234,7 @@ footer{background:#1b1610;padding:28px 5vw 112px;text-align:center;color:#7d7154
 
 <footer>Antica Trattoria "Da Pino" · Via dello Spezio 6, Palermo · <span data-edit="phone2">349 633 7358</span></footer>
 
-<div class="bar">
- <a class="wa" href="https://wa.me/393496337358?text=Ciao%20Pino%21%20Un%20tavolo%20per%20pranzo%2C%20per%20favore" rel="noopener">💬 WhatsApp</a>
- <a class="call" href="tel:+393496337358">📞 Chiama</a>
- <a href="https://maps.google.com/?q=Trattoria+da+Pino+Palermo+Via+dello+Spezio" rel="noopener">📍 Mappa</a>
-</div>
+<div class="bar"><a class="wa" href="https://wa.me/393496337358?text=Ciao%20Pino%21%20Un%20tavolo%20per%20pranzo%2C%20per%20favore" rel="noopener">[ WHATSAPP ]</a><a class="call" href="tel:+393496337358">[ <span class="it">CHIAMA</span><span class="tr">CALL</span> ]</a><a class="map" href="https://maps.google.com/?q=Trattoria+da+Pino+Palermo+Via+dello+Spezio" rel="noopener">[ <span class="it">MAPPA</span><span class="tr">MAP</span> ]</a></div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});

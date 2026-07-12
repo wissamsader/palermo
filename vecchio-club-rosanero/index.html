@@ -96,9 +96,6 @@ h1 .r{color:var(--rosa)}
 .btn{display:inline-block;background:var(--rosa);color:var(--nero);font-weight:800;border-radius:8px;padding:14px 26px;text-decoration:none;margin:6px 10px 0 0;font-size:14.5px;text-transform:uppercase;letter-spacing:.06em}
 .btn.o{background:transparent;color:#fff;border:1px solid #453a42}
 footer{background:#0d0b0d;padding:30px 5vw 112px;text-align:center;color:#6f6067;font-size:12.5px}
-.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(20,17,20,.96);backdrop-filter:blur(8px);border-top:2px solid var(--rosa);display:flex;z-index:50}
-.bar a{flex:1;text-align:center;padding:15px 6px;font-size:13.5px;font-weight:800;text-decoration:none;color:#fff;text-transform:uppercase;letter-spacing:.05em}
-.bar a.call{background:var(--rosa);color:var(--nero)}
 @media(max-width:860px){
  .hgrid{grid-template-columns:1fr;padding-top:80px}
  .hphoto{display:none}
@@ -108,16 +105,36 @@ footer{background:#0d0b0d;padding:30px 5vw 112px;text-align:center;color:#6f6067
  .ggrid{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px}
  .vgrid{grid-template-columns:1fr}
 }
+
+/* mobile hard-rules (07-13): text never at the screen edge + no blue tap flash */
+*{-webkit-tap-highlight-color:transparent}
+@media(max-width:860px){.wrap{padding-left:5vw!important;padding-right:5vw!important}}
+
+/* curva scarf bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#131114;display:flex;gap:10px;align-items:center;justify-content:center;padding:11px 10px calc(11px + env(safe-area-inset-bottom));border-top:0}
+.bar::before,.bar::after{content:'';position:absolute;left:0;right:0;height:6px;background:repeating-linear-gradient(90deg,#e57ca1 0 26px,#131114 26px 52px)}
+.bar::before{top:0}.bar::after{display:none}
+.bar a{font-family:'Anton',sans-serif;font-size:15px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:11px 20px;transform:skewX(-8deg);border:2px solid #e57ca1;color:#e57ca1;background:transparent}
+.bar a span,.bar a b{display:inline-block;transform:skewX(8deg)}
+.bar a.call{background:#e57ca1;color:#131114}
+
+/* IT/EN toggle (07-13) */
+html.en .it{display:none!important}
+html:not(.en) .tr{display:none!important}
+.lgx{position:fixed;top:calc(12px + env(safe-area-inset-top));right:12px;z-index:80;cursor:pointer;border:0;font-weight:700;font-size:11.5px;letter-spacing:.14em;padding:9px 14px;border-radius:999px;line-height:1}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.lgx{background:#131114;color:#e57ca1;border:2px solid #e57ca1}
 </style>
 </head>
 <body>
 
+<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it">EN</span><span class="tr">IT</span></button>
 <header>
  <div class="hgrid">
   <div>
    <div class="badge"><b>VICOLO CALDOMAI 18</b><span>Centro storico · Palermo</span></div>
    <h1>Al Vecchio<br>Club <span class="r">Rosanero</span></h1>
-   <p class="hsub">La trattoria del tifo palermitano: mezze porzioni per provare tutto, prezzi da vicolo e una cucina che gioca sempre in casa. <em>Palermo's football-soul trattoria — half portions, alley prices, home cooking.</em></p>
+   <p class="hsub"><span class="it">La trattoria del tifo palermitano: mezze porzioni per provare tutto, prezzi da vicolo e una cucina che gioca sempre in casa.</span> <em class="tr">Palermo's football-soul trattoria — half portions, alley prices, home cooking.</em></p>
    <div class="hmeta">
     <span>★ <b data-edit="rating">4,3</b> · <span data-edit="revcount">2.128</span> recensioni</span>
     <span>Mezze porzioni <b>da 4 €</b></span>
@@ -130,10 +147,10 @@ footer{background:#0d0b0d;padding:30px 5vw 112px;text-align:center;color:#6f6067
 <section class="story wrap">
  <img class="rev" src="img/08.jpg" alt="La sala in pietra">
  <div class="rev">
-  <span class="k">La nostra storia · Our story</span>
+  <span class="k"><span class="it">La nostra storia</span><span class="tr">Our story</span></span>
   <h2>Dove il tifo<br><em>si siede a tavola</em></h2>
-  <p>In un vicolo dietro Ballarò, tra muri in pietra e foto di vecchie squadre, si mangia la Palermo di sempre: pasta con le sarde, trippa, sfincione — e le mezze porzioni, così ne assaggi due invece di uno.</p>
-  <p><em>In an alley behind Ballarò, between stone walls and old team photos, you eat the Palermo of always — pasta con le sarde, trippa, sfincione — in half portions, so you can try two instead of one.</em></p>
+  <p class="it">In un vicolo dietro Ballarò, tra muri in pietra e foto di vecchie squadre, si mangia la Palermo di sempre: pasta con le sarde, trippa, sfincione — e le mezze porzioni, così ne assaggi due invece di uno.</p>
+  <p class="tr"><em>In an alley behind Ballarò, between stone walls and old team photos, you eat the Palermo of always — pasta con le sarde, trippa, sfincione — in half portions, so you can try two instead of one.</em></p>
   <p>Il piatto simbolo? Gli <b>spaghetti rosa nero</b>: metà salmone, metà nero di seppia. I colori della squadra, nel piatto.</p>
  </div>
 </section>
@@ -141,7 +158,7 @@ footer{background:#0d0b0d;padding:30px 5vw 112px;text-align:center;color:#6f6067
 <div class="chant"><div class="in disp"><span>MEZZE PORZIONI DA 4 € ✦ SPAGHETTI ROSA NERO ✦ CUCINA DI CASA ✦ MEZZE PORZIONI DA 4 € ✦ SPAGHETTI ROSA NERO ✦ CUCINA DI CASA ✦</span></div></div>
 
 <section class="high wrap">
- <span class="k">I titolari · Starting eleven</span>
+ <span class="k"><span class="it">I titolari</span><span class="tr">Starting eleven</span></span>
  <h2 class="rev">La formazione</h2>
  <div class="hgrid2">
   <div class="hcard rev"><img src="img/03.jpg" alt="Spaghetti"><div class="hb"><h3>Spaghetti Rosa Nero</h3><p>Metà salmone, metà nero di seppia — il piatto bandiera. <span class="pr">11 €</span></p></div></div>
@@ -194,7 +211,7 @@ footer{background:#0d0b0d;padding:30px 5vw 112px;text-align:center;color:#6f6067
 </div>
 
 <section class="gal wrap">
- <span class="k">Dal vicolo · From the alley</span>
+ <span class="k"><span class="it">Dal vicolo</span><span class="tr">From the alley</span></span>
  <h2 class="rev">In campo</h2>
  <div class="ggrid rev">
   <img src="img/04.jpg" alt="Pesce alla griglia">
@@ -207,7 +224,7 @@ footer{background:#0d0b0d;padding:30px 5vw 112px;text-align:center;color:#6f6067
 </section>
 
 <section class="revs wrap">
- <span class="k">La curva dice · The stands say</span>
+ <span class="k"><span class="it">La curva dice</span><span class="tr">The stands say</span></span>
  <h2 class="rev">Dalle recensioni Google</h2>
  <div class="rgrid">
   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Inexpensive, good quality fresh dishes with great ingredients. Friendly staff. Very authentic renditions of local pasta dishes."</p><div class="who">Joris Peels · Google</div></div>
@@ -220,19 +237,19 @@ footer{background:#0d0b0d;padding:30px 5vw 112px;text-align:center;color:#6f6067
 <section class="visit">
  <div class="wrap vgrid">
   <div class="rev">
-   <span class="k">Orari · Hours</span>
+   <span class="k"><span class="it">Orari</span><span class="tr">Hours</span></span>
    <h2>Calendario</h2>
    <table class="hours">
-    <tr><td>Lunedì – Mercoledì</td><td data-edit="h-mon">13:00 – 15:30</td></tr>
+    <tr><td><span class="it">Lunedì – Mercoledì</span><span class="tr">Mon – Wed</span></td><td data-edit="h-mon">13:00 – 15:30</td></tr>
     <tr><td>Giovedì – Sabato</td><td data-edit="h-thu">13:00 – 15:30 · 20:00 – 23:00</td></tr>
-    <tr><td>Domenica</td><td data-edit="h-sun">Chiuso · Closed</td></tr>
+    <tr><td><span class="it">Domenica</span><span class="tr">Sunday</span></td><td data-edit="h-sun">Chiuso · Closed</td></tr>
    </table>
   </div>
   <div class="rev">
-   <span class="k">Dove siamo · Find us</span>
+   <span class="k"><span class="it">Dove siamo</span><span class="tr">Find us</span></span>
    <h2>Il nostro stadio</h2>
    <p class="adr" data-edit="addr">Vicolo Caldomai 18, 90134 Palermo — tra Ballarò e Via Maqueda</p>
-   <p>Sala piccola, cuore grande: chiamate per il tavolo, soprattutto giovedì–sabato sera. <em>Small room, big heart — call ahead for dinner.</em></p>
+   <p><span class="it">Sala piccola, cuore grande: chiamate per il tavolo, soprattutto giovedì–sabato sera.</span> <em class="tr">Small room, big heart — call ahead for dinner.</em></p>
    <a class="btn" href="tel:+390912511234">📞 <span data-edit="phone">091 251 1234</span></a>
    <a class="btn o" href="https://maps.google.com/?q=Trattoria+Al+Vecchio+Club+Rosanero+Palermo" rel="noopener">Apri in Maps</a>
   </div>
@@ -241,10 +258,7 @@ footer{background:#0d0b0d;padding:30px 5vw 112px;text-align:center;color:#6f6067
 
 <footer>Trattoria Al Vecchio Club Rosanero · Vicolo Caldomai 18, Palermo · <span data-edit="phone2">091 251 1234</span></footer>
 
-<div class="bar">
- <a class="call" href="tel:+390912511234">📞 Chiama · Call</a>
- <a href="https://maps.google.com/?q=Trattoria+Al+Vecchio+Club+Rosanero+Palermo" rel="noopener">📍 Mappa</a>
-</div>
+<div class="bar"><a class="call" href="tel:+390912511234"><b>☎ <span class="it">Chiama</span><span class="tr">Call</span></b></a><a class="map" href="https://maps.google.com/?q=Trattoria+Al+Vecchio+Club+Rosanero+Palermo" rel="noopener"><b>➤ <span class="it">Mappa</span><span class="tr">Map</span></b></a></div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});

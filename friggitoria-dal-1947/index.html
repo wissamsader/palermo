@@ -91,10 +91,6 @@ h1 .anno{display:block;color:var(--giallo);font-size:clamp(64px,13vw,150px);lett
 .btn.o{background:transparent;color:var(--ink);border:2px solid var(--line)}
 footer{padding:0}
 footer .fin{background:var(--nero);color:#a89f88;text-align:center;padding:30px 5vw 118px;font-size:12.5px}
-.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(20,19,17,.97);backdrop-filter:blur(8px);display:flex;z-index:50;border-top:3px solid var(--giallo)}
-.bar a{flex:1;text-align:center;padding:15px 6px;font-size:13.5px;font-weight:800;text-decoration:none;color:var(--crema)}
-.bar a.wa{background:#1f9d55}
-.bar a.call{background:var(--giallo);color:var(--nero)}
 @media(max-width:860px){
  .story{grid-template-columns:1fr;gap:34px}
  .fgrid{grid-template-columns:1fr 1fr}
@@ -103,16 +99,35 @@ footer .fin{background:var(--nero);color:#a89f88;text-align:center;padding:30px 
  .visit{grid-template-columns:1fr}
 }
 @media(max-width:520px){.fgrid{grid-template-columns:1fr}}
+
+/* mobile hard-rules (07-13): text never at the screen edge + no blue tap flash */
+*{-webkit-tap-highlight-color:transparent}
+@media(max-width:860px){.wrap{padding-left:5vw!important;padding-right:5vw!important}}
+
+/* chiosco hazard stripes + ticket stubs */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#141210;display:flex;align-items:center;justify-content:center;gap:12px;padding:13px 10px calc(12px + env(safe-area-inset-bottom))}
+.bar::before{content:'';position:absolute;top:-7px;left:0;right:0;height:8px;background:repeating-linear-gradient(45deg,#e8b400 0 14px,#141210 14px 28px);animation:stripes47 9s linear infinite}
+@keyframes stripes47{to{background-position:200px 0}}
+.bar a{text-decoration:none;font-family:'Archivo',sans-serif;font-weight:800;font-size:12.5px;letter-spacing:.1em;color:#141210;background:#e8b400;padding:12px 16px;clip-path:polygon(0 0,100% 0,100% 35%,96% 50%,100% 65%,100% 100%,0 100%,0 65%,4% 50%,0 35%)}
+.bar a.wa{background:#f4efe0}
+
+/* IT/EN toggle (07-13) */
+html.en .it{display:none!important}
+html:not(.en) .tr{display:none!important}
+.lgx{position:fixed;top:calc(12px + env(safe-area-inset-top));right:12px;z-index:80;cursor:pointer;border:0;font-weight:700;font-size:11.5px;letter-spacing:.14em;padding:9px 14px;border-radius:999px;line-height:1}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.lgx{background:#e8b400;color:#141210;border:2px solid #141210}
 </style>
 </head>
 <body>
 
+<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it">EN</span><span class="tr">IT</span></button>
 <header>
  <div class="bg"></div><div class="veil"></div>
  <div class="hin">
   <span class="since">Via Niccolò Palmeri 4 · Palermo</span>
   <h1>Antica Friggitoria<span class="anno">dal 1947</span></h1>
-  <p class="hsub">Panelle, crocché, arancine e rascatura: il chiosco giallo e nero che frigge da tre quarti di secolo. <em>Palermo's yellow-and-black fry kiosk, at it since 1947.</em></p>
+  <p class="hsub"><span class="it">Panelle, crocché, arancine e rascatura: il chiosco giallo e nero che frigge da tre quarti di secolo.</span> <em class="tr">Palermo's yellow-and-black fry kiosk, at it since 1947.</em></p>
   <div class="hmeta">
    <span>★ <b data-edit="rating">4,5</b> — <span data-edit="revcount">255</span> recensioni</span>
    <span>Lun – Sab · dalle 7:00</span>
@@ -123,10 +138,10 @@ footer .fin{background:var(--nero);color:#a89f88;text-align:center;padding:30px 
 
 <section class="story wrap">
  <div class="rev">
-  <span class="k">La storia · Since 1947</span>
+  <span class="k"><span class="it">La storia</span><span class="tr">Since 1947</span></span>
   <h2>Il fritto<br><em>non si cambia</em></h2>
-  <p>Il nome dice tutto: qui si frigge dal 1947. Panelle di ceci, crocché di patate, arancine e la rascatura — quella vera, fatta con quel che resta dell'impasto, come vuole la tradizione delle friggitorie palermitane.</p>
-  <p class="en">The name says it all: frying since 1947. Chickpea panelle, potato crocché, arancine and the real rascatura — made from the last scrapes of the batter, the way Palermo's fry shops always did.</p>
+  <p class="it">Il nome dice tutto: qui si frigge dal 1947. Panelle di ceci, crocché di patate, arancine e la rascatura — quella vera, fatta con quel che resta dell'impasto, come vuole la tradizione delle friggitorie palermitane.</p>
+  <p class="en tr">The name says it all: frying since 1947. Chickpea panelle, potato crocché, arancine and the real rascatura — made from the last scrapes of the batter, the way Palermo's fry shops always did.</p>
   <p>Si mangia sui fusti neri davanti al chiosco, col coppo in mano e il limone spremuto sopra.</p>
  </div>
  <figure class="sfig rev"><img src="img/06.jpg" alt="Coppo di crocché e pane e panelle"></figure>
@@ -137,7 +152,7 @@ footer .fin{background:var(--nero);color:#a89f88;text-align:center;padding:30px 
   <div class="chead">
    <span class="k" style="color:var(--giallo)">Il coppo · The paper cone</span>
    <h2 class="rev">Cosa si frigge <span>oggi</span></h2>
-   <p class="note">Il coppo si compone a voce, al banco — i prezzi sono esposti al chiosco. <em>Build your cone at the counter — prices are posted at the kiosk.</em></p>
+   <p class="note"><span class="it">Il coppo si compone a voce, al banco — i prezzi sono esposti al chiosco.</span> <em class="tr">Build your cone at the counter — prices are posted at the kiosk.</em></p>
   </div>
   <div class="fgrid">
    <div class="fitem rev"><div class="blk">Panelle</div><p>le frittelle di ceci, da sole o nel pane</p></div>
@@ -153,9 +168,9 @@ footer .fin{background:var(--nero);color:#a89f88;text-align:center;padding:30px 
 
 <div class="wrap">
 <section class="bibite">
- <span class="k">Listino bibite · Drinks board</span>
+ <span class="k"><span class="it">Listino bibite</span><span class="tr">Drinks board</span></span>
  <h2 class="rev">Prezzi veri, dal listino</h2>
- <p class="note">Dal nostro listino esposto — sì, la birra piccola costa un euro. <em>From our posted board — yes, the small beer is one euro.</em></p>
+ <p class="note"><span class="it">Dal nostro listino esposto — sì, la birra piccola costa un euro.</span> <em class="tr">From our posted board — yes, the small beer is one euro.</em></p>
  <div class="tgrid">
   <div class="tik rev"><span class="nm">Gazzosa</span><b>€ 0,70</b></div>
   <div class="tik rev"><span class="nm">Acqua piccola</span><b>€ 0,80</b></div>
@@ -169,7 +184,7 @@ footer .fin{background:var(--nero);color:#a89f88;text-align:center;padding:30px 
 </section>
 
 <section class="high">
- <span class="k">Dalla vetrina · From the hot case</span>
+ <span class="k"><span class="it">Dalla vetrina</span><span class="tr">From the hot case</span></span>
  <h2 class="rev">Le tre mosse giuste</h2>
  <div class="hgrid">
   <div class="hcard rev"><img src="img/04.jpg" alt="Arancine in vetrina"><div class="hb"><h3>L'arancina</h3><p>"Got the arancina which was great" — la vetrina parla da sola.</p></div></div>
@@ -181,7 +196,7 @@ footer .fin{background:var(--nero);color:#a89f88;text-align:center;padding:30px 
 
 <section class="revs">
  <div class="wrap">
-  <span class="k">Dicono di noi · What guests say</span>
+  <span class="k"><span class="it">Dicono di noi</span><span class="tr">What guests say</span></span>
   <h2 class="rev">Dalle recensioni Google</h2>
   <div class="rgrid">
    <div class="rcard rev"><div class="stars">★★★★★</div><p>"The first food we had when we arrived in Sicily was here — and we made sure to visit again before leaving. Excellent taste, affordable."</p><div class="who">Amari Rae Pulido · Google</div></div>
@@ -194,19 +209,19 @@ footer .fin{background:var(--nero);color:#a89f88;text-align:center;padding:30px 
 
 <section class="visit wrap">
  <div class="rev">
-  <span class="k">Orari · Hours</span>
+  <span class="k"><span class="it">Orari</span><span class="tr">Hours</span></span>
   <h2>Dalle 7 del mattino</h2>
   <table class="hours">
-   <tr><td>Lunedì – Venerdì</td><td data-edit="h-week">7:00 – 19:30</td></tr>
-   <tr><td>Sabato</td><td data-edit="h-sat">7:00 – 18:00</td></tr>
-   <tr><td>Domenica</td><td data-edit="h-sun">Chiuso · Closed</td></tr>
+   <tr><td><span class="it">Lunedì – Venerdì</span><span class="tr">Mon – Fri</span></td><td data-edit="h-week">7:00 – 19:30</td></tr>
+   <tr><td><span class="it">Sabato</span><span class="tr">Saturday</span></td><td data-edit="h-sat">7:00 – 18:00</td></tr>
+   <tr><td><span class="it">Domenica</span><span class="tr">Sunday</span></td><td data-edit="h-sun">Chiuso · Closed</td></tr>
   </table>
  </div>
  <div class="rev">
-  <span class="k">Dove siamo · Find us</span>
+  <span class="k"><span class="it">Dove siamo</span><span class="tr">Find us</span></span>
   <h2>Palmeri 4</h2>
   <p class="adr" data-edit="addr">Via Niccolò Palmeri 4, 90133 Palermo</p>
-  <p>Ordinate su WhatsApp e il coppo vi aspetta caldo. <em>Order on WhatsApp and your cone waits for you hot.</em></p>
+  <p><span class="it">Ordinate su WhatsApp e il coppo vi aspetta caldo.</span> <em class="tr">Order on WhatsApp and your cone waits for you hot.</em></p>
   <a class="btn" href="https://wa.me/393298398377?text=Ciao%21%20Vorrei%20ordinare%20alla%20Friggitoria%20Dal%201947" rel="noopener">💬 WhatsApp</a>
   <a class="btn call" href="tel:+393298398377">📞 <span data-edit="phone">329 839 8377</span></a>
   <a class="btn o" href="https://maps.google.com/?q=Antica+Friggitoria+Dal+1947+Palermo" rel="noopener">Apri in Maps</a>
@@ -218,11 +233,7 @@ footer .fin{background:var(--nero);color:#a89f88;text-align:center;padding:30px 
  <div class="fin">Antica Friggitoria Dal 1947 · Via Niccolò Palmeri 4, Palermo · <span data-edit="phone2">329 839 8377</span></div>
 </footer>
 
-<div class="bar">
- <a class="wa" href="https://wa.me/393298398377?text=Ciao%21%20Vorrei%20ordinare%20alla%20Friggitoria%20Dal%201947" rel="noopener">💬 WhatsApp</a>
- <a class="call" href="tel:+393298398377">📞 Chiama</a>
- <a href="https://maps.google.com/?q=Antica+Friggitoria+Dal+1947+Palermo" rel="noopener">📍 Mappa</a>
-</div>
+<div class="bar"><a class="wa" href="https://wa.me/393298398377?text=Ciao%21%20Vorrei%20ordinare%20alla%20Friggitoria%20Dal%201947" rel="noopener">💬 WHATSAPP</a><a class="call" href="tel:+393298398377">☎ <span class="it">CHIAMA</span><span class="tr">CALL</span></a><a class="map" href="https://maps.google.com/?q=Antica+Friggitoria+Dal+1947+Palermo" rel="noopener">➜ <span class="it">MAPPA</span><span class="tr">MAP</span></a></div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});

@@ -87,26 +87,42 @@ h1{font-family:'Anton',sans-serif;font-size:clamp(30px,5vw,54px);line-height:1.0
 .btn.call{background:var(--rosso)}
 .btn.o{background:transparent;color:var(--ink);border:2px solid var(--line)}
 footer{background:var(--lampada);color:#c6b493;text-align:center;padding:30px 5vw 118px;font-size:12.5px}
-.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(42,32,22,.97);backdrop-filter:blur(8px);display:flex;z-index:50;border-top:3px solid var(--ambra)}
-.bar a{flex:1;text-align:center;padding:15px 6px;font-size:13.5px;font-weight:800;text-decoration:none;color:#fbf2e2}
-.bar a.wa{background:#1f9d55}
-.bar a.call{background:var(--ambra);color:var(--lampada)}
 @media(max-width:860px){
  .story{grid-template-columns:1fr;gap:34px}
  .agrid{grid-template-columns:1fr}
  .hgrid,.rgrid{grid-template-columns:1fr}
  .visit{grid-template-columns:1fr}
 }
+
+/* mobile hard-rules (07-13): text never at the screen edge + no blue tap flash */
+*{-webkit-tap-highlight-color:transparent}
+@media(max-width:860px){.wrap{padding-left:5vw!important;padding-right:5vw!important}}
+
+/* banco caldo — heat-lamp glow */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:linear-gradient(180deg,#a01f14,#7e150c);display:flex;align-items:center;justify-content:center;gap:12px;padding:12px 10px calc(12px + env(safe-area-inset-bottom));overflow:hidden}
+.bar::before{content:'';position:absolute;top:-16px;left:10%;right:10%;height:20px;background:radial-gradient(ellipse at center,rgba(255,223,158,.85),transparent 70%);animation:heatglow 2.4s ease-in-out infinite}
+@keyframes heatglow{0%,100%{opacity:.75}50%{opacity:1}}
+.bar a{text-decoration:none;font-family:'Anton',sans-serif;font-size:14px;letter-spacing:.1em;color:#7e150c;background:#f4a71d;padding:11px 18px;border-radius:3px;box-shadow:0 3px 0 #c77d0a}
+.bar a.wa{background:#ffdf9e}
+.bar a:active{transform:translateY(2px);box-shadow:0 1px 0 #c77d0a}
+
+/* IT/EN toggle (07-13) */
+html.en .it{display:none!important}
+html:not(.en) .tr{display:none!important}
+.lgx{position:fixed;top:calc(12px + env(safe-area-inset-top));right:12px;z-index:80;cursor:pointer;border:0;font-weight:700;font-size:11.5px;letter-spacing:.14em;padding:9px 14px;border-radius:999px;line-height:1}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.lgx{background:#f4a71d;color:#7e150c;border:0;box-shadow:0 2px 0 #c77d0a}
 </style>
 </head>
 <body>
 
+<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it">EN</span><span class="tr">IT</span></button>
 <header>
  <div class="bg"></div><div class="veil"></div>
  <div class="hin">
   <div class="prezzo">€1<sup>,50</sup></div>
   <h1>Il Rosticciere</h1>
-  <p class="hsub">Un prezzo solo, tutto il giorno: arancine e rosticceria calda a un euro e cinquanta, su Corso Tukory. <em>One price, all day: arancine and hot rosticceria for €1.50.</em></p>
+  <p class="hsub"><span class="it">Un prezzo solo, tutto il giorno: arancine e rosticceria calda a un euro e cinquanta, su Corso Tukory.</span> <em class="tr">One price, all day: arancine and hot rosticceria for €1.50.</em></p>
   <div class="hmeta">
    <span>★ <b data-edit="rating">4,7</b> — <span data-edit="revcount">211</span> recensioni</span>
    <span>Lun – Sab · 9:00 – 20:00</span>
@@ -117,10 +133,10 @@ footer{background:var(--lampada);color:#c6b493;text-align:center;padding:30px 5v
 
 <section class="story wrap">
  <div class="rev">
-  <span class="k">La regola della casa · House rule</span>
+  <span class="k"><span class="it">La regola della casa</span><span class="tr">House rule</span></span>
   <h2>Un prezzo,<br><em>nessuna sorpresa</em></h2>
-  <p>Il cartello fuori dice tutto: € 1,50. L'arancina calda che esce a ciclo continuo, le pizzette, i calzoni e i rollò del banco — stesso prezzo dalla mattina alla chiusura. Due pezzi e il pranzo è fatto, come fanno i palermitani.</p>
-  <p class="en">The sign outside says it all: € 1.50. Warm arancine all day, plus the counter's pizzette, calzoni and rollò — same price from morning to close. Two pieces make a proper Palermo lunch.</p>
+  <p class="it">Il cartello fuori dice tutto: € 1,50. L'arancina calda che esce a ciclo continuo, le pizzette, i calzoni e i rollò del banco — stesso prezzo dalla mattina alla chiusura. Due pezzi e il pranzo è fatto, come fanno i palermitani.</p>
+  <p class="en tr">The sign outside says it all: € 1.50. Warm arancine all day, plus the counter's pizzette, calzoni and rollò — same price from morning to close. Two pieces make a proper Palermo lunch.</p>
  </div>
  <figure class="sfig rev">
   <img src="img/02.jpg" alt="Il cartello €1,50">
@@ -133,7 +149,7 @@ footer{background:var(--lampada);color:#c6b493;text-align:center;padding:30px 5v
   <div class="mhead">
    <span class="k" style="color:var(--ambra)">Le quattro regine · The four queens</span>
    <h2 class="rev">Arancine <span>tutto il giorno</span></h2>
-   <p class="note">Gusti e ripieni come sul nostro cartello — in italiano, inglese e francese. <em>Fillings straight from our board.</em></p>
+   <p class="note"><span class="it">Gusti e ripieni come sul nostro cartello — in italiano, inglese e francese.</span> <em class="tr">Fillings straight from our board.</em></p>
   </div>
   <div class="agrid">
    <div class="acard rev"><span class="num">N° 1</span><h3>Con carne</h3><p>Riso, carne macinata, salsa di pomodoro, piselli</p><b>€ 1,50</b></div>
@@ -147,7 +163,7 @@ footer{background:var(--lampada);color:#c6b493;text-align:center;padding:30px 5v
 
 <div class="wrap">
 <section class="high">
- <span class="k">Dal banco caldo · From the hot counter</span>
+ <span class="k"><span class="it">Dal banco caldo</span><span class="tr">From the hot counter</span></span>
  <h2 class="rev">Appena sfornate</h2>
  <div class="hgrid">
   <div class="hcard rev"><img src="img/03.jpg" alt="Arancina con carne aperta"><div class="hb"><h3>La classica</h3><p>Ragù e piselli dentro la crosta d'oro — la regina di Palermo.</p></div></div>
@@ -159,7 +175,7 @@ footer{background:var(--lampada);color:#c6b493;text-align:center;padding:30px 5v
 
 <section class="revs">
  <div class="wrap">
-  <span class="k">Dicono di noi · What guests say</span>
+  <span class="k"><span class="it">Dicono di noi</span><span class="tr">What guests say</span></span>
   <h2 class="rev">Dalle recensioni Google</h2>
   <div class="rgrid">
    <div class="rcard rev"><div class="stars">★★★★★</div><p>"The best arancini in Palermo, served warm all day — with ragù, spinach or spicy sausage."</p><div class="who">Carolina RLC · Google</div></div>
@@ -172,18 +188,18 @@ footer{background:var(--lampada);color:#c6b493;text-align:center;padding:30px 5v
 
 <section class="visit wrap">
  <div class="rev">
-  <span class="k">Orari · Hours</span>
+  <span class="k"><span class="it">Orari</span><span class="tr">Hours</span></span>
   <h2>Caldo tutto il giorno</h2>
   <table class="hours">
-   <tr><td>Lunedì – Sabato</td><td data-edit="h-week">9:00 – 20:00</td></tr>
-   <tr><td>Domenica</td><td data-edit="h-sun">Chiuso · Closed</td></tr>
+   <tr><td><span class="it">Lunedì – Sabato</span><span class="tr">Mon – Sat</span></td><td data-edit="h-week">9:00 – 20:00</td></tr>
+   <tr><td><span class="it">Domenica</span><span class="tr">Sunday</span></td><td data-edit="h-sun">Chiuso · Closed</td></tr>
   </table>
  </div>
  <div class="rev">
-  <span class="k">Dove siamo · Find us</span>
+  <span class="k"><span class="it">Dove siamo</span><span class="tr">Find us</span></span>
   <h2>Corso Tukory</h2>
   <p class="adr" data-edit="addr">Corso Tukory, 90134 Palermo — lato Policlinico/Stazione</p>
-  <p>Ordinate su WhatsApp e passate a ritirare: le arancine non aspettano. <em>Order on WhatsApp and swing by — arancine don't wait.</em></p>
+  <p><span class="it">Ordinate su WhatsApp e passate a ritirare: le arancine non aspettano.</span> <em class="tr">Order on WhatsApp and swing by — arancine don't wait.</em></p>
   <a class="btn" href="https://wa.me/393332444020?text=Ciao%21%20Vorrei%20ordinare%20da%20Il%20Rosticciere" rel="noopener">💬 WhatsApp</a>
   <a class="btn call" href="tel:+393332444020">📞 <span data-edit="phone">333 244 4020</span></a>
   <a class="btn o" href="https://maps.google.com/?q=Il+Rosticciere+Corso+Tukory+Palermo" rel="noopener">Apri in Maps</a>
@@ -192,11 +208,7 @@ footer{background:var(--lampada);color:#c6b493;text-align:center;padding:30px 5v
 
 <footer>Il Rosticciere · Corso Tukory, Palermo · <span data-edit="phone2">333 244 4020</span></footer>
 
-<div class="bar">
- <a class="wa" href="https://wa.me/393332444020?text=Ciao%21%20Vorrei%20ordinare%20da%20Il%20Rosticciere" rel="noopener">💬 WhatsApp</a>
- <a class="call" href="tel:+393332444020">📞 Chiama</a>
- <a href="https://maps.google.com/?q=Il+Rosticciere+Corso+Tukory+Palermo" rel="noopener">📍 Mappa</a>
-</div>
+<div class="bar"><a class="wa" href="https://wa.me/393332444020?text=Ciao%21%20Vorrei%20ordinare%20da%20Il%20Rosticciere" rel="noopener">WHATSAPP</a><a class="call" href="tel:+393332444020">☎ <span class="it">CHIAMA</span><span class="tr">CALL</span></a><a class="map" href="https://maps.google.com/?q=Il+Rosticciere+Corso+Tukory+Palermo" rel="noopener">➜ <span class="it">MAPPA</span><span class="tr">MAP</span></a></div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});

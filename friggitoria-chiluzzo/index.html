@@ -90,10 +90,6 @@ h1 span{color:var(--oro)}
 .btn.o{background:transparent;color:var(--ink);border:2px solid var(--line)}
 footer{padding:0}
 footer .fin{background:var(--pietra);color:#cfc8b4;text-align:center;padding:30px 5vw 118px;font-size:12.5px}
-.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(51,48,42,.97);backdrop-filter:blur(8px);display:flex;z-index:50;border-top:3px solid var(--oro)}
-.bar a{flex:1;text-align:center;padding:15px 6px;font-size:13.5px;font-weight:800;text-decoration:none;color:#faf3df}
-.bar a.call{background:var(--rosso)}
-.bar a.map{background:var(--oro);color:#33302a}
 @media(max-width:860px){
  .story{grid-template-columns:1fr;gap:34px}
  .mgrid{grid-template-columns:1fr}
@@ -101,16 +97,36 @@ footer .fin{background:var(--pietra);color:#cfc8b4;text-align:center;padding:30p
  .ggrid{grid-template-columns:1fr}
  .visit{grid-template-columns:1fr}
 }
+
+/* mobile hard-rules (07-13): text never at the screen edge + no blue tap flash */
+*{-webkit-tap-highlight-color:transparent}
+@media(max-width:860px){.wrap{padding-left:5vw!important;padding-right:5vw!important}}
+
+/* panelle counter — one big golden disc */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#f4e9c9;display:flex;align-items:center;justify-content:space-around;padding:9px 8px calc(9px + env(safe-area-inset-bottom))}
+.bar::before{content:'';position:absolute;top:-8px;left:0;right:0;height:9px;background:radial-gradient(circle at 11px 0,#b52c1f 8px,transparent 9px);background-size:22px 9px}
+.bar a{text-decoration:none;font-family:'Alfa Slab One',serif;font-size:13px;color:#5a4a1e;display:flex;flex-direction:column;align-items:center;gap:2px}
+.bar a.call{background:radial-gradient(circle at 35% 30%,#f2bc3e,#e0a11e 75%);width:78px;height:78px;border-radius:50%;justify-content:center;margin-top:-34px;border:4px solid #f4e9c9;box-shadow:0 8px 22px -6px rgba(90,74,30,.55);color:#4a3208;animation:chilsizzle 3s ease-in-out infinite}
+@keyframes chilsizzle{0%,100%{transform:rotate(0)}30%{transform:rotate(-2deg)}60%{transform:rotate(2deg)}}
+.bar a i{font-style:normal;font-size:16px}
+
+/* IT/EN toggle (07-13) */
+html.en .it{display:none!important}
+html:not(.en) .tr{display:none!important}
+.lgx{position:fixed;top:calc(12px + env(safe-area-inset-top));right:12px;z-index:80;cursor:pointer;border:0;font-weight:700;font-size:11.5px;letter-spacing:.14em;padding:9px 14px;border-radius:999px;line-height:1}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.lgx{background:#e0a11e;color:#4a3208;border:2px solid #4a3208}
 </style>
 </head>
 <body>
 
+<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it">EN</span><span class="tr">IT</span></button>
 <header>
  <div class="bg"></div><div class="veil"></div>
  <div class="hin">
   <span class="dal">Street food since 1943</span>
   <h1>Friggitoria <span>Chiluzzo</span></h1>
-  <p class="hsub">Il chiosco della Kalsa: panelle e crocché nel pane, pani ca' meusa e un tavolino di plastica in piazza. Il pranzo palermitano da 2 euro. <em>Palermo's 2-euro lunch, on Piazza della Kalsa since 1943.</em></p>
+  <p class="hsub"><span class="it">Il chiosco della Kalsa: panelle e crocché nel pane, pani ca' meusa e un tavolino di plastica in piazza. Il pranzo palermitano da 2 euro.</span> <em class="tr">Palermo's 2-euro lunch, on Piazza della Kalsa since 1943.</em></p>
   <div class="hmeta">
    <span>★ <b data-edit="rating">4,7</b> — <span data-edit="revcount">1.297</span> recensioni</span>
    <span>Lun – Sab · 8:00 – 16:00</span>
@@ -121,10 +137,10 @@ footer .fin{background:var(--pietra);color:#cfc8b4;text-align:center;padding:30p
 
 <section class="story wrap">
  <div class="rev">
-  <span class="k">La piazza · The square</span>
+  <span class="k"><span class="it">La piazza</span><span class="tr">The square</span></span>
   <h2>Si mangia<br><em>in piazza</em></h2>
-  <p>Alla Kalsa il rito è sempre lo stesso: si ordina al banco, si prende il vassoio, ci si siede sulle sedie di plastica in piazza con una birra fredda. Panelle tagliate al momento, crocché con la menta, e il pane che arriva caldo.</p>
-  <p class="en">The Kalsa ritual never changes: order at the counter, grab a tray, sit on a plastic chair in the square with a cold beer. Panelle cut to order, minty crocché, warm sesame bread.</p>
+  <p class="it">Alla Kalsa il rito è sempre lo stesso: si ordina al banco, si prende il vassoio, ci si siede sulle sedie di plastica in piazza con una birra fredda. Panelle tagliate al momento, crocché con la menta, e il pane che arriva caldo.</p>
+  <p class="en tr">The Kalsa ritual never changes: order at the counter, grab a tray, sit on a plastic chair in the square with a cold beer. Panelle cut to order, minty crocché, warm sesame bread.</p>
   <p>Ottant'anni di frittura, una piazza intera come sala.</p>
  </div>
  <figure class="sfig rev"><img src="img/05.jpg" alt="Tavolino in piazza con panelle e birre"></figure>
@@ -135,7 +151,7 @@ footer .fin{background:var(--pietra);color:#cfc8b4;text-align:center;padding:30p
   <div class="mhead">
    <span class="k" style="color:#f7c948">Il listino vero · Real board prices</span>
    <h2 class="rev">Tutto sotto i <span>3 euro</span></h2>
-   <p class="note">Prezzi reali dal nostro cartellone in piazza. <em>Real prices from our board on the square.</em></p>
+   <p class="note"><span class="it">Prezzi reali dal nostro cartellone in piazza.</span> <em class="tr">Real prices from our board on the square.</em></p>
   </div>
   <div class="mgrid">
    <div class="mboard rev">
@@ -168,7 +184,7 @@ footer .fin{background:var(--pietra);color:#cfc8b4;text-align:center;padding:30p
 
 <div class="wrap">
 <section class="high">
- <span class="k">Dal banco · From the counter</span>
+ <span class="k"><span class="it">Dal banco</span><span class="tr">From the counter</span></span>
  <h2 class="rev">Le tre mosse della Kalsa</h2>
  <div class="hgrid">
   <div class="hcard rev"><img src="img/03.jpg" alt="Panino tris"><div class="hb"><h3>Il Tris</h3><p>Melanzane fritte, panelle e crocchè nello stesso panino — <span class="pz">€ 2,50</span></p></div></div>
@@ -182,13 +198,13 @@ footer .fin{background:var(--pietra);color:#cfc8b4;text-align:center;padding:30p
   <img src="img/08.jpg" alt="Il chiosco sotto l'ombrellone giallo">
   <img src="img/06.jpg" alt="L'insegna storica del chiosco">
  </div>
- <p class="gcap">il chiosco giallo della Kalsa — <em>the yellow kiosk on the square</em></p>
+ <p class="gcap"><span class="it">il chiosco giallo della Kalsa —</span> <em class="tr">the yellow kiosk on the square</em></p>
 </section>
 </div>
 
 <section class="revs">
  <div class="wrap">
-  <span class="k">Dicono di noi · What guests say</span>
+  <span class="k"><span class="it">Dicono di noi</span><span class="tr">What guests say</span></span>
   <h2 class="rev">Dalle recensioni Google</h2>
   <div class="rgrid">
    <div class="rcard rev"><div class="stars">★★★★★</div><p>"Easy, fast, and cheap for a quick bite. The panino con panelle e crocchè was very tasty. Recommended."</p><div class="who">Nico · Google</div></div>
@@ -201,18 +217,18 @@ footer .fin{background:var(--pietra);color:#cfc8b4;text-align:center;padding:30p
 
 <section class="visit wrap">
  <div class="rev">
-  <span class="k">Orari · Hours</span>
+  <span class="k"><span class="it">Orari</span><span class="tr">Hours</span></span>
   <h2>Il turno del pranzo</h2>
   <table class="hours">
-   <tr><td>Lunedì – Sabato</td><td data-edit="h-week">8:00 – 16:00</td></tr>
-   <tr><td>Domenica</td><td data-edit="h-sun">Chiuso · Closed</td></tr>
+   <tr><td><span class="it">Lunedì – Sabato</span><span class="tr">Mon – Sat</span></td><td data-edit="h-week">8:00 – 16:00</td></tr>
+   <tr><td><span class="it">Domenica</span><span class="tr">Sunday</span></td><td data-edit="h-sun">Chiuso · Closed</td></tr>
   </table>
  </div>
  <div class="rev">
-  <span class="k">Dove siamo · Find us</span>
+  <span class="k"><span class="it">Dove siamo</span><span class="tr">Find us</span></span>
   <h2>Piazza della Kalsa</h2>
   <p class="adr" data-edit="addr">Piazza della Kalsa 11, 90133 Palermo</p>
-  <p>Niente prenotazioni online: si viene, si punta il banco, si mangia. Per info il numero è quello sull'insegna. <em>No apps here — walk up, point, eat. For info, the number painted on our sign.</em></p>
+  <p><span class="it">Niente prenotazioni online: si viene, si punta il banco, si mangia. Per info il numero è quello sull'insegna.</span> <em class="tr">No apps here — walk up, point, eat. For info, the number painted on our sign.</em></p>
   <a class="btn" href="tel:+393290615929">📞 <span data-edit="phone">329 061 5929</span></a>
   <a class="btn o" href="https://maps.google.com/?q=Friggitoria+Chiluzzo+Palermo" rel="noopener">Apri in Maps</a>
  </div>
@@ -223,10 +239,7 @@ footer .fin{background:var(--pietra);color:#cfc8b4;text-align:center;padding:30p
  <div class="fin">Friggitoria Chiluzzo · Piazza della Kalsa 11, Palermo · dal 1943</div>
 </footer>
 
-<div class="bar">
- <a class="call" href="tel:+393290615929">📞 Chiama</a>
- <a class="map" href="https://maps.google.com/?q=Friggitoria+Chiluzzo+Palermo" rel="noopener">📍 Mappa</a>
-</div>
+<div class="bar"><a class="call" href="tel:+393290615929"><i>☎</i><span class="it">Chiama</span><span class="tr">Call</span></a><a class="map" href="https://maps.google.com/?q=Friggitoria+Chiluzzo+Palermo" rel="noopener"><i>📍</i><span class="it">Mappa</span><span class="tr">Map</span></a></div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});

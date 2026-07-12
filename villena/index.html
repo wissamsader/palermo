@@ -91,9 +91,6 @@ h1 small{display:block;font-size:.3em;letter-spacing:.42em;color:var(--gold);mar
 .btn{display:inline-block;background:var(--teal);color:var(--stone2);font-weight:600;border-radius:6px;padding:14px 28px;text-decoration:none;margin:6px 10px 0 0;font-size:14.5px;font-family:'Lora',serif}
 .btn.o{background:transparent;color:var(--ink);border:1px solid var(--line)}
 footer{background:var(--teal2);padding:34px 5vw 116px;text-align:center;color:#7fa094;font-size:12.5px}
-.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(14,59,67,.96);backdrop-filter:blur(8px);border-top:1px solid var(--gold);display:flex;z-index:50}
-.bar a{flex:1;text-align:center;padding:15px 6px;font-size:13.5px;font-weight:600;text-decoration:none;color:var(--stone2)}
-.bar a.call{background:var(--gold);color:#241c0d}
 @media(max-width:860px){
  .hgrid{grid-template-columns:1fr}
  .hright{min-height:36vh;order:-1}
@@ -103,10 +100,29 @@ footer{background:var(--teal2);padding:34px 5vw 116px;text-align:center;color:#7
  .ggrid{grid-template-columns:repeat(2,1fr)}
  .visit{grid-template-columns:1fr}
 }
+
+/* mobile hard-rules (07-13): text never at the screen edge + no blue tap flash */
+*{-webkit-tap-highlight-color:transparent}
+@media(max-width:860px){.wrap{padding-left:5vw!important;padding-right:5vw!important}}
+
+/* scalloped loggia */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#15505a;display:flex;align-items:center;justify-content:center;gap:26px;padding:14px 12px calc(13px + env(safe-area-inset-bottom))}
+.bar::before{content:'';position:absolute;top:-9px;left:0;right:0;height:10px;background:radial-gradient(circle at 10px 10px,#15505a 9px,transparent 10px);background-size:20px 10px}
+.bar a{font-family:'Prata',serif;font-size:15px;color:#e9e2d4;text-decoration:none;display:flex;align-items:center;gap:9px}
+.bar a i{font-style:normal;color:#c2a14a}
+.bar .dot{color:#c2a14a;font-size:11px}
+
+/* IT/EN toggle (07-13) */
+html.en .it{display:none!important}
+html:not(.en) .tr{display:none!important}
+.lgx{position:fixed;top:calc(12px + env(safe-area-inset-top));right:12px;z-index:80;cursor:pointer;border:0;font-weight:700;font-size:11.5px;letter-spacing:.14em;padding:9px 14px;border-radius:999px;line-height:1}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.lgx{background:#15505a;color:#e9e2d4;border:1px solid #c2a14a}
 </style>
 </head>
 <body>
 
+<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it">EN</span><span class="tr">IT</span></button>
 <header>
  <div class="hgrid">
   <div class="hleft">
@@ -128,10 +144,10 @@ footer{background:var(--teal2);padding:34px 5vw 116px;text-align:center;color:#7
 <section class="story wrap">
  <div class="arch rev"><img src="img/01.jpg" alt="L'ingresso ad arco"></div>
  <div class="rev">
-  <span class="k">La nostra storia · Our story</span>
+  <span class="k"><span class="it">La nostra storia</span><span class="tr">Our story</span></span>
   <h2>La piazza che ha<br>due nomi</h2>
-  <p>I turisti li chiamano Quattro Canti; i palermitani sanno che il nome vero è piazza Villena. Noi stiamo lì in mezzo, su Via Maqueda: pasta fatta fresca ogni mattina, il tagliere siciliano da dividere e lo spritz che accompagna il passeggio.</p>
-  <p><em>Tourists say Quattro Canti; Palermitans know the square's true name is Piazza Villena. We sit right there on Via Maqueda — fresh pasta made daily, Sicilian sharing boards, and spritz for the evening stroll.</em></p>
+  <p class="it">I turisti li chiamano Quattro Canti; i palermitani sanno che il nome vero è piazza Villena. Noi stiamo lì in mezzo, su Via Maqueda: pasta fatta fresca ogni mattina, il tagliere siciliano da dividere e lo spritz che accompagna il passeggio.</p>
+  <p class="tr"><em>Tourists say Quattro Canti; Palermitans know the square's true name is Piazza Villena. We sit right there on Via Maqueda — fresh pasta made daily, Sicilian sharing boards, and spritz for the evening stroll.</em></p>
   <p>Piatti serviti sulle maioliche, barocco fuori dalla finestra.</p>
  </div>
 </section>
@@ -150,7 +166,7 @@ footer{background:var(--teal2);padding:34px 5vw 116px;text-align:center;color:#7
 <section class="menu rev">
  <div class="mhead">
   <h2>La carta</h2>
-  <p class="note">PREZZI REALI DAL NOSTRO MENÙ · <em>REAL PRICES FROM OUR MENU</em></p>
+  <p class="note"><span class="it">PREZZI REALI DAL NOSTRO MENÙ ·</span> <em class="tr">REAL PRICES FROM OUR MENU</em></p>
  </div>
  <div class="mcols">
   <div class="msec">
@@ -212,18 +228,18 @@ footer{background:var(--teal2);padding:34px 5vw 116px;text-align:center;color:#7
 
 <section class="visit wrap">
  <div class="rev">
-  <span class="k">Orari · Hours</span>
+  <span class="k"><span class="it">Orari</span><span class="tr">Hours</span></span>
   <h2>Sempre in piazza</h2>
   <table class="hours">
-   <tr><td>Lunedì – Domenica</td><td data-edit="h-week">12:00 – 24:00</td></tr>
-   <tr><td>Cucina</td><td>Orario continuato · All-day kitchen</td></tr>
+   <tr><td><span class="it">Lunedì – Domenica</span><span class="tr">Mon – Sun</span></td><td data-edit="h-week">12:00 – 24:00</td></tr>
+   <tr><td><span class="it">Cucina</span><span class="tr">Kitchen</span></td><td><span class="it">Orario continuato</span><span class="tr">All-day kitchen</span></td></tr>
   </table>
  </div>
  <div class="rev">
-  <span class="k">Dove siamo · Find us</span>
+  <span class="k"><span class="it">Dove siamo</span><span class="tr">Find us</span></span>
   <h2>Via Maqueda 176</h2>
   <p class="adr" data-edit="addr">Via Maqueda 176, 90134 Palermo — 1 minuto dai Quattro Canti</p>
-  <p>Chiamateci per il tavolo, dentro o sotto le stelle di Maqueda. <em>Call us for a table, inside or under the Maqueda stars.</em></p>
+  <p><span class="it">Chiamateci per il tavolo, dentro o sotto le stelle di Maqueda.</span> <em class="tr">Call us for a table, inside or under the Maqueda stars.</em></p>
   <a class="btn" href="tel:+39091229035">📞 <span data-edit="phone">091 229 035</span></a>
   <a class="btn o" href="https://maps.google.com/?q=Villena+Via+Maqueda+176+Palermo" rel="noopener">Apri in Maps</a>
  </div>
@@ -231,10 +247,7 @@ footer{background:var(--teal2);padding:34px 5vw 116px;text-align:center;color:#7
 
 <footer>Osteria Villena · Via Maqueda 176, Palermo · <span data-edit="phone2">091 229 035</span></footer>
 
-<div class="bar">
- <a class="call" href="tel:+39091229035">📞 Chiama · Call</a>
- <a href="https://maps.google.com/?q=Villena+Via+Maqueda+176+Palermo" rel="noopener">📍 Mappa</a>
-</div>
+<div class="bar"><a class="call" href="tel:+39091229035"><i>✆</i><span class="it">Chiama</span><span class="tr">Call</span></a><span class="dot">✦</span><a class="map" href="https://maps.google.com/?q=Villena+Via+Maqueda+176+Palermo" rel="noopener"><i>❖</i><span class="it">Mappa</span><span class="tr">Map</span></a></div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});

@@ -92,27 +92,42 @@ h1 small{display:block;font-size:.34em;letter-spacing:.3em;text-transform:upperc
 .btn.o{background:transparent;color:var(--ink);border:1px solid var(--line)}
 footer{padding:0 0 0}
 footer .fin{padding:34px 5vw 116px;text-align:center;color:#6b7280;font-size:12.5px}
-.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(16,20,24,.96);backdrop-filter:blur(8px);border-top:1px solid var(--lemon);display:flex;z-index:50}
-.bar a{flex:1;text-align:center;padding:15px 6px;font-size:13.5px;font-weight:600;text-decoration:none;color:var(--ink)}
-.bar a.wa{background:#23a455;color:#fff}
-.bar a.call{background:var(--cobalt);color:#fff}
 @media(max-width:860px){
  .story{grid-template-columns:1fr;gap:28px}
  .hgrid,.rgrid,.mgrid{grid-template-columns:1fr}
  .ggrid{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px}
  .visit{grid-template-columns:1fr}
 }
+
+/* mobile hard-rules (07-13): text never at the screen edge + no blue tap flash */
+*{-webkit-tap-highlight-color:transparent}
+@media(max-width:860px){.wrap{padding-left:5vw!important;padding-right:5vw!important}}
+
+/* maiolica tile row */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#0e0d0c;display:flex;justify-content:center;gap:12px;padding:10px 10px calc(10px + env(safe-area-inset-bottom));border-top:1px solid #2a2723}
+.bar a{width:104px;height:58px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-decoration:none;font-family:'Work Sans',sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#f4efe6;background:#17150f;border:2px solid;border-radius:4px;position:relative}
+.bar a::after{content:'';position:absolute;inset:3px;border:1px dashed rgba(244,239,230,.35);border-radius:2px}
+.bar a.wa{border-color:#3f7d5d}.bar a.call{border-color:#e8c04a;color:#e8c04a}.bar a.map{border-color:#2e6fb0}
+.bar a:active{transform:rotate(-2deg) scale(.96)}
+
+/* IT/EN toggle (07-13) */
+html.en .it{display:none!important}
+html:not(.en) .tr{display:none!important}
+.lgx{position:fixed;top:calc(12px + env(safe-area-inset-top));right:12px;z-index:80;cursor:pointer;border:0;font-weight:700;font-size:11.5px;letter-spacing:.14em;padding:9px 14px;border-radius:999px;line-height:1}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.lgx{background:#17150f;color:#e8c04a;border:2px solid #e8c04a}
 </style>
 </head>
 <body>
 
+<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it">EN</span><span class="tr">IT</span></button>
 <div class="tiles"></div>
 <header>
  <div class="bg"></div>
  <div class="hero-in">
   <span class="lant">Via dei Candelai 110</span>
   <h1><small>TRATTORIA</small>no zu Totó<br>e niputi</h1>
-  <p class="hsub">Da zio Totó e i nipoti: tavoli di maiolica, pesce del giorno e vino sfuso — nel vicolo dove Palermo fa sera. <em>Uncle Totó &amp; the grandkids: majolica tables, daily catch and house wine, on Palermo's liveliest old street.</em></p>
+  <p class="hsub"><span class="it">Da zio Totó e i nipoti: tavoli di maiolica, pesce del giorno e vino sfuso — nel vicolo dove Palermo fa sera.</span> <em class="tr">Uncle Totó &amp; the grandkids: majolica tables, daily catch and house wine, on Palermo's liveliest old street.</em></p>
   <div class="hmeta">
    <span>★ <b data-edit="rating">4,5</b> · <span data-edit="revcount">1.955</span> recensioni</span>
    <span>Pranzo e cena · martedì riposo</span>
@@ -122,10 +137,10 @@ footer .fin{padding:34px 5vw 116px;text-align:center;color:#6b7280;font-size:12.
 
 <section class="story wrap">
  <div class="rev">
-  <span class="k">La nostra storia · Our story</span>
+  <span class="k"><span class="it">La nostra storia</span><span class="tr">Our story</span></span>
   <h2>Le maioliche<br>di zio Totó</h2>
-  <p>Il nome è già tutta la storia: "no zu Totó" — da zio Totó — e i "niputi", i nipoti che oggi portano avanti la cucina. I tavoli piastrellati di maiolica siciliana, il pane e le olive che arrivano da soli, e il mare che cambia ogni giorno.</p>
-  <p><em>The name says it all: "at uncle Totó's", with the grandkids now running the kitchen. Sicilian-majolica tables, bread and olives that arrive on their own, and a catch that changes daily.</em></p>
+  <p class="it">Il nome è già tutta la storia: "no zu Totó" — da zio Totó — e i "niputi", i nipoti che oggi portano avanti la cucina. I tavoli piastrellati di maiolica siciliana, il pane e le olive che arrivano da soli, e il mare che cambia ogni giorno.</p>
+  <p class="tr"><em>The name says it all: "at uncle Totó's", with the grandkids now running the kitchen. Sicilian-majolica tables, bread and olives that arrive on their own, and a catch that changes daily.</em></p>
   <p>Su Google: "best meal in Palermo — and the cheapest". A noi basta così.</p>
  </div>
  <div class="storyimg rev"><img src="img/04.jpg" alt="Il tavolo di maiolica"></div>
@@ -133,7 +148,7 @@ footer .fin{padding:34px 5vw 116px;text-align:center;color:#6b7280;font-size:12.
 
 <section class="high">
  <div class="wrap">
-  <span class="k">Dal mare · From the sea</span>
+  <span class="k"><span class="it">Dal mare</span><span class="tr">From the sea</span></span>
   <h2 class="rev">I piatti delle maioliche</h2>
   <div class="hgrid">
    <div class="hcard rev"><div class="tiles"></div><img src="img/03.jpg" alt="Cozze"><div class="hb"><h3>Impepata di cozze</h3><p>Il classico che apre la serata in Via dei Candelai.</p></div></div>
@@ -147,7 +162,7 @@ footer .fin{padding:34px 5vw 116px;text-align:center;color:#6b7280;font-size:12.
 <section class="menu rev">
  <div class="mhead">
   <h2>In tavola</h2>
-  <p class="note">Il pesce si racconta a voce · la cantina è scritta — <em>the fish is told at the table, the cellar is in writing</em></p>
+  <p class="note"><span class="it">Il pesce si racconta a voce · la cantina è scritta —</span> <em class="tr">the fish is told at the table, the cellar is in writing</em></p>
  </div>
  <div class="mgrid">
   <div class="mpanel">
@@ -162,8 +177,8 @@ footer .fin{padding:34px 5vw 116px;text-align:center;color:#6b7280;font-size:12.
   </div>
   <div class="mday">
    <h3>Il pesce del giorno</h3>
-   <p>Antipasti di mare, primi e il pescato: li portiamo a voce al tavolo, come si fa tra parenti — perché cambiano ogni mattina con il mercato.</p>
-   <p><em>Sea starters, pastas and the day's catch are told at the table, family-style — they change with the market every morning.</em></p>
+   <p class="it">Antipasti di mare, primi e il pescato: li portiamo a voce al tavolo, come si fa tra parenti — perché cambiano ogni mattina con il mercato.</p>
+   <p class="tr"><em>Sea starters, pastas and the day's catch are told at the table, family-style — they change with the market every morning.</em></p>
    <p class="em">Chiedete ai niputi cosa c'è oggi.</p>
   </div>
  </div>
@@ -171,7 +186,7 @@ footer .fin{padding:34px 5vw 116px;text-align:center;color:#6b7280;font-size:12.
 </div>
 
 <section class="gal wrap">
- <span class="k">Dal vicolo · From the alley</span>
+ <span class="k"><span class="it">Dal vicolo</span><span class="tr">From the alley</span></span>
  <h2 class="rev">Sera ai Candelai</h2>
  <div class="ggrid rev">
   <img src="img/01.jpg" alt="La trattoria">
@@ -185,7 +200,7 @@ footer .fin{padding:34px 5vw 116px;text-align:center;color:#6b7280;font-size:12.
 
 <section class="revs">
  <div class="wrap">
-  <span class="k">Dicono di noi · What guests say</span>
+  <span class="k"><span class="it">Dicono di noi</span><span class="tr">What guests say</span></span>
   <h2 class="rev">Dalle recensioni Google</h2>
   <div class="rgrid">
    <div class="rcard rev"><div class="stars">★★★★★</div><p>"The food was excellent — very fresh, tasty, clearly high quality. Complimentary bread and olives made it feel even more welcoming."</p><div class="who">Aleks · Google</div></div>
@@ -198,19 +213,19 @@ footer .fin{padding:34px 5vw 116px;text-align:center;color:#6b7280;font-size:12.
 
 <section class="visit wrap">
  <div class="rev">
-  <span class="k">Orari · Hours</span>
+  <span class="k"><span class="it">Orari</span><span class="tr">Hours</span></span>
   <h2>Quando trovarci</h2>
   <table class="hours">
-   <tr><td>Mer – Lun (pranzo)</td><td data-edit="h-lunch">12:00 – 15:30</td></tr>
-   <tr><td>Mer – Lun (cena)</td><td data-edit="h-dinner">18:30 – 22:30</td></tr>
-   <tr><td>Martedì</td><td data-edit="h-tue">Chiuso · Closed</td></tr>
+   <tr><td><span class="it">Mer – Lun (pranzo)</span><span class="tr">Wed – Mon (lunch)</span></td><td data-edit="h-lunch">12:00 – 15:30</td></tr>
+   <tr><td><span class="it">Mer – Lun (cena)</span><span class="tr">Wed – Mon (dinner)</span></td><td data-edit="h-dinner">18:30 – 22:30</td></tr>
+   <tr><td><span class="it">Martedì</span><span class="tr">Tuesday</span></td><td data-edit="h-tue">Chiuso · Closed</td></tr>
   </table>
  </div>
  <div class="rev">
-  <span class="k">Dove siamo · Find us</span>
+  <span class="k"><span class="it">Dove siamo</span><span class="tr">Find us</span></span>
   <h2>Via dei Candelai 110</h2>
   <p class="adr" data-edit="addr">Via dei Candelai 110, 90134 Palermo — centro storico</p>
-  <p>Un messaggio su WhatsApp e zio Totó vi tiene il tavolo di maiolica. <em>One WhatsApp message and your majolica table is saved.</em></p>
+  <p><span class="it">Un messaggio su WhatsApp e zio Totó vi tiene il tavolo di maiolica.</span> <em class="tr">One WhatsApp message and your majolica table is saved.</em></p>
   <a class="btn" href="https://wa.me/393202361846?text=Ciao%21%20Vorrei%20prenotare%20un%20tavolo%20da%20no%20zu%20Tot%C3%B3" rel="noopener">💬 WhatsApp</a>
   <a class="btn call" href="tel:+393202361846">📞 <span data-edit="phone">320 236 1846</span></a>
   <a class="btn o" href="https://maps.google.com/?q=Trattoria+no+zu+Toto+e+niputi+Palermo" rel="noopener">Apri in Maps</a>
@@ -222,11 +237,7 @@ footer .fin{padding:34px 5vw 116px;text-align:center;color:#6b7280;font-size:12.
  <div class="fin">Trattoria no zu Totó e niputi · Via dei Candelai 110, Palermo · <span data-edit="phone2">320 236 1846</span></div>
 </footer>
 
-<div class="bar">
- <a class="wa" href="https://wa.me/393202361846?text=Ciao%21%20Vorrei%20prenotare%20un%20tavolo%20da%20no%20zu%20Tot%C3%B3" rel="noopener">💬 WhatsApp</a>
- <a class="call" href="tel:+393202361846">📞 Chiama</a>
- <a href="https://maps.google.com/?q=Trattoria+no+zu+Toto+e+niputi+Palermo" rel="noopener">📍 Mappa</a>
-</div>
+<div class="bar"><a class="wa" href="https://wa.me/393202361846?text=Ciao%21%20Vorrei%20prenotare%20un%20tavolo%20da%20no%20zu%20Tot%C3%B3" rel="noopener">✳ WhatsApp</a><a class="call" href="tel:+393202361846">☀ <span class="it">Chiama</span><span class="tr">Call</span></a><a class="map" href="https://maps.google.com/?q=Trattoria+no+zu+Toto+e+niputi+Palermo" rel="noopener">➢ <span class="it">Mappa</span><span class="tr">Map</span></a></div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});

@@ -95,27 +95,43 @@ h1{font-family:'Shrikhand',cursive;font-size:clamp(40px,7.6vw,88px);line-height:
 .btn.call{background:var(--coral)}
 .btn.o{background:transparent;color:var(--ink);border:2px solid var(--line)}
 footer{padding:36px 5vw 116px;text-align:center;color:var(--mut);font-size:12.5px;background:#fff}
-.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(43,33,24,.95);backdrop-filter:blur(8px);display:flex;z-index:50}
-.bar a{flex:1;text-align:center;padding:15px 6px;font-size:13.5px;font-weight:800;text-decoration:none;color:#fff}
-.bar a.wa{background:#23a455}
-.bar a.call{background:var(--coral)}
 @media(max-width:860px){
  .story{grid-template-columns:1fr;gap:30px}
  .hgrid,.rgrid,.mgrid{grid-template-columns:1fr}
  .ggrid{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px}
  .visit{grid-template-columns:1fr}
 }
+
+/* mobile hard-rules (07-13): text never at the screen edge + no blue tap flash */
+*{-webkit-tap-highlight-color:transparent}
+@media(max-width:860px){.wrap{padding-left:5vw!important;padding-right:5vw!important}}
+
+/* painted colour blocks */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:8px;padding:9px 10px calc(9px + env(safe-area-inset-bottom));background:#f7f1e6;border-top:2px solid #26262a}
+.bar a{flex:1;text-align:center;text-decoration:none;font-family:'Nunito',sans-serif;font-weight:800;font-size:13.5px;color:#fff;padding:13px 4px;border:2px solid #26262a}
+.bar a.wa{background:#ef6f5f;border-radius:18px 6px 16px 6px;transform:rotate(-1.2deg)}
+.bar a.call{background:#1f8a8a;border-radius:6px 16px 6px 18px;transform:rotate(1deg)}
+.bar a.map{background:#e2a93b;color:#26262a;border-radius:14px 8px 18px 8px;transform:rotate(-.6deg)}
+.bar a:active{transform:scale(.94)}
+
+/* IT/EN toggle (07-13) */
+html.en .it{display:none!important}
+html:not(.en) .tr{display:none!important}
+.lgx{position:fixed;top:calc(12px + env(safe-area-inset-top));right:12px;z-index:80;cursor:pointer;border:0;font-weight:700;font-size:11.5px;letter-spacing:.14em;padding:9px 14px;border-radius:999px;line-height:1}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.lgx{background:#ef6f5f;color:#fff;border:2px solid #26262a}
 </style>
 </head>
 <body>
 
+<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it">EN</span><span class="tr">IT</span></button>
 <header>
  <div class="bg"></div>
  <div class="blocks"><i style="background:var(--teal)"></i><i style="background:var(--coral)"></i><i style="background:var(--must)"></i><i style="background:var(--viola)"></i><i style="background:var(--teal)"></i><i style="background:var(--coral)"></i></div>
  <div class="hero-in">
   <span class="htag">Via Coltellieri 5 · Vucciria</span>
   <h1>Da Totò</h1>
-  <p class="hsub">La vecchia trattoria dietro la porta più colorata della Vucciria — pesce del mercato e pasta di casa, dalle 11 a mezzanotte. <em>Behind the most colourful doorway of the Vucciria — market fish and home pasta, from 11 to midnight.</em></p>
+  <p class="hsub"><span class="it">La vecchia trattoria dietro la porta più colorata della Vucciria — pesce del mercato e pasta di casa, dalle 11 a mezzanotte.</span> <em class="tr">Behind the most colourful doorway of the Vucciria — market fish and home pasta, from 11 to midnight.</em></p>
   <div class="hmeta">
    <span>★ <b data-edit="rating">4,1</b> su Google · <span data-edit="revcount">723</span> recensioni</span>
    <span>Aperti fino a tardi · 6 giorni su 7</span>
@@ -125,17 +141,17 @@ footer{padding:36px 5vw 116px;text-align:center;color:var(--mut);font-size:12.5p
 
 <section class="story wrap">
  <div class="rev">
-  <span class="k">La nostra storia · Our story</span>
+  <span class="k"><span class="it">La nostra storia</span><span class="tr">Our story</span></span>
   <h2>Una porta colorata,<br>una cucina vera</h2>
-  <p>Totò ha riempito il vicolo di colori e la tavola di piatti onesti: spaghetti alle vongole, gamberoni alla griglia, frittura per due. Dentro, tovaglie a quadretti e maioliche; fuori, i tavolini nel cuore antico della Vucciria.</p>
-  <p><em>Totò filled the alley with colour and the table with honest dishes: clams, grilled prawns, fry-ups for two. Inside, checked tablecloths and majolica; outside, little tables in the old heart of the Vucciria market.</em></p>
+  <p class="it">Totò ha riempito il vicolo di colori e la tavola di piatti onesti: spaghetti alle vongole, gamberoni alla griglia, frittura per due. Dentro, tovaglie a quadretti e maioliche; fuori, i tavolini nel cuore antico della Vucciria.</p>
+  <p class="tr"><em>Totò filled the alley with colour and the table with honest dishes: clams, grilled prawns, fry-ups for two. Inside, checked tablecloths and majolica; outside, little tables in the old heart of the Vucciria market.</em></p>
   <p>Porzioni generose — su Google lo scrivono più spesso di ogni altra cosa.</p>
  </div>
  <div class="frame rev"><img src="img/01.jpg" alt="La facciata colorata"></div>
 </section>
 
 <section class="high wrap">
- <span class="k">I più amati · Most loved</span>
+ <span class="k"><span class="it">I più amati</span><span class="tr">Most loved</span></span>
  <h2 class="rev">I tre colori di Totò</h2>
  <div class="hgrid">
   <div class="hcard rev"><div class="top"></div><img src="img/05.jpg" alt="Vongole"><div class="hb"><h3>Con vongole veraci</h3><p>Il primo che profuma di Vucciria — <span class="pr">12 €</span></p></div></div>
@@ -148,7 +164,7 @@ footer{padding:36px 5vw 116px;text-align:center;color:var(--mut);font-size:12.5p
 <section class="menu rev">
  <div class="mhead">
   <h2>Il menù di casa</h2>
-  <p class="note">Prezzi reali dal nostro menù · <em>real prices from our menu</em></p>
+  <p class="note"><span class="it">Prezzi reali dal nostro menù ·</span> <em class="tr">real prices from our menu</em></p>
  </div>
  <div class="mgrid">
   <div class="mboard b1">
@@ -189,12 +205,12 @@ footer{padding:36px 5vw 116px;text-align:center;color:var(--mut);font-size:12.5p
    <div class="mi"><span>Limoncello</span><b class="pr">2 €</b></div>
   </div>
  </div>
- <p class="mfoot">Il pescato cambia ogni mattina con il mercato — <em>the catch changes with the market every morning.</em></p>
+ <p class="mfoot"><span class="it">Il pescato cambia ogni mattina con il mercato —</span> <em class="tr">the catch changes with the market every morning.</em></p>
 </section>
 </div>
 
 <section class="gal wrap">
- <span class="k">Dal vicolo · From the alley</span>
+ <span class="k"><span class="it">Dal vicolo</span><span class="tr">From the alley</span></span>
  <h2 class="rev">In tavola da Totò</h2>
  <div class="ggrid rev">
   <img src="img/07.jpg" alt="Pasta al pesto e sala">
@@ -208,7 +224,7 @@ footer{padding:36px 5vw 116px;text-align:center;color:var(--mut);font-size:12.5p
 
 <section class="revs">
  <div class="wrap">
-  <span class="k">Dicono di noi · What guests say</span>
+  <span class="k"><span class="it">Dicono di noi</span><span class="tr">What guests say</span></span>
   <h2 class="rev">Dalle recensioni Google</h2>
   <div class="rgrid">
    <div class="rcard rev"><div class="stars">★★★★★</div><p>"Atmosphere is really nice — you feel that Sicilian vibe as soon as you walk in. The place has a unique, colorful character and it feels authentic."</p><div class="who">Mingaudas M. · Google</div></div>
@@ -221,19 +237,19 @@ footer{padding:36px 5vw 116px;text-align:center;color:var(--mut);font-size:12.5p
 
 <section class="visit wrap">
  <div class="rev">
-  <span class="k">Orari · Hours</span>
+  <span class="k"><span class="it">Orari</span><span class="tr">Hours</span></span>
   <h2>Quando trovarci</h2>
   <table class="hours">
-   <tr><td>Lunedì – Martedì</td><td data-edit="h-mon">11:00 – 23:00</td></tr>
-   <tr><td>Mercoledì</td><td data-edit="h-wed">Chiuso · Closed</td></tr>
-   <tr><td>Giovedì – Domenica</td><td data-edit="h-thu">11:00 – 23:00</td></tr>
+   <tr><td><span class="it">Lunedì – Martedì</span><span class="tr">Mon – Tue</span></td><td data-edit="h-mon">11:00 – 23:00</td></tr>
+   <tr><td><span class="it">Mercoledì</span><span class="tr">Wednesday</span></td><td data-edit="h-wed">Chiuso · Closed</td></tr>
+   <tr><td><span class="it">Giovedì – Domenica</span><span class="tr">Thu – Sun</span></td><td data-edit="h-thu">11:00 – 23:00</td></tr>
   </table>
  </div>
  <div class="rev">
-  <span class="k">Dove siamo · Find us</span>
+  <span class="k"><span class="it">Dove siamo</span><span class="tr">Find us</span></span>
   <h2>Via Coltellieri 5</h2>
   <p class="adr" data-edit="addr">Via Coltellieri 5, 90133 Palermo — cuore della Vucciria</p>
-  <p>Scrivici su WhatsApp per il tavolo o per il pescato del giorno. <em>WhatsApp us for a table or today's catch.</em></p>
+  <p><span class="it">Scrivici su WhatsApp per il tavolo o per il pescato del giorno.</span> <em class="tr">WhatsApp us for a table or today's catch.</em></p>
   <a class="btn" href="https://wa.me/393333157558?text=Ciao%20Tot%C3%B2%21%20Vorrei%20prenotare%20un%20tavolo" rel="noopener">💬 WhatsApp</a>
   <a class="btn call" href="tel:+393333157558">📞 <span data-edit="phone">333 315 7558</span></a>
   <a class="btn o" href="https://maps.google.com/?q=Vecchia+Trattoria+da+Toto+Palermo" rel="noopener">Apri in Maps</a>
@@ -242,11 +258,7 @@ footer{padding:36px 5vw 116px;text-align:center;color:var(--mut);font-size:12.5p
 
 <footer>Vecchia Trattoria da Totò · Via Coltellieri 5, Palermo · <span data-edit="phone2">333 315 7558</span></footer>
 
-<div class="bar">
- <a class="wa" href="https://wa.me/393333157558?text=Ciao%20Tot%C3%B2%21%20Vorrei%20prenotare%20un%20tavolo" rel="noopener">💬 WhatsApp</a>
- <a class="call" href="tel:+393333157558">📞 Chiama</a>
- <a href="https://maps.google.com/?q=Vecchia+Trattoria+da+Toto+Palermo" rel="noopener">📍 Mappa</a>
-</div>
+<div class="bar"><a class="wa" href="https://wa.me/393333157558?text=Ciao%20Tot%C3%B2%21%20Vorrei%20prenotare%20un%20tavolo" rel="noopener">💬 WhatsApp</a><a class="call" href="tel:+393333157558">📞 <span class="it">Chiama</span><span class="tr">Call</span></a><a class="map" href="https://maps.google.com/?q=Vecchia+Trattoria+da+Toto+Palermo" rel="noopener">📍 <span class="it">Mappa</span><span class="tr">Map</span></a></div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});

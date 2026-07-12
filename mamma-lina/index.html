@@ -96,10 +96,6 @@ h1{font-family:'Homemade Apple',cursive;font-size:clamp(40px,7.4vw,84px);line-he
 .btn.call{background:var(--rosso)}
 .btn.o{background:transparent;color:var(--ink);border:1px solid #d8c8b2}
 footer{background:#2c2018;color:#c2b09a;text-align:center;padding:30px 5vw 118px;font-size:12.5px}
-.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(44,32,24,.97);backdrop-filter:blur(8px);display:flex;z-index:50;border-top:3px solid var(--rosso)}
-.bar a{flex:1;text-align:center;padding:15px 6px;font-size:13.5px;font-weight:700;text-decoration:none;color:#f8f1e2;font-family:'Lora',serif}
-.bar a.wa{background:#1f9d55}
-.bar a.call{background:var(--rosso)}
 @media(max-width:860px){
  .story{grid-template-columns:1fr;gap:34px}
  .rgrid3{grid-template-columns:1fr}
@@ -107,16 +103,34 @@ footer{background:#2c2018;color:#c2b09a;text-align:center;padding:30px 5vw 118px
  .rgrid{grid-template-columns:1fr}
  .visit{grid-template-columns:1fr}
 }
+
+/* mobile hard-rules (07-13): text never at the screen edge + no blue tap flash */
+*{-webkit-tap-highlight-color:transparent}
+@media(max-width:860px){.wrap{padding-left:5vw!important;padding-right:5vw!important}}
+
+/* picnic gingham + recipe-card buttons */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;align-items:center;justify-content:center;gap:12px;padding:12px 10px calc(11px + env(safe-area-inset-bottom));background:conic-gradient(#c23b2e 90deg,#fbf6ec 90deg 180deg,#c23b2e 180deg 270deg,#fbf6ec 270deg) 0 0/22px 22px}
+.bar a{position:relative;text-decoration:none;background:#fbf6ec;border:1px solid #d9c9ad;box-shadow:0 4px 12px -4px rgba(60,40,20,.4);padding:12px 16px;font-family:'Lora',serif;font-size:13.5px;color:#4a3524}
+.bar a::before{content:'';position:absolute;top:-6px;left:50%;transform:translateX(-50%) rotate(-2deg);width:34px;height:11px;background:rgba(232,217,168,.85)}
+.bar a.wa{transform:rotate(-1.2deg)}.bar a.call{transform:rotate(.9deg);font-weight:700}.bar a.map{transform:rotate(-.5deg)}
+
+/* IT/EN toggle (07-13) */
+html.en .it{display:none!important}
+html:not(.en) .tr{display:none!important}
+.lgx{position:fixed;top:calc(12px + env(safe-area-inset-top));right:12px;z-index:80;cursor:pointer;border:0;font-weight:700;font-size:11.5px;letter-spacing:.14em;padding:9px 14px;border-radius:999px;line-height:1}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.lgx{background:#fbf6ec;color:#c23b2e;border:1px solid #c23b2e}
 </style>
 </head>
 <body>
 
+<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it">EN</span><span class="tr">IT</span></button>
 <header>
  <div class="bg"></div><div class="veil"></div>
  <div class="hin">
   <span class="tovaglia">Via Venezia 40 · Palermo</span>
   <h1>Mamma Lina</h1>
-  <p class="hsub">Friggitoria e gastronomia all'antica: la tovaglia a quadretti, l'arco giallo e la cucina di chef Rita — come una volta. <em>Old-style fry shop &amp; home kitchen, checked tablecloths included.</em></p>
+  <p class="hsub"><span class="it">Friggitoria e gastronomia all'antica: la tovaglia a quadretti, l'arco giallo e la cucina di chef Rita — come una volta.</span> <em class="tr">Old-style fry shop &amp; home kitchen, checked tablecloths included.</em></p>
   <div class="hmeta">
    <span>★ <b data-edit="rating">4,9</b> — <span data-edit="revcount">80</span> recensioni</span>
    <span>Tutti i giorni · 10:00 – 22:00</span>
@@ -127,10 +141,10 @@ footer{background:#2c2018;color:#c2b09a;text-align:center;padding:30px 5vw 118px
 
 <section class="story wrap">
  <div class="rev">
-  <span class="k">La cucina · The kitchen</span>
+  <span class="k"><span class="it">La cucina</span><span class="tr">The kitchen</span></span>
   <h2>La cucina di <span class="hand">Rita</span></h2>
-  <p>"All'antica" qui non è una posa: è la pasta del giorno scritta a mano, la parmigiana che esce quando è pronta, i fritti fatti nell'ordine in cui li chiedete. In cucina c'è Rita — i clienti la nominano per nome nelle recensioni.</p>
-  <p class="en">"All'antica" is no pose here: today's pasta written by hand, parmigiana served when it's ready, and Rita in the kitchen — guests thank her by name in the reviews.</p>
+  <p class="it">"All'antica" qui non è una posa: è la pasta del giorno scritta a mano, la parmigiana che esce quando è pronta, i fritti fatti nell'ordine in cui li chiedete. In cucina c'è Rita — i clienti la nominano per nome nelle recensioni.</p>
+  <p class="en tr">"All'antica" is no pose here: today's pasta written by hand, parmigiana served when it's ready, and Rita in the kitchen — guests thank her by name in the reviews.</p>
   <p>Dentro, l'arco giallo e le tovagliette a quadretti rossi. Fuori, i tavolini in strada come si usava.</p>
  </div>
  <figure class="sfig rev"><img src="img/05.jpg" alt="L'insegna in maiolica di Mamma Lina"></figure>
@@ -139,9 +153,9 @@ footer{background:#2c2018;color:#c2b09a;text-align:center;padding:30px 5vw 118px
 <section class="menu">
  <div class="wrap in">
   <div class="mhead">
-   <span class="k">Il menù di casa · The house menu</span>
+   <span class="k"><span class="it">Il menù di casa</span><span class="tr">The house menu</span></span>
    <h2 class="rev">Tre ricettari, <span class="hand">un banco</span></h2>
-   <p class="note">Il nostro menù è una lista di piatti, non di numeri: i prezzi del giorno ve li dice Rita al banco. <em>Our board lists dishes, not numbers — the day's prices come from Rita at the counter.</em></p>
+   <p class="note"><span class="it">Il nostro menù è una lista di piatti, non di numeri: i prezzi del giorno ve li dice Rita al banco.</span> <em class="tr">Our board lists dishes, not numbers — the day's prices come from Rita at the counter.</em></p>
   </div>
   <div class="rgrid3">
    <div class="rcp rev">
@@ -179,14 +193,14 @@ footer{background:#2c2018;color:#c2b09a;text-align:center;padding:30px 5vw 118px
   </div>
   <div class="mfoot rev">
    <span class="hand">"come una volta"</span>
-   <p>La lavagna è bilingue, italiano e inglese — chiedete pure. <em>The board speaks Italian and English — just ask.</em></p>
+   <p><span class="it">La lavagna è bilingue, italiano e inglese — chiedete pure.</span> <em class="tr">The board speaks Italian and English — just ask.</em></p>
   </div>
  </div>
 </section>
 
 <div class="wrap">
 <section class="high">
- <span class="k">Dalla tovaglia a quadretti · From the checked table</span>
+ <span class="k"><span class="it">Dalla tovaglia a quadretti</span><span class="tr">From the checked table</span></span>
  <h2 class="rev">I piatti di <span class="hand">oggi</span></h2>
  <div class="hgrid">
   <div class="hcard rev"><img src="img/03.jpg" alt="Pasta espressa di giornata"><div class="hb"><h3>La pasta espressa</h3><p>Cambia col giorno e col mercato — servita fuori, coi tavolini in strada e il parmigiano nella ciotola.</p></div></div>
@@ -197,7 +211,7 @@ footer{background:#2c2018;color:#c2b09a;text-align:center;padding:30px 5vw 118px
 
 <section class="revs">
  <div class="wrap">
-  <span class="k">Dicono di noi · What guests say</span>
+  <span class="k"><span class="it">Dicono di noi</span><span class="tr">What guests say</span></span>
   <h2 class="rev">Dalle recensioni <span class="hand">Google</span></h2>
   <div class="rgrid">
    <div class="rcard rev"><div class="stars">★★★★★</div><p>"Best food we had in Palermo and even friendlier staff! Chef Rita's food is amazing!"</p><div class="who">Alžbeta Zemanová · Google</div></div>
@@ -210,18 +224,18 @@ footer{background:#2c2018;color:#c2b09a;text-align:center;padding:30px 5vw 118px
 
 <section class="visit wrap">
  <div class="rev">
-  <span class="k">Orari · Hours</span>
+  <span class="k"><span class="it">Orari</span><span class="tr">Hours</span></span>
   <h2>Aperti <span class="hand">ogni giorno</span></h2>
   <table class="hours">
-   <tr><td>Lunedì – Domenica</td><td data-edit="h-week">10:00 – 22:00</td></tr>
-   <tr><td>La cucina</td><td>Orario continuato</td></tr>
+   <tr><td><span class="it">Lunedì – Domenica</span><span class="tr">Mon – Sun</span></td><td data-edit="h-week">10:00 – 22:00</td></tr>
+   <tr><td><span class="it">La cucina</span><span class="tr">The kitchen</span></td><td><span class="it">Orario continuato</span><span class="tr">Open all day</span></td></tr>
   </table>
  </div>
  <div class="rev">
-  <span class="k">Dove siamo · Find us</span>
+  <span class="k"><span class="it">Dove siamo</span><span class="tr">Find us</span></span>
   <h2>Via Venezia 40</h2>
   <p class="adr" data-edit="addr">Via Venezia 40, 90133 Palermo — a due passi da Via Roma</p>
-  <p>Scrivete su WhatsApp per il tavolo o per sapere la pasta di oggi. <em>WhatsApp us for a table — or to ask what today's pasta is.</em></p>
+  <p><span class="it">Scrivete su WhatsApp per il tavolo o per sapere la pasta di oggi.</span> <em class="tr">WhatsApp us for a table — or to ask what today's pasta is.</em></p>
   <a class="btn" href="https://wa.me/393315916964?text=Ciao%21%20Vorrei%20un%20tavolo%20da%20Mamma%20Lina" rel="noopener">💬 WhatsApp</a>
   <a class="btn call" href="tel:+393315916964">📞 <span data-edit="phone">331 591 6964</span></a>
   <a class="btn o" href="https://maps.google.com/?q=Mamma+Lina+friggitoria+gastronomia+Palermo" rel="noopener">Apri in Maps</a>
@@ -230,11 +244,7 @@ footer{background:#2c2018;color:#c2b09a;text-align:center;padding:30px 5vw 118px
 
 <footer>Mamma Lina — Friggitoria Gastronomia all'Antica · Via Venezia 40, Palermo · <span data-edit="phone2">331 591 6964</span></footer>
 
-<div class="bar">
- <a class="wa" href="https://wa.me/393315916964?text=Ciao%21%20Vorrei%20un%20tavolo%20da%20Mamma%20Lina" rel="noopener">💬 WhatsApp</a>
- <a class="call" href="tel:+393315916964">📞 Chiama</a>
- <a href="https://maps.google.com/?q=Mamma+Lina+friggitoria+gastronomia+Palermo" rel="noopener">📍 Mappa</a>
-</div>
+<div class="bar"><a class="wa" href="https://wa.me/393315916964?text=Ciao%21%20Vorrei%20un%20tavolo%20da%20Mamma%20Lina" rel="noopener">💬 WhatsApp</a><a class="call" href="tel:+393315916964">📞 <span class="it">Chiama</span><span class="tr">Call</span></a><a class="map" href="https://maps.google.com/?q=Mamma+Lina+friggitoria+gastronomia+Palermo" rel="noopener">📍 <span class="it">Mappa</span><span class="tr">Map</span></a></div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});

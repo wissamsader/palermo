@@ -92,10 +92,6 @@ h1 span{color:#8fd0e8}
 .btn.call{background:var(--mare)}
 .btn.o{background:transparent;color:var(--ink);border:2px solid var(--line)}
 footer{background:var(--mare);color:#9fc2cf;text-align:center;padding:30px 5vw 118px;font-size:12.5px}
-.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(15,51,69,.97);backdrop-filter:blur(8px);display:flex;z-index:50;border-top:2px solid #8fd0e8}
-.bar a{flex:1;text-align:center;padding:15px 6px;font-size:13.5px;font-weight:800;text-decoration:none;color:#f1f7f9}
-.bar a.wa{background:#1f9d55}
-.bar a.call{background:#8fd0e8;color:var(--mare)}
 @media(max-width:860px){
  .story{grid-template-columns:1fr;gap:34px}
  .mgrid{grid-template-columns:1fr}
@@ -103,16 +99,36 @@ footer{background:var(--mare);color:#9fc2cf;text-align:center;padding:30px 5vw 1
  .ggrid{grid-template-columns:1fr}
  .visit{grid-template-columns:1fr}
 }
+
+/* mobile hard-rules (07-13): text never at the screen edge + no blue tap flash */
+*{-webkit-tap-highlight-color:transparent}
+@media(max-width:860px){.wrap{padding-left:5vw!important;padding-right:5vw!important}}
+
+/* cassetta del pescato — crate slats + stake tag */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#123a4c;display:flex;align-items:center;justify-content:center;gap:14px;padding:11px 10px calc(11px + env(safe-area-inset-bottom));border-top:4px solid #0d2c3a}
+.bar::before{content:'';position:absolute;top:-4px;left:0;right:0;height:4px;background:repeating-linear-gradient(90deg,#e8d9a8 0 46px,transparent 46px 60px)}
+.bar a{text-decoration:none;font-family:'Saira Stencil One',sans-serif;font-size:13px;letter-spacing:.1em;color:#dff0f5;padding:11px 15px;border:2px dashed rgba(223,240,245,.5)}
+.bar a.wa{background:#e8d9a8;color:#123a4c;border:0;position:relative}
+.bar a.wa::before{content:'●';position:absolute;top:3px;left:5px;font-size:7px;color:#123a4c}
+.bar a.call{background:#2e94b8;border:0}
+
+/* IT/EN toggle (07-13) */
+html.en .it{display:none!important}
+html:not(.en) .tr{display:none!important}
+.lgx{position:fixed;top:calc(12px + env(safe-area-inset-top));right:12px;z-index:80;cursor:pointer;border:0;font-weight:700;font-size:11.5px;letter-spacing:.14em;padding:9px 14px;border-radius:999px;line-height:1}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.lgx{background:#123a4c;color:#dff0f5;border:2px dashed #dff0f5}
 </style>
 </head>
 <body>
 
+<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it">EN</span><span class="tr">IT</span></button>
 <header>
  <div class="bg"></div><div class="veil"></div>
  <div class="hin">
   <span class="crate">Mercato di Ballarò · Palermo</span>
   <h1>Sicily <span>Street Food</span></h1>
-  <p class="hsub">Trattoria di pesce fra le bancarelle di Ballarò: il pescato arriva dal mercato ogni mattina, la frittura esce nel coppo. <em>A fresh-fish trattoria tucked between the market stalls.</em></p>
+  <p class="hsub"><span class="it">Trattoria di pesce fra le bancarelle di Ballarò: il pescato arriva dal mercato ogni mattina, la frittura esce nel coppo.</span> <em class="tr">A fresh-fish trattoria tucked between the market stalls.</em></p>
   <div class="hmeta">
    <span>★ <b data-edit="rating">4,8</b> — <span data-edit="revcount">601</span> recensioni</span>
    <span>Pescato del giorno · Daily catch</span>
@@ -123,10 +139,10 @@ footer{background:var(--mare);color:#9fc2cf;text-align:center;padding:30px 5vw 1
 
 <section class="story wrap">
  <div class="rev">
-  <span class="k">Il banco · The counter</span>
+  <span class="k"><span class="it">Il banco</span><span class="tr">The counter</span></span>
   <h2>Il mercato<br><em>decide il menù</em></h2>
-  <p>Triglie, scampi, cozze e astici sul ghiaccio tritato: il nostro banco si riempie ogni mattina con quello che Ballarò offre. Quello che vedete sul ghiaccio è quello che trovate nel piatto.</p>
-  <p class="en">Red mullet, scampi, mussels and lobster on crushed ice: our counter fills each morning with whatever Ballarò brings in. What you see on the ice is what lands on your plate.</p>
+  <p class="it">Triglie, scampi, cozze e astici sul ghiaccio tritato: il nostro banco si riempie ogni mattina con quello che Ballarò offre. Quello che vedete sul ghiaccio è quello che trovate nel piatto.</p>
+  <p class="en tr">Red mullet, scampi, mussels and lobster on crushed ice: our counter fills each morning with whatever Ballarò brings in. What you see on the ice is what lands on your plate.</p>
   <p>Fuori, i tavolini stanno in mezzo al teatro del mercato — il posto più siciliano dove mangiare un'arancina di mare.</p>
  </div>
  <figure class="ifig rev">
@@ -140,7 +156,7 @@ footer{background:var(--mare);color:#9fc2cf;text-align:center;padding:30px 5vw 1
   <div class="mhead">
    <span class="k" style="color:#8fd0e8">Il menù · In 4 lingue al tavolo</span>
    <h2 class="rev">Prezzi veri, dal menù</h2>
-   <p class="note">Prezzi reali dal nostro menù stampato — il pescato del giorno va a mercato. <em>Real printed-menu prices; daily catch priced at the counter.</em></p>
+   <p class="note"><span class="it">Prezzi reali dal nostro menù stampato — il pescato del giorno va a mercato.</span> <em class="tr">Real printed-menu prices; daily catch priced at the counter.</em></p>
   </div>
   <div class="mgrid">
    <div class="mcrate rev">
@@ -161,13 +177,13 @@ footer{background:var(--mare);color:#9fc2cf;text-align:center;padding:30px 5vw 1
     <div class="mi"><span class="nm">Pasta con pesce spada e melanzane</span><b>€ 13</b></div>
    </div>
   </div>
-  <p class="mfoot">Coperto € 1,50 · Lista allergeni alla cassa · <em>Allergen list at the cash desk</em></p>
+  <p class="mfoot"><span class="it">Coperto € 1,50 · Lista allergeni alla cassa ·</span> <em class="tr">Allergen list at the cash desk</em></p>
  </div>
 </section>
 
 <div class="wrap">
 <section class="high">
- <span class="k">Dal banco alla tavola · Counter to table</span>
+ <span class="k"><span class="it">Dal banco alla tavola</span><span class="tr">Counter to table</span></span>
  <h2 class="rev">Tre cose da non perdere</h2>
  <div class="hgrid">
   <div class="hcard rev"><img src="img/04.jpg" alt="Pasta con le cozze"><div class="hb"><h3>Pasta con le cozze</h3><p>La specialità della casa, servita in mezzo al mercato — <span class="pz">€ 14</span></p></div></div>
@@ -181,13 +197,13 @@ footer{background:var(--mare);color:#9fc2cf;text-align:center;padding:30px 5vw 1
   <img src="img/07.jpg" alt="Frittura di gamberi e calamari">
   <img src="img/08.jpg" alt="I tavolini nel mercato di Ballarò">
  </div>
- <p class="gcap">i tavolini stanno dentro il mercato — <em>your table sits inside the market</em></p>
+ <p class="gcap"><span class="it">i tavolini stanno dentro il mercato —</span> <em class="tr">your table sits inside the market</em></p>
 </section>
 </div>
 
 <section class="revs">
  <div class="wrap">
-  <span class="k">Dicono di noi · What guests say</span>
+  <span class="k"><span class="it">Dicono di noi</span><span class="tr">What guests say</span></span>
   <h2 class="rev">Dalle recensioni Google</h2>
   <div class="rgrid">
    <div class="rcard rev"><div class="stars">★★★★★</div><p>"The seafood was incredibly fresh, and the whole experience felt truly authentic Sicilian. I loved sitting outside taking in the hustle and bustle."</p><div class="who">Kevin · Google</div></div>
@@ -200,18 +216,18 @@ footer{background:var(--mare);color:#9fc2cf;text-align:center;padding:30px 5vw 1
 
 <section class="visit wrap">
  <div class="rev">
-  <span class="k">Il ritmo · Our rhythm</span>
+  <span class="k"><span class="it">Il ritmo</span><span class="tr">Our rhythm</span></span>
   <h2>Freschi ogni giorno</h2>
   <div class="fresh">
    <span class="hand">"pescato del giorno = orario del mercato"</span>
-   <p>Il banco segue il mercato di Ballarò: per l'orario di oggi scriveteci su WhatsApp — rispondiamo subito. <em>Our counter follows the market: message us on WhatsApp for today's hours.</em></p>
+   <p><span class="it">Il banco segue il mercato di Ballarò: per l'orario di oggi scriveteci su WhatsApp — rispondiamo subito.</span> <em class="tr">Our counter follows the market: message us on WhatsApp for today's hours.</em></p>
   </div>
  </div>
  <div class="rev">
-  <span class="k">Dove siamo · Find us</span>
+  <span class="k"><span class="it">Dove siamo</span><span class="tr">Find us</span></span>
   <h2>Dentro Ballarò</h2>
   <p class="adr" data-edit="addr">Via Dalmazio Birago 17, 90134 Palermo — mercato di Ballarò</p>
-  <p>Un messaggio e vi teniamo il tavolo fra le bancarelle. <em>One message and we'll hold your table between the stalls.</em></p>
+  <p><span class="it">Un messaggio e vi teniamo il tavolo fra le bancarelle.</span> <em class="tr">One message and we'll hold your table between the stalls.</em></p>
   <a class="btn" href="https://wa.me/393273581227?text=Ciao%21%20Vorrei%20un%20tavolo%20da%20Sicily%20Street%20Food" rel="noopener">💬 WhatsApp</a>
   <a class="btn call" href="tel:+393273581227">📞 <span data-edit="phone">327 358 1227</span></a>
   <a class="btn o" href="https://maps.google.com/?q=Sicily+Street+Food+Seafood+Trattoria+Palermo" rel="noopener">Apri in Maps</a>
@@ -220,11 +236,7 @@ footer{background:var(--mare);color:#9fc2cf;text-align:center;padding:30px 5vw 1
 
 <footer>Sicily Street Food — Seafood Trattoria · Via Dalmazio Birago 17, Ballarò, Palermo · <span data-edit="phone2">327 358 1227</span></footer>
 
-<div class="bar">
- <a class="wa" href="https://wa.me/393273581227?text=Ciao%21%20Vorrei%20un%20tavolo%20da%20Sicily%20Street%20Food" rel="noopener">💬 WhatsApp</a>
- <a class="call" href="tel:+393273581227">📞 Chiama</a>
- <a href="https://maps.google.com/?q=Sicily+Street+Food+Seafood+Trattoria+Palermo" rel="noopener">📍 Mappa</a>
-</div>
+<div class="bar"><a class="wa" href="https://wa.me/393273581227?text=Ciao%21%20Vorrei%20un%20tavolo%20da%20Sicily%20Street%20Food" rel="noopener">WHATSAPP</a><a class="call" href="tel:+393273581227">☎ <span class="it">CHIAMA</span><span class="tr">CALL</span></a><a class="map" href="https://maps.google.com/?q=Sicily+Street+Food+Seafood+Trattoria+Palermo" rel="noopener">⚓ <span class="it">MAPPA</span><span class="tr">MAP</span></a></div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});

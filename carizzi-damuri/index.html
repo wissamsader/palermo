@@ -87,10 +87,6 @@ h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(46px,8
 .btn.call{background:var(--wine)}
 .btn.o{background:transparent;color:var(--ink);border:1px solid var(--line)}
 footer{background:var(--wine);padding:34px 5vw 116px;text-align:center;color:#b58b95;font-size:12.5px}
-.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(44,18,24,.96);backdrop-filter:blur(8px);display:flex;z-index:50;border-top:1px solid var(--gold)}
-.bar a{flex:1;text-align:center;padding:15px 6px;font-size:13.5px;font-weight:600;text-decoration:none;color:var(--cream)}
-.bar a.wa{background:#23a455;color:#fff}
-.bar a.call{background:var(--gold);color:var(--wine)}
 @media(max-width:860px){
  .trip{grid-template-columns:1fr;gap:12px}
  .trip img:nth-child(1),.trip img:nth-child(3){display:none}
@@ -99,15 +95,34 @@ footer{background:var(--wine);padding:34px 5vw 116px;text-align:center;color:#b5
  .ggrid{grid-template-columns:repeat(2,1fr)}
  .visit{grid-template-columns:1fr}
 }
+
+/* mobile hard-rules (07-13): text never at the screen edge + no blue tap flash */
+*{-webkit-tap-highlight-color:transparent}
+@media(max-width:860px){.wrap{padding-left:5vw!important;padding-right:5vw!important}}
+
+/* tre archi */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#3a0f19;display:flex;justify-content:center;gap:16px;align-items:flex-end;padding:0 10px calc(9px + env(safe-area-inset-bottom));border-top:1px solid #c9a35c}
+.bar a{width:112px;text-align:center;text-decoration:none;font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#f3ead9;background:#4a1420;border:1.5px solid #c9a35c;border-bottom:0;border-radius:60px 60px 0 0;padding:20px 6px 12px;transform:translateY(0);transition:transform .25s}
+.bar a.call{padding-top:30px;margin-top:-14px;background:#5a1a28}
+.bar a:active{transform:translateY(3px)}
+.bar a i{display:block;font-style:normal;font-size:16px;margin-bottom:4px;color:#c9a35c}
+
+/* IT/EN toggle (07-13) */
+html.en .it{display:none!important}
+html:not(.en) .tr{display:none!important}
+.lgx{position:fixed;top:calc(12px + env(safe-area-inset-top));right:12px;z-index:80;cursor:pointer;border:0;font-weight:700;font-size:11.5px;letter-spacing:.14em;padding:9px 14px;border-radius:999px;line-height:1}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.lgx{background:#4a1420;color:#c9a35c;border:1px solid #c9a35c}
 </style>
 </head>
 <body>
 
+<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it">EN</span><span class="tr">IT</span></button>
 <header>
  <div class="hin">
   <span class="k">Via Lungarini 21 · Palermo</span>
   <h1>Carizzi d'amuri</h1>
-  <p class="hsub">"Carezze d'amore", in siciliano — il ristorante dei tre fratelli, aperto solo a cena. <em>"Caresses of love", in Sicilian — three brothers, dinner only.</em></p>
+  <p class="hsub"><span class="it">"Carezze d'amore", in siciliano — il ristorante dei tre fratelli, aperto solo a cena.</span> <em class="tr">"Caresses of love", in Sicilian — three brothers, dinner only.</em></p>
   <div class="trip">
    <img src="img/03.jpg" alt="Pasta d'autore" class="rev on">
    <img src="img/01.jpg" alt="La sala ad archi" class="rev on">
@@ -124,10 +139,10 @@ footer{background:var(--wine);padding:34px 5vw 116px;text-align:center;color:#b5
 
 <section class="story wrap">
  <div class="rev">
-  <span class="k">La nostra storia · Our story</span>
+  <span class="k"><span class="it">La nostra storia</span><span class="tr">Our story</span></span>
   <h2>La tavola di Giacomo<br>e dei suoi fratelli</h2>
-  <p>Sotto gli archi in pietra di Via Lungarini, tre fratelli hanno trasformato il nome siciliano delle carezze in un modo di cucinare: pochi tavoli, ingredienti freschissimi e piatti che escono quando sono pronti — mai prima.</p>
-  <p><em>Under the stone arches of Via Lungarini, three brothers turned the Sicilian word for caresses into a way of cooking: few tables, the freshest ingredients, and dishes that leave the kitchen only when they're ready.</em></p>
+  <p class="it">Sotto gli archi in pietra di Via Lungarini, tre fratelli hanno trasformato il nome siciliano delle carezze in un modo di cucinare: pochi tavoli, ingredienti freschissimi e piatti che escono quando sono pronti — mai prima.</p>
+  <p class="tr"><em>Under the stone arches of Via Lungarini, three brothers turned the Sicilian word for caresses into a way of cooking: few tables, the freshest ingredients, and dishes that leave the kitchen only when they're ready.</em></p>
   <p>Su Google li chiamano "Giacomo's table" — e chi ci cena una volta, torna da amico.</p>
  </div>
  <img class="rev" src="img/09.jpg" alt="In sala">
@@ -148,7 +163,7 @@ footer{background:var(--wine);padding:34px 5vw 116px;text-align:center;color:#b5
 <div class="wrap">
 <section class="menu rev">
  <h2>I nostri secondi</h2>
- <p class="note">DAL MENÙ — PREZZI REALI · <em>FROM OUR MENU — REAL PRICES</em></p>
+ <p class="note"><span class="it">DAL MENÙ — PREZZI REALI ·</span> <em class="tr">FROM OUR MENU — REAL PRICES</em></p>
  <div class="mlist">
   <h3>Dalla terra</h3>
   <div class="mi"><span class="nm">Tagliata di vitello, radicchio e gorgonzola<i>Cut of veal, radicchio, mushrooms, leek, gorgonzola</i></span><b class="pr">19 €</b></div>
@@ -169,7 +184,7 @@ footer{background:var(--wine);padding:34px 5vw 116px;text-align:center;color:#b5
 </div>
 
 <section class="gal wrap">
- <span class="k">Dalla cucina · From the kitchen</span>
+ <span class="k"><span class="it">Dalla cucina</span><span class="tr">From the kitchen</span></span>
  <h2 class="rev">Piatti come carezze</h2>
  <div class="ggrid rev">
   <img src="img/04.jpg" alt="Dessert">
@@ -180,7 +195,7 @@ footer{background:var(--wine);padding:34px 5vw 116px;text-align:center;color:#b5
 
 <section class="revs">
  <div class="wrap">
-  <span class="k">Dicono di noi · What guests say</span>
+  <span class="k"><span class="it">Dicono di noi</span><span class="tr">What guests say</span></span>
   <h2 class="rev">Chi cena, racconta</h2>
   <div class="rgrid">
    <div class="rcard rev"><div class="stars">★★★★★</div><p>"We had a wonderful evening at Giacomo's table with his brothers: fresh ingredients, beautifully prepared!"</p><div class="who">Alexa Garry · Google</div></div>
@@ -193,18 +208,18 @@ footer{background:var(--wine);padding:34px 5vw 116px;text-align:center;color:#b5
 
 <section class="visit wrap">
  <div class="rev">
-  <span class="k">Orari · Hours</span>
+  <span class="k"><span class="it">Orari</span><span class="tr">Hours</span></span>
   <h2>Solo a cena</h2>
   <table class="hours">
-   <tr><td>Mercoledì – Lunedì</td><td data-edit="h-week">19:30 – 23:00</td></tr>
-   <tr><td>Martedì</td><td data-edit="h-tue">Chiuso · Closed</td></tr>
+   <tr><td><span class="it">Mercoledì – Lunedì</span><span class="tr">Wed – Mon</span></td><td data-edit="h-week">19:30 – 23:00</td></tr>
+   <tr><td><span class="it">Martedì</span><span class="tr">Tuesday</span></td><td data-edit="h-tue">Chiuso · Closed</td></tr>
   </table>
  </div>
  <div class="rev">
-  <span class="k">Dove siamo · Find us</span>
+  <span class="k"><span class="it">Dove siamo</span><span class="tr">Find us</span></span>
   <h2>Via Lungarini 21</h2>
   <p class="adr" data-edit="addr">Via Lungarini 21, 90133 Palermo — tra la Kalsa e Via Roma</p>
-  <p>Pochi tavoli: scriveteci su WhatsApp per la vostra sera. <em>Few tables — WhatsApp us for your evening.</em></p>
+  <p><span class="it">Pochi tavoli: scriveteci su WhatsApp per la vostra sera.</span> <em class="tr">Few tables — WhatsApp us for your evening.</em></p>
   <a class="btn" href="https://wa.me/393291341439?text=Buonasera%21%20Vorrei%20prenotare%20un%20tavolo%20da%20Carizzi%20d%27amuri" rel="noopener">💬 WhatsApp</a>
   <a class="btn call" href="tel:+393291341439">📞 <span data-edit="phone">329 134 1439</span></a>
   <a class="btn o" href="https://maps.google.com/?q=Carizzi+d%27amuri+Palermo" rel="noopener">Apri in Maps</a>
@@ -213,11 +228,7 @@ footer{background:var(--wine);padding:34px 5vw 116px;text-align:center;color:#b5
 
 <footer>Carizzi d'amuri · Via Lungarini 21, Palermo · <span data-edit="phone2">329 134 1439</span></footer>
 
-<div class="bar">
- <a class="wa" href="https://wa.me/393291341439?text=Buonasera%21%20Vorrei%20prenotare%20un%20tavolo%20da%20Carizzi%20d%27amuri" rel="noopener">💬 WhatsApp</a>
- <a class="call" href="tel:+393291341439">📞 Chiama</a>
- <a href="https://maps.google.com/?q=Carizzi+d%27amuri+Palermo" rel="noopener">📍 Mappa</a>
-</div>
+<div class="bar"><a class="wa" href="https://wa.me/393291341439?text=Buonasera%21%20Vorrei%20prenotare%20un%20tavolo%20da%20Carizzi%20d%27amuri" rel="noopener"><i>✉</i>WhatsApp</a><a class="call" href="tel:+393291341439"><i>❖</i><span class="it">Chiama</span><span class="tr">Call</span></a><a class="map" href="https://maps.google.com/?q=Carizzi+d%27amuri+Palermo" rel="noopener"><i>✦</i><span class="it">Mappa</span><span class="tr">Map</span></a></div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
