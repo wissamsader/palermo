@@ -116,6 +116,9 @@ html:not(.en) .tr{display:none!important}
 .lgx{position:fixed;top:calc(12px + env(safe-area-inset-top));right:12px;z-index:80;cursor:pointer;border:0;font-weight:700;font-size:11.5px;letter-spacing:.14em;padding:9px 14px;border-radius:999px;line-height:1}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 .lgx{background:#17150f;color:#e8c04a;border:2px solid #e8c04a}
+
+
+/*igbtn*/.bar a.ig{display:inline-flex;align-items:center;justify-content:center;padding:10px 12px}.bar a.ig svg{width:17px;height:17px;display:block}
 </style>
 </head>
 <body>
@@ -237,7 +240,7 @@ html:not(.en) .tr{display:none!important}
  <div class="fin">Trattoria no zu Totó e niputi · Via dei Candelai 110, Palermo · <span data-edit="phone2">320 236 1846</span></div>
 </footer>
 
-<div class="bar"><a class="wa" href="https://wa.me/393202361846?text=Ciao%21%20Vorrei%20prenotare%20un%20tavolo%20da%20no%20zu%20Tot%C3%B3" rel="noopener">✳ WhatsApp</a><a class="call" href="tel:+393202361846">☀ <span class="it">Chiama</span><span class="tr">Call</span></a><a class="map" href="https://maps.google.com/?q=Trattoria+no+zu+Toto+e+niputi+Palermo" rel="noopener">➢ <span class="it">Mappa</span><span class="tr">Map</span></a></div>
+<div class="bar"><a class="wa" href="https://wa.me/393202361846?text=Ciao%21%20Vorrei%20prenotare%20un%20tavolo%20da%20no%20zu%20Tot%C3%B3" rel="noopener">✳ WhatsApp</a><a class="call" href="tel:+393202361846">☀ <span class="it">Chiama</span><span class="tr">Call</span></a><a class="ig" href="https://instagram.com/fratelli_marchese" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.4"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg></a><a class="map" href="https://maps.google.com/?q=Trattoria+no+zu+Toto+e+niputi+Palermo" rel="noopener">➢ <span class="it">Mappa</span><span class="tr">Map</span></a></div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
