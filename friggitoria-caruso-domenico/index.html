@@ -115,16 +115,16 @@ html:not(.en) .tr{display:none!important}
 </head>
 <body>
 
-<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it">EN</span><span class="tr">IT</span></button>
+<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it" data-edit="t1" data-edit-label="Text — EN">EN</span><span class="tr" data-edit="t2" data-edit-label="Text — IT">IT</span></button>
 <header>
  <div class="bg"></div><div class="veil"></div>
  <div class="hin">
-  <span class="freccia">➜ Sosta obbligata · Via Messina Marine 313</span>
-  <h1>Antica Friggitoria<span class="script">Caruso</span></h1>
-  <p class="hsub"><span class="it">Panineria, rosticceria e focacceria sulla strada del mare: la sosta storica di chi va e viene dal lungomare di Palermo.</span> <em class="tr">The classic pit stop on Palermo's seafront road.</em></p>
+  <span class="freccia" data-edit="t3" data-edit-label="Text — ➜ Sosta obbligata · Via Messina Marine…">➜ Sosta obbligata · Via Messina Marine 313</span>
+  <h1>Antica Friggitoria<span class="script" data-edit="t4" data-edit-label="Text — Caruso">Caruso</span></h1>
+  <p class="hsub"><span class="it" data-edit="t5" data-edit-label="Text — Panineria, rosticceria e focacceria su…">Panineria, rosticceria e focacceria sulla strada del mare: la sosta storica di chi va e viene dal lungomare di Palermo.</span> <em class="tr" data-edit="t6" data-edit-label="Text — The classic pit stop on Palermo's seaf…">The classic pit stop on Palermo's seafront road.</em></p>
   <div class="hmeta">
    <span>★ <b data-edit="rating">4,3</b> — <span data-edit="revcount">520</span> recensioni</span>
-   <span>Lun – Sab · 8:00 – 24:00</span>
+   <span data-edit="t7" data-edit-label="Text — Lun – Sab · 8:00 – 24:00">Lun – Sab · 8:00 – 24:00</span>
   </div>
  </div>
 </header>
@@ -132,11 +132,11 @@ html:not(.en) .tr{display:none!important}
 
 <section class="story wrap">
  <div class="rev">
-  <span class="k"><span class="it">La sosta</span><span class="tr">The pit stop</span></span>
-  <h2>Dove mangiano <span class="script">i locali</span></h2>
-  <p class="it">Due palme sull'insegna, la tenda verde a righe e il banco pieno dalla mattina a mezzanotte: da Caruso ci si ferma tornando dal mare, per un panino con le panelle o un pezzo di rosticceria a un euro.</p>
-  <p class="en tr">Two palms on the sign, a striped green awning, and a counter that runs from morning to midnight. "Eat where the locals eat" — that's how the reviews put it.</p>
-  <p>Panineria, rosticceria, focacceria, gastronomia a peso: una cucina intera travestita da chiosco.</p>
+  <span class="k"><span class="it" data-edit="t8" data-edit-label="Text — La sosta">La sosta</span><span class="tr" data-edit="t9" data-edit-label="Text — The pit stop">The pit stop</span></span>
+  <h2>Dove mangiano <span class="script" data-edit="t10" data-edit-label="Text — i locali">i locali</span></h2>
+  <p class="it" data-edit="t11" data-edit-label="Text — Due palme sull'insegna, la tenda verde…">Due palme sull'insegna, la tenda verde a righe e il banco pieno dalla mattina a mezzanotte: da Caruso ci si ferma tornando dal mare, per un panino con le panelle o un pezzo di rosticceria a un euro.</p>
+  <p class="en tr" data-edit="t12" data-edit-label="Text — Two palms on the sign, a striped green…">Two palms on the sign, a striped green awning, and a counter that runs from morning to midnight. "Eat where the locals eat" — that's how the reviews put it.</p>
+  <p data-edit="t13" data-edit-label="Text — Panineria, rosticceria, focacceria, ga…">Panineria, rosticceria, focacceria, gastronomia a peso: una cucina intera travestita da chiosco.</p>
  </div>
  <figure class="sfig rev"><img src="img/01.jpg" alt="L'insegna con le palme"></figure>
 </section>
@@ -144,87 +144,87 @@ html:not(.en) .tr{display:none!important}
 <section class="menu">
  <div class="wrap">
   <div class="mhead">
-   <span class="k" style="color:#ffe9a8">Il muro dei prezzi · The price wall</span>
-   <h2 class="rev">Prezzi veri, <span class="script">dal muro</span></h2>
-   <p class="note"><span class="it">Dal nostro listino esposto in negozio — la lista intera è molto più lunga.</span> <em class="tr">From the wall board in the shop; the full list runs much longer.</em></p>
+   <span class="k" style="color:#ffe9a8" data-edit="t14" data-edit-label="Text — Il muro dei prezzi · The price wall">Il muro dei prezzi · The price wall</span>
+   <h2 class="rev">Prezzi veri, <span class="script" data-edit="t15" data-edit-label="Text — dal muro">dal muro</span></h2>
+   <p class="note"><span class="it" data-edit="t16" data-edit-label="Text — Dal nostro listino esposto in negozio …">Dal nostro listino esposto in negozio — la lista intera è molto più lunga.</span> <em class="tr" data-edit="t17" data-edit-label="Text — From the wall board in the shop; the f…">From the wall board in the shop; the full list runs much longer.</em></p>
   </div>
   <div class="mgrid">
    <div class="mcol rev">
-    <h3>Rosticceria a 1 €</h3>
-    <div class="mi"><span class="nm">Rollò · Calzone<i>fritto o al forno</i></span><b>€ 1,00</b></div>
-    <div class="mi"><span class="nm">Pizzetta · Sfincionello</span><b>€ 1,00</b></div>
-    <div class="mi"><span class="nm">Ravazzata · Papillon</span><b>€ 1,00</b></div>
-    <div class="mi"><span class="nm">Arancina<i>con carne o con burro</i></span><b>€ 1,00</b></div>
-    <div class="mi"><span class="nm">Ciambella<i>grande 1,00 · piccola 0,50</i></span><b>€ 0,50+</b></div>
+    <h3 data-edit="t18" data-edit-label="Heading — Rosticceria a 1 €">Rosticceria a 1 €</h3>
+    <div class="mi"><span class="nm">Rollò · Calzone<i data-edit="t19" data-edit-label="Text — fritto o al forno">fritto o al forno</i></span><b data-edit="t20" data-edit-label="Text — € 1,00">€ 1,00</b></div>
+    <div class="mi"><span class="nm" data-edit="t21" data-edit-label="Text — Pizzetta · Sfincionello">Pizzetta · Sfincionello</span><b data-edit="t22" data-edit-label="Text — € 1,00">€ 1,00</b></div>
+    <div class="mi"><span class="nm" data-edit="t23" data-edit-label="Text — Ravazzata · Papillon">Ravazzata · Papillon</span><b data-edit="t24" data-edit-label="Text — € 1,00">€ 1,00</b></div>
+    <div class="mi"><span class="nm">Arancina<i data-edit="t25" data-edit-label="Text — con carne o con burro">con carne o con burro</i></span><b data-edit="t26" data-edit-label="Text — € 1,00">€ 1,00</b></div>
+    <div class="mi"><span class="nm">Ciambella<i data-edit="t27" data-edit-label="Text — grande 1,00 · piccola 0,50">grande 1,00 · piccola 0,50</i></span><b data-edit="t28" data-edit-label="Text — € 0,50+">€ 0,50+</b></div>
    </div>
    <div class="mcol rev">
-    <h3>Panineria</h3>
-    <div class="mi"><span class="nm">Panino con panelle · con crocchè</span><b>€ 1,50</b></div>
-    <div class="mi"><span class="nm">Panino con la milza</span><b>€ 2,00</b></div>
-    <div class="mi"><span class="nm">Diavola · Topolino</span><b>€ 3,00</b></div>
-    <div class="mi"><span class="nm">Vastaso<i>porchetta, bacon, cipolla agrodolce, maionese</i></span><b>€ 4,00</b></div>
-    <div class="mi"><span class="nm">Caruso Beach<i>il doppio della casa</i></span><b>€ 5,50</b></div>
+    <h3 data-edit="t29" data-edit-label="Heading — Panineria">Panineria</h3>
+    <div class="mi"><span class="nm" data-edit="t30" data-edit-label="Text — Panino con panelle · con crocchè">Panino con panelle · con crocchè</span><b data-edit="t31" data-edit-label="Text — € 1,50">€ 1,50</b></div>
+    <div class="mi"><span class="nm" data-edit="t32" data-edit-label="Text — Panino con la milza">Panino con la milza</span><b data-edit="t33" data-edit-label="Text — € 2,00">€ 2,00</b></div>
+    <div class="mi"><span class="nm" data-edit="t34" data-edit-label="Text — Diavola · Topolino">Diavola · Topolino</span><b data-edit="t35" data-edit-label="Text — € 3,00">€ 3,00</b></div>
+    <div class="mi"><span class="nm">Vastaso<i data-edit="t36" data-edit-label="Text — porchetta, bacon, cipolla agrodolce, m…">porchetta, bacon, cipolla agrodolce, maionese</i></span><b data-edit="t37" data-edit-label="Text — € 4,00">€ 4,00</b></div>
+    <div class="mi"><span class="nm">Caruso Beach<i data-edit="t38" data-edit-label="Text — il doppio della casa">il doppio della casa</i></span><b data-edit="t39" data-edit-label="Text — € 5,50">€ 5,50</b></div>
    </div>
    <div class="mcol rev">
-    <h3>Dal mare &amp; primi</h3>
-    <div class="mi"><span class="nm">Latterino fritto</span><b>€ 3,00</b></div>
-    <div class="mi"><span class="nm">Calamaro fritto · Seppioline</span><b>€ 4,00</b></div>
-    <div class="mi"><span class="nm">Gamberetti fritti</span><b>€ 4,50</b></div>
-    <div class="mi"><span class="nm">Fritturina di mare mista</span><b>€ 6,00</b></div>
-    <div class="mi"><span class="nm">Pasta espressa · Anelletti al forno</span><b>€ 2,50</b></div>
+    <h3 data-edit="t40" data-edit-label="Heading — Dal mare &amp; primi">Dal mare &amp; primi</h3>
+    <div class="mi"><span class="nm" data-edit="t41" data-edit-label="Text — Latterino fritto">Latterino fritto</span><b data-edit="t42" data-edit-label="Text — € 3,00">€ 3,00</b></div>
+    <div class="mi"><span class="nm" data-edit="t43" data-edit-label="Text — Calamaro fritto · Seppioline">Calamaro fritto · Seppioline</span><b data-edit="t44" data-edit-label="Text — € 4,00">€ 4,00</b></div>
+    <div class="mi"><span class="nm" data-edit="t45" data-edit-label="Text — Gamberetti fritti">Gamberetti fritti</span><b data-edit="t46" data-edit-label="Text — € 4,50">€ 4,50</b></div>
+    <div class="mi"><span class="nm" data-edit="t47" data-edit-label="Text — Fritturina di mare mista">Fritturina di mare mista</span><b data-edit="t48" data-edit-label="Text — € 6,00">€ 6,00</b></div>
+    <div class="mi"><span class="nm" data-edit="t49" data-edit-label="Text — Pasta espressa · Anelletti al forno">Pasta espressa · Anelletti al forno</span><b data-edit="t50" data-edit-label="Text — € 2,50">€ 2,50</b></div>
    </div>
   </div>
-  <p class="mfoot">E la gastronomia a peso: porchetta, insalata di mare, milza — al chilo, come in bottega.</p>
+  <p class="mfoot" data-edit="t51" data-edit-label="Text — E la gastronomia a peso: porchetta, in…">E la gastronomia a peso: porchetta, insalata di mare, milza — al chilo, come in bottega.</p>
  </div>
 </section>
 
 <div class="wrap">
 <section class="high">
- <span class="k"><span class="it">Dal banco</span><span class="tr">From the counter</span></span>
- <h2 class="rev">Le soste <span class="script">giuste</span></h2>
+ <span class="k"><span class="it" data-edit="t52" data-edit-label="Text — Dal banco">Dal banco</span><span class="tr" data-edit="t53" data-edit-label="Text — From the counter">From the counter</span></span>
+ <h2 class="rev">Le soste <span class="script" data-edit="t54" data-edit-label="Text — giuste">giuste</span></h2>
  <div class="hgrid">
-  <div class="hcard rev"><img src="img/03.jpg" alt="Pane e panelle"><div class="hb"><h3>Pane e panelle</h3><p>Strati di panelle calde nella mafalda — <span class="pz">€ 1,50</span></p></div></div>
-  <div class="hcard rev"><img src="img/07.jpg" alt="La vetrina del fritto"><div class="hb"><h3>La vetrina del fritto</h3><p>Arancine, pizzette e crocchè in fila dietro il vetro, tutto il giorno.</p></div></div>
-  <div class="hcard rev"><img src="img/04.jpg" alt="Il banco gastronomia"><div class="hb"><h3>Gastronomia a peso</h3><p>Porchetta, contorni e salsiccia — la cena si compone al banco.</p></div></div>
+  <div class="hcard rev"><img src="img/03.jpg" alt="Pane e panelle"><div class="hb"><h3 data-edit="t55" data-edit-label="Heading — Pane e panelle">Pane e panelle</h3><p>Strati di panelle calde nella mafalda — <span class="pz" data-edit="t56" data-edit-label="Text — € 1,50">€ 1,50</span></p></div></div>
+  <div class="hcard rev"><img src="img/07.jpg" alt="La vetrina del fritto"><div class="hb"><h3 data-edit="t57" data-edit-label="Heading — La vetrina del fritto">La vetrina del fritto</h3><p data-edit="t58" data-edit-label="Text — Arancine, pizzette e crocchè in fila d…">Arancine, pizzette e crocchè in fila dietro il vetro, tutto il giorno.</p></div></div>
+  <div class="hcard rev"><img src="img/04.jpg" alt="Il banco gastronomia"><div class="hb"><h3 data-edit="t59" data-edit-label="Heading — Gastronomia a peso">Gastronomia a peso</h3><p data-edit="t60" data-edit-label="Text — Porchetta, contorni e salsiccia — la c…">Porchetta, contorni e salsiccia — la cena si compone al banco.</p></div></div>
  </div>
 </section>
 </div>
 
 <section class="revs">
  <div class="wrap">
-  <span class="k"><span class="it">Dicono di noi</span><span class="tr">What guests say</span></span>
-  <h2 class="rev">Dalle recensioni Google</h2>
+  <span class="k"><span class="it" data-edit="t61" data-edit-label="Text — Dicono di noi">Dicono di noi</span><span class="tr" data-edit="t62" data-edit-label="Text — What guests say">What guests say</span></span>
+  <h2 class="rev" data-edit="t63" data-edit-label="Title — Dalle recensioni Google">Dalle recensioni Google</h2>
   <div class="rgrid">
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Eat where the locals eat. Fair prices, good food and friendly staff."</p><div class="who">M. Mascia · Google</div></div>
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Food was really good, prices lower than central Palermo. Many options — I paid 7.50 € for fried calamari."</p><div class="who">Alex Pjetra · Google</div></div>
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"We had the Vastaso sandwich and the Diavola — they were all delicious!! The staff was very kind as well."</p><div class="who">Alex · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t64" data-edit-label="Text — 'Eat where the locals eat. Fair prices…">"Eat where the locals eat. Fair prices, good food and friendly staff."</p><div class="who" data-edit="t65" data-edit-label="Text — M. Mascia · Google">M. Mascia · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t66" data-edit-label="Text — 'Food was really good, prices lower th…">"Food was really good, prices lower than central Palermo. Many options — I paid 7.50 € for fried calamari."</p><div class="who" data-edit="t67" data-edit-label="Text — Alex Pjetra · Google">Alex Pjetra · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t68" data-edit-label="Text — 'We had the Vastaso sandwich and the D…">"We had the Vastaso sandwich and the Diavola — they were all delicious!! The staff was very kind as well."</p><div class="who" data-edit="t69" data-edit-label="Text — Alex · Google">Alex · Google</div></div>
   </div>
-  <p class="gbadge">★ <b>4,3 / 5</b> — 520 recensioni su Google</p>
+  <p class="gbadge">★ <b data-edit="t70" data-edit-label="Text — 4,3 / 5">4,3 / 5</b> — 520 recensioni su Google</p>
  </div>
 </section>
 
 <section class="visit wrap">
  <div class="rev">
-  <span class="k"><span class="it">Orari</span><span class="tr">Hours</span></span>
-  <h2>Fino a mezzanotte</h2>
+  <span class="k"><span class="it" data-edit="t71" data-edit-label="Text — Orari">Orari</span><span class="tr" data-edit="t72" data-edit-label="Text — Hours">Hours</span></span>
+  <h2 data-edit="t73" data-edit-label="Title — Fino a mezzanotte">Fino a mezzanotte</h2>
   <table class="hours">
-   <tr><td><span class="it">Lunedì – Sabato</span><span class="tr">Mon – Sat</span></td><td data-edit="h-week">8:00 – 24:00</td></tr>
-   <tr><td><span class="it">Domenica</span><span class="tr">Sunday</span></td><td data-edit="h-sun">Chiuso · Closed</td></tr>
+   <tr><td><span class="it" data-edit="t74" data-edit-label="Text — Lunedì – Sabato">Lunedì – Sabato</span><span class="tr" data-edit="t75" data-edit-label="Text — Mon – Sat">Mon – Sat</span></td><td data-edit="h-week">8:00 – 24:00</td></tr>
+   <tr><td><span class="it" data-edit="t76" data-edit-label="Text — Domenica">Domenica</span><span class="tr" data-edit="t77" data-edit-label="Text — Sunday">Sunday</span></td><td data-edit="h-sun">Chiuso · Closed</td></tr>
   </table>
  </div>
  <div class="rev">
-  <span class="k"><span class="it">Dove siamo</span><span class="tr">Find us</span></span>
-  <h2>Messina Marine 313</h2>
+  <span class="k"><span class="it" data-edit="t78" data-edit-label="Text — Dove siamo">Dove siamo</span><span class="tr" data-edit="t79" data-edit-label="Text — Find us">Find us</span></span>
+  <h2 data-edit="t80" data-edit-label="Title — Messina Marine 313">Messina Marine 313</h2>
   <p class="adr" data-edit="addr">Via Messina Marine 313, 90123 Palermo — la strada del mare</p>
-  <p><span class="it">Per prenotazioni c'è il numero della tenda.</span> <em class="tr">For bookings, the number on the awning.</em></p>
+  <p><span class="it" data-edit="t81" data-edit-label="Text — Per prenotazioni c'è il numero della t…">Per prenotazioni c'è il numero della tenda.</span> <em class="tr" data-edit="t82" data-edit-label="Text — For bookings, the number on the awning…">For bookings, the number on the awning.</em></p>
   <a class="btn" href="tel:+39091475484">📞 <span data-edit="phone">091 475484</span></a>
-  <a class="btn o" href="https://maps.google.com/?q=Antica+Friggitoria+Caruso+Domenico+Palermo" rel="noopener" target="_blank">Apri in Maps</a>
+  <a class="btn o" href="https://maps.google.com/?q=Antica+Friggitoria+Caruso+Domenico+Palermo" rel="noopener" target="_blank" data-edit="t83" data-edit-label="Button / link — Apri in Maps">Apri in Maps</a>
  </div>
 </section>
 
 <footer>Antica Friggitoria Caruso · Via Messina Marine 313, Palermo · <span data-edit="phone2">091 475484</span></footer>
 
-<div class="bar"><span class="arrow">➜</span><a class="call" href="tel:+39091475484"><b>☎ <span class="it">Chiama</span><span class="tr">Call</span></b></a><a class="map" href="https://maps.google.com/?q=Antica+Friggitoria+Caruso+Domenico+Palermo" rel="noopener" target="_blank"><b>✶ <span class="it">Mappa</span><span class="tr">Map</span></b></a></div>
+<div class="bar"><span class="arrow">➜</span><a class="call" href="tel:+39091475484"><b>☎ <span class="it" data-edit="t84" data-edit-label="Text — Chiama">Chiama</span><span class="tr" data-edit="t85" data-edit-label="Text — Call">Call</span></b></a><a class="map" href="https://maps.google.com/?q=Antica+Friggitoria+Caruso+Domenico+Palermo" rel="noopener" target="_blank"><b>✶ <span class="it" data-edit="t86" data-edit-label="Text — Mappa">Mappa</span><span class="tr" data-edit="t87" data-edit-label="Text — Map">Map</span></b></a></div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});

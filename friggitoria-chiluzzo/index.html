@@ -123,16 +123,16 @@ html:not(.en) .tr{display:none!important}
 </head>
 <body>
 
-<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it">EN</span><span class="tr">IT</span></button>
+<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it" data-edit="t1" data-edit-label="Text — EN">EN</span><span class="tr" data-edit="t2" data-edit-label="Text — IT">IT</span></button>
 <header>
  <div class="bg"></div><div class="veil"></div>
  <div class="hin">
-  <span class="dal">Street food since 1943</span>
-  <h1>Friggitoria <span>Chiluzzo</span></h1>
-  <p class="hsub"><span class="it">Il chiosco della Kalsa: panelle e crocché nel pane, pani ca' meusa e un tavolino di plastica in piazza. Il pranzo palermitano da 2 euro.</span> <em class="tr">Palermo's 2-euro lunch, on Piazza della Kalsa since 1943.</em></p>
+  <span class="dal" data-edit="t3" data-edit-label="Text — Street food since 1943">Street food since 1943</span>
+  <h1>Friggitoria <span data-edit="t4" data-edit-label="Text — Chiluzzo">Chiluzzo</span></h1>
+  <p class="hsub"><span class="it" data-edit="t5" data-edit-label="Text — Il chiosco della Kalsa: panelle e croc…">Il chiosco della Kalsa: panelle e crocché nel pane, pani ca' meusa e un tavolino di plastica in piazza. Il pranzo palermitano da 2 euro.</span> <em class="tr" data-edit="t6" data-edit-label="Text — Palermo's 2-euro lunch, on Piazza dell…">Palermo's 2-euro lunch, on Piazza della Kalsa since 1943.</em></p>
   <div class="hmeta">
    <span>★ <b data-edit="rating">4,7</b> — <span data-edit="revcount">1.297</span> recensioni</span>
-   <span>Lun – Sab · 8:00 – 16:00</span>
+   <span data-edit="t7" data-edit-label="Text — Lun – Sab · 8:00 – 16:00">Lun – Sab · 8:00 – 16:00</span>
   </div>
  </div>
 </header>
@@ -140,11 +140,11 @@ html:not(.en) .tr{display:none!important}
 
 <section class="story wrap">
  <div class="rev">
-  <span class="k"><span class="it">La piazza</span><span class="tr">The square</span></span>
-  <h2>Si mangia<br><em>in piazza</em></h2>
-  <p class="it">Alla Kalsa il rito è sempre lo stesso: si ordina al banco, si prende il vassoio, ci si siede sulle sedie di plastica in piazza con una birra fredda. Panelle tagliate al momento, crocché con la menta, e il pane che arriva caldo.</p>
-  <p class="en tr">The Kalsa ritual never changes: order at the counter, grab a tray, sit on a plastic chair in the square with a cold beer. Panelle cut to order, minty crocché, warm sesame bread.</p>
-  <p>Ottant'anni di frittura, una piazza intera come sala.</p>
+  <span class="k"><span class="it" data-edit="t8" data-edit-label="Text — La piazza">La piazza</span><span class="tr" data-edit="t9" data-edit-label="Text — The square">The square</span></span>
+  <h2>Si mangia<br><em data-edit="t10" data-edit-label="Text — in piazza">in piazza</em></h2>
+  <p class="it" data-edit="t11" data-edit-label="Text — Alla Kalsa il rito è sempre lo stesso:…">Alla Kalsa il rito è sempre lo stesso: si ordina al banco, si prende il vassoio, ci si siede sulle sedie di plastica in piazza con una birra fredda. Panelle tagliate al momento, crocché con la menta, e il pane che arriva caldo.</p>
+  <p class="en tr" data-edit="t12" data-edit-label="Text — The Kalsa ritual never changes: order …">The Kalsa ritual never changes: order at the counter, grab a tray, sit on a plastic chair in the square with a cold beer. Panelle cut to order, minty crocché, warm sesame bread.</p>
+  <p data-edit="t13" data-edit-label="Text — Ottant'anni di frittura, una piazza in…">Ottant'anni di frittura, una piazza intera come sala.</p>
  </div>
  <figure class="sfig rev"><img src="img/05.jpg" alt="Tavolino in piazza con panelle e birre"></figure>
 </section>
@@ -152,47 +152,47 @@ html:not(.en) .tr{display:none!important}
 <section class="menu">
  <div class="wrap">
   <div class="mhead">
-   <span class="k" style="color:#f7c948">Il listino vero · Real board prices</span>
-   <h2 class="rev">Tutto sotto i <span>3 euro</span></h2>
-   <p class="note"><span class="it">Prezzi reali dal nostro cartellone in piazza.</span> <em class="tr">Real prices from our board on the square.</em></p>
+   <span class="k" style="color:#f7c948" data-edit="t14" data-edit-label="Text — Il listino vero · Real board prices">Il listino vero · Real board prices</span>
+   <h2 class="rev">Tutto sotto i <span data-edit="t15" data-edit-label="Text — 3 euro">3 euro</span></h2>
+   <p class="note"><span class="it" data-edit="t16" data-edit-label="Text — Prezzi reali dal nostro cartellone in …">Prezzi reali dal nostro cartellone in piazza.</span> <em class="tr" data-edit="t17" data-edit-label="Text — Real prices from our board on the squa…">Real prices from our board on the square.</em></p>
   </div>
   <div class="mgrid">
    <div class="mboard rev">
-    <h3>Il panino classico</h3>
-    <div class="mi"><span class="nm">Panelle</span><b>€ 1,50</b></div>
-    <div class="mi"><span class="nm">Crocchè</span><b>€ 1,50</b></div>
-    <div class="mi"><span class="nm">Panelle e crocchè</span><b>€ 2,00</b></div>
-    <div class="mi"><span class="nm">Tris<i>melanzane fritte, panelle, crocchè</i></span><b>€ 2,50</b></div>
-    <div class="mi"><span class="nm">Pani ca' meusa<i>formaggio o limone</i></span><b>€ 2,50</b></div>
-    <div class="mi"><span class="nm">Pani cunzato<i>alici marinate, pomodoro, caciocavallo</i></span><b>€ 2,50</b></div>
+    <h3 data-edit="t18" data-edit-label="Heading — Il panino classico">Il panino classico</h3>
+    <div class="mi"><span class="nm" data-edit="t19" data-edit-label="Text — Panelle">Panelle</span><b data-edit="t20" data-edit-label="Text — € 1,50">€ 1,50</b></div>
+    <div class="mi"><span class="nm" data-edit="t21" data-edit-label="Text — Crocchè">Crocchè</span><b data-edit="t22" data-edit-label="Text — € 1,50">€ 1,50</b></div>
+    <div class="mi"><span class="nm" data-edit="t23" data-edit-label="Text — Panelle e crocchè">Panelle e crocchè</span><b data-edit="t24" data-edit-label="Text — € 2,00">€ 2,00</b></div>
+    <div class="mi"><span class="nm">Tris<i data-edit="t25" data-edit-label="Text — melanzane fritte, panelle, crocchè">melanzane fritte, panelle, crocchè</i></span><b data-edit="t26" data-edit-label="Text — € 2,50">€ 2,50</b></div>
+    <div class="mi"><span class="nm">Pani ca' meusa<i data-edit="t27" data-edit-label="Text — formaggio o limone">formaggio o limone</i></span><b data-edit="t28" data-edit-label="Text — € 2,50">€ 2,50</b></div>
+    <div class="mi"><span class="nm">Pani cunzato<i data-edit="t29" data-edit-label="Text — alici marinate, pomodoro, caciocavallo">alici marinate, pomodoro, caciocavallo</i></span><b data-edit="t30" data-edit-label="Text — € 2,50">€ 2,50</b></div>
    </div>
    <div class="mboard rev">
-    <h3>Panini piastrati</h3>
-    <div class="mi"><span class="nm">Patatine fritte</span><b>€ 1,50</b></div>
-    <div class="mi"><span class="nm">Wurstel e patatine</span><b>€ 2,00</b></div>
-    <div class="mi"><span class="nm">Cartoccio<i>prosciutto, mozzarella, salsa rosa</i></span><b>€ 2,00</b></div>
-    <div class="mi"><span class="nm">Topolino<i>prosciutto, mozzarella, wurstel</i></span><b>€ 2,50</b></div>
-    <div class="mi"><span class="nm">Pollo · Hamburger · Salsiccia · Porchetta</span><b>€ 3,00</b></div>
+    <h3 data-edit="t31" data-edit-label="Heading — Panini piastrati">Panini piastrati</h3>
+    <div class="mi"><span class="nm" data-edit="t32" data-edit-label="Text — Patatine fritte">Patatine fritte</span><b data-edit="t33" data-edit-label="Text — € 1,50">€ 1,50</b></div>
+    <div class="mi"><span class="nm" data-edit="t34" data-edit-label="Text — Wurstel e patatine">Wurstel e patatine</span><b data-edit="t35" data-edit-label="Text — € 2,00">€ 2,00</b></div>
+    <div class="mi"><span class="nm">Cartoccio<i data-edit="t36" data-edit-label="Text — prosciutto, mozzarella, salsa rosa">prosciutto, mozzarella, salsa rosa</i></span><b data-edit="t37" data-edit-label="Text — € 2,00">€ 2,00</b></div>
+    <div class="mi"><span class="nm">Topolino<i data-edit="t38" data-edit-label="Text — prosciutto, mozzarella, wurstel">prosciutto, mozzarella, wurstel</i></span><b data-edit="t39" data-edit-label="Text — € 2,50">€ 2,50</b></div>
+    <div class="mi"><span class="nm" data-edit="t40" data-edit-label="Text — Pollo · Hamburger · Salsiccia · Porche…">Pollo · Hamburger · Salsiccia · Porchetta</span><b data-edit="t41" data-edit-label="Text — € 3,00">€ 3,00</b></div>
    </div>
    <div class="mboard rev">
-    <h3>Panini leggeri</h3>
-    <div class="mi"><span class="nm">Caprese</span><b>€ 2,00</b></div>
-    <div class="mi"><span class="nm">Sgombro e insalata</span><b>€ 2,50</b></div>
-    <div class="mi"><span class="nm">Tonno e insalata</span><b>€ 2,50</b></div>
+    <h3 data-edit="t42" data-edit-label="Heading — Panini leggeri">Panini leggeri</h3>
+    <div class="mi"><span class="nm" data-edit="t43" data-edit-label="Text — Caprese">Caprese</span><b data-edit="t44" data-edit-label="Text — € 2,00">€ 2,00</b></div>
+    <div class="mi"><span class="nm" data-edit="t45" data-edit-label="Text — Sgombro e insalata">Sgombro e insalata</span><b data-edit="t46" data-edit-label="Text — € 2,50">€ 2,50</b></div>
+    <div class="mi"><span class="nm" data-edit="t47" data-edit-label="Text — Tonno e insalata">Tonno e insalata</span><b data-edit="t48" data-edit-label="Text — € 2,50">€ 2,50</b></div>
    </div>
   </div>
-  <p class="mfoot">"Each bowl was just 1 euro — that's incredible." — dalle recensioni Google</p>
+  <p class="mfoot" data-edit="t49" data-edit-label="Text — 'Each bowl was just 1 euro — that's in…">"Each bowl was just 1 euro — that's incredible." — dalle recensioni Google</p>
  </div>
 </section>
 
 <div class="wrap">
 <section class="high">
- <span class="k"><span class="it">Dal banco</span><span class="tr">From the counter</span></span>
- <h2 class="rev">Le tre mosse della Kalsa</h2>
+ <span class="k"><span class="it" data-edit="t50" data-edit-label="Text — Dal banco">Dal banco</span><span class="tr" data-edit="t51" data-edit-label="Text — From the counter">From the counter</span></span>
+ <h2 class="rev" data-edit="t52" data-edit-label="Title — Le tre mosse della Kalsa">Le tre mosse della Kalsa</h2>
  <div class="hgrid">
-  <div class="hcard rev"><img src="img/03.jpg" alt="Panino tris"><div class="hb"><h3>Il Tris</h3><p>Melanzane fritte, panelle e crocchè nello stesso panino — <span class="pz">€ 2,50</span></p></div></div>
-  <div class="hcard rev"><img src="img/07.jpg" alt="Pane e panelle con coppo"><div class="hb"><h3>Pane e panelle</h3><p>Col coppo di crocché e una Messina fredda — <span class="pz">€ 2,00</span></p></div></div>
-  <div class="hcard rev"><img src="img/04.jpg" alt="Panino piastrato con patatine"><div class="hb"><h3>Il piastrato</h3><p>Porchetta pressata sulla piastra, patatine a parte — <span class="pz">€ 3,00</span></p></div></div>
+  <div class="hcard rev"><img src="img/03.jpg" alt="Panino tris"><div class="hb"><h3 data-edit="t53" data-edit-label="Heading — Il Tris">Il Tris</h3><p>Melanzane fritte, panelle e crocchè nello stesso panino — <span class="pz" data-edit="t54" data-edit-label="Text — € 2,50">€ 2,50</span></p></div></div>
+  <div class="hcard rev"><img src="img/07.jpg" alt="Pane e panelle con coppo"><div class="hb"><h3 data-edit="t55" data-edit-label="Heading — Pane e panelle">Pane e panelle</h3><p>Col coppo di crocché e una Messina fredda — <span class="pz" data-edit="t56" data-edit-label="Text — € 2,00">€ 2,00</span></p></div></div>
+  <div class="hcard rev"><img src="img/04.jpg" alt="Panino piastrato con patatine"><div class="hb"><h3 data-edit="t57" data-edit-label="Heading — Il piastrato">Il piastrato</h3><p>Porchetta pressata sulla piastra, patatine a parte — <span class="pz" data-edit="t58" data-edit-label="Text — € 3,00">€ 3,00</span></p></div></div>
  </div>
 </section>
 
@@ -201,48 +201,48 @@ html:not(.en) .tr{display:none!important}
   <img src="img/08.jpg" alt="Il chiosco sotto l'ombrellone giallo">
   <img src="img/06.jpg" alt="L'insegna storica del chiosco">
  </div>
- <p class="gcap"><span class="it">il chiosco giallo della Kalsa —</span> <em class="tr">the yellow kiosk on the square</em></p>
+ <p class="gcap"><span class="it" data-edit="t59" data-edit-label="Text — il chiosco giallo della Kalsa —">il chiosco giallo della Kalsa —</span> <em class="tr" data-edit="t60" data-edit-label="Text — the yellow kiosk on the square">the yellow kiosk on the square</em></p>
 </section>
 </div>
 
 <section class="revs">
  <div class="wrap">
-  <span class="k"><span class="it">Dicono di noi</span><span class="tr">What guests say</span></span>
-  <h2 class="rev">Dalle recensioni Google</h2>
+  <span class="k"><span class="it" data-edit="t61" data-edit-label="Text — Dicono di noi">Dicono di noi</span><span class="tr" data-edit="t62" data-edit-label="Text — What guests say">What guests say</span></span>
+  <h2 class="rev" data-edit="t63" data-edit-label="Title — Dalle recensioni Google">Dalle recensioni Google</h2>
   <div class="rgrid">
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Easy, fast, and cheap for a quick bite. The panino con panelle e crocchè was very tasty. Recommended."</p><div class="who">Nico · Google</div></div>
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Delicious and vegetarian friendly food for the best prices — each bowl was just 1 euro. Friendly service too."</p><div class="who">Y B · Google</div></div>
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Happy I came across this local street food vendor. Ordered the Caprese and a Chinò-flavoured Sanpellegrino."</p><div class="who">Maya Hamilton · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t64" data-edit-label="Text — 'Easy, fast, and cheap for a quick bit…">"Easy, fast, and cheap for a quick bite. The panino con panelle e crocchè was very tasty. Recommended."</p><div class="who" data-edit="t65" data-edit-label="Text — Nico · Google">Nico · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t66" data-edit-label="Text — 'Delicious and vegetarian friendly foo…">"Delicious and vegetarian friendly food for the best prices — each bowl was just 1 euro. Friendly service too."</p><div class="who" data-edit="t67" data-edit-label="Text — Y B · Google">Y B · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t68" data-edit-label="Text — 'Happy I came across this local street…">"Happy I came across this local street food vendor. Ordered the Caprese and a Chinò-flavoured Sanpellegrino."</p><div class="who" data-edit="t69" data-edit-label="Text — Maya Hamilton · Google">Maya Hamilton · Google</div></div>
   </div>
-  <p class="gbadge">★ <b>4,7 / 5</b> — 1.297 recensioni su Google</p>
+  <p class="gbadge">★ <b data-edit="t70" data-edit-label="Text — 4,7 / 5">4,7 / 5</b> — 1.297 recensioni su Google</p>
  </div>
 </section>
 
 <section class="visit wrap">
  <div class="rev">
-  <span class="k"><span class="it">Orari</span><span class="tr">Hours</span></span>
-  <h2>Il turno del pranzo</h2>
+  <span class="k"><span class="it" data-edit="t71" data-edit-label="Text — Orari">Orari</span><span class="tr" data-edit="t72" data-edit-label="Text — Hours">Hours</span></span>
+  <h2 data-edit="t73" data-edit-label="Title — Il turno del pranzo">Il turno del pranzo</h2>
   <table class="hours">
-   <tr><td><span class="it">Lunedì – Sabato</span><span class="tr">Mon – Sat</span></td><td data-edit="h-week">8:00 – 16:00</td></tr>
-   <tr><td><span class="it">Domenica</span><span class="tr">Sunday</span></td><td data-edit="h-sun">Chiuso · Closed</td></tr>
+   <tr><td><span class="it" data-edit="t74" data-edit-label="Text — Lunedì – Sabato">Lunedì – Sabato</span><span class="tr" data-edit="t75" data-edit-label="Text — Mon – Sat">Mon – Sat</span></td><td data-edit="h-week">8:00 – 16:00</td></tr>
+   <tr><td><span class="it" data-edit="t76" data-edit-label="Text — Domenica">Domenica</span><span class="tr" data-edit="t77" data-edit-label="Text — Sunday">Sunday</span></td><td data-edit="h-sun">Chiuso · Closed</td></tr>
   </table>
  </div>
  <div class="rev">
-  <span class="k"><span class="it">Dove siamo</span><span class="tr">Find us</span></span>
-  <h2>Piazza della Kalsa</h2>
+  <span class="k"><span class="it" data-edit="t78" data-edit-label="Text — Dove siamo">Dove siamo</span><span class="tr" data-edit="t79" data-edit-label="Text — Find us">Find us</span></span>
+  <h2 data-edit="t80" data-edit-label="Title — Piazza della Kalsa">Piazza della Kalsa</h2>
   <p class="adr" data-edit="addr">Piazza della Kalsa 11, 90133 Palermo</p>
-  <p><span class="it">Niente prenotazioni online: si viene, si punta il banco, si mangia. Per info il numero è quello sull'insegna.</span> <em class="tr">No apps here — walk up, point, eat. For info, the number painted on our sign.</em></p>
+  <p><span class="it" data-edit="t81" data-edit-label="Text — Niente prenotazioni online: si viene, …">Niente prenotazioni online: si viene, si punta il banco, si mangia. Per info il numero è quello sull'insegna.</span> <em class="tr" data-edit="t82" data-edit-label="Text — No apps here — walk up, point, eat. Fo…">No apps here — walk up, point, eat. For info, the number painted on our sign.</em></p>
   <a class="btn" href="tel:+393290615929">📞 <span data-edit="phone">329 061 5929</span></a>
-  <a class="btn o" href="https://maps.google.com/?q=Friggitoria+Chiluzzo+Palermo" rel="noopener" target="_blank">Apri in Maps</a>
+  <a class="btn o" href="https://maps.google.com/?q=Friggitoria+Chiluzzo+Palermo" rel="noopener" target="_blank" data-edit="t83" data-edit-label="Button / link — Apri in Maps">Apri in Maps</a>
  </div>
 </section>
 
 <footer>
  <div class="panelle"></div>
- <div class="fin">Friggitoria Chiluzzo · Piazza della Kalsa 11, Palermo · dal 1943</div>
+ <div class="fin" data-edit="t84" data-edit-label="Text — Friggitoria Chiluzzo · Piazza della Ka…">Friggitoria Chiluzzo · Piazza della Kalsa 11, Palermo · dal 1943</div>
 </footer>
 
-<div class="bar"><a class="call" href="tel:+393290615929"><i>☎</i><span class="it">Chiama</span><span class="tr">Call</span></a><a class="ig" href="https://instagram.com/friggitoria_chiluzzo" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.4"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg></a><a class="map" href="https://maps.google.com/?q=Friggitoria+Chiluzzo+Palermo" rel="noopener" target="_blank"><i>📍</i><span class="it">Mappa</span><span class="tr">Map</span></a></div>
+<div class="bar"><a class="call" href="tel:+393290615929"><i>☎</i><span class="it" data-edit="t85" data-edit-label="Text — Chiama">Chiama</span><span class="tr" data-edit="t86" data-edit-label="Text — Call">Call</span></a><a class="ig" href="https://instagram.com/friggitoria_chiluzzo" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.4"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg></a><a class="map" href="https://maps.google.com/?q=Friggitoria+Chiluzzo+Palermo" rel="noopener" target="_blank"><i>📍</i><span class="it" data-edit="t87" data-edit-label="Text — Mappa">Mappa</span><span class="tr" data-edit="t88" data-edit-label="Text — Map">Map</span></a></div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});

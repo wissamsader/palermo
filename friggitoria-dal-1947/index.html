@@ -124,16 +124,16 @@ html:not(.en) .tr{display:none!important}
 </head>
 <body>
 
-<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it">EN</span><span class="tr">IT</span></button>
+<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it" data-edit="t1" data-edit-label="Text — EN">EN</span><span class="tr" data-edit="t2" data-edit-label="Text — IT">IT</span></button>
 <header>
  <div class="bg"></div><div class="veil"></div>
  <div class="hin">
-  <span class="since">Via Niccolò Palmeri 4 · Palermo</span>
-  <h1>Antica Friggitoria<span class="anno">dal 1947</span></h1>
-  <p class="hsub"><span class="it">Panelle, crocché, arancine e rascatura: il chiosco giallo e nero che frigge da tre quarti di secolo.</span> <em class="tr">Palermo's yellow-and-black fry kiosk, at it since 1947.</em></p>
+  <span class="since" data-edit="t3" data-edit-label="Text — Via Niccolò Palmeri 4 · Palermo">Via Niccolò Palmeri 4 · Palermo</span>
+  <h1>Antica Friggitoria<span class="anno" data-edit="t4" data-edit-label="Text — dal 1947">dal 1947</span></h1>
+  <p class="hsub"><span class="it" data-edit="t5" data-edit-label="Text — Panelle, crocché, arancine e rascatura…">Panelle, crocché, arancine e rascatura: il chiosco giallo e nero che frigge da tre quarti di secolo.</span> <em class="tr" data-edit="t6" data-edit-label="Text — Palermo's yellow-and-black fry kiosk, …">Palermo's yellow-and-black fry kiosk, at it since 1947.</em></p>
   <div class="hmeta">
    <span>★ <b data-edit="rating">4,5</b> — <span data-edit="revcount">255</span> recensioni</span>
-   <span>Lun – Sab · dalle 7:00</span>
+   <span data-edit="t7" data-edit-label="Text — Lun – Sab · dalle 7:00">Lun – Sab · dalle 7:00</span>
   </div>
  </div>
 </header>
@@ -141,11 +141,11 @@ html:not(.en) .tr{display:none!important}
 
 <section class="story wrap">
  <div class="rev">
-  <span class="k"><span class="it">La storia</span><span class="tr">Since 1947</span></span>
-  <h2>Il fritto<br><em>non si cambia</em></h2>
-  <p class="it">Il nome dice tutto: qui si frigge dal 1947. Panelle di ceci, crocché di patate, arancine e la rascatura — quella vera, fatta con quel che resta dell'impasto, come vuole la tradizione delle friggitorie palermitane.</p>
-  <p class="en tr">The name says it all: frying since 1947. Chickpea panelle, potato crocché, arancine and the real rascatura — made from the last scrapes of the batter, the way Palermo's fry shops always did.</p>
-  <p>Si mangia sui fusti neri davanti al chiosco, col coppo in mano e il limone spremuto sopra.</p>
+  <span class="k"><span class="it" data-edit="t8" data-edit-label="Text — La storia">La storia</span><span class="tr" data-edit="t9" data-edit-label="Text — Since 1947">Since 1947</span></span>
+  <h2>Il fritto<br><em data-edit="t10" data-edit-label="Text — non si cambia">non si cambia</em></h2>
+  <p class="it" data-edit="t11" data-edit-label="Text — Il nome dice tutto: qui si frigge dal …">Il nome dice tutto: qui si frigge dal 1947. Panelle di ceci, crocché di patate, arancine e la rascatura — quella vera, fatta con quel che resta dell'impasto, come vuole la tradizione delle friggitorie palermitane.</p>
+  <p class="en tr" data-edit="t12" data-edit-label="Text — The name says it all: frying since 194…">The name says it all: frying since 1947. Chickpea panelle, potato crocché, arancine and the real rascatura — made from the last scrapes of the batter, the way Palermo's fry shops always did.</p>
+  <p data-edit="t13" data-edit-label="Text — Si mangia sui fusti neri davanti al ch…">Si mangia sui fusti neri davanti al chiosco, col coppo in mano e il limone spremuto sopra.</p>
  </div>
  <figure class="sfig rev"><img src="img/06.jpg" alt="Coppo di crocché e pane e panelle"></figure>
 </section>
@@ -153,81 +153,81 @@ html:not(.en) .tr{display:none!important}
 <section class="coppo">
  <div class="wrap">
   <div class="chead">
-   <span class="k" style="color:var(--giallo)">Il coppo · The paper cone</span>
-   <h2 class="rev">Cosa si frigge <span>oggi</span></h2>
-   <p class="note"><span class="it">Il coppo si compone a voce, al banco — i prezzi sono esposti al chiosco.</span> <em class="tr">Build your cone at the counter — prices are posted at the kiosk.</em></p>
+   <span class="k" style="color:var(--giallo)" data-edit="t14" data-edit-label="Text — Il coppo · The paper cone">Il coppo · The paper cone</span>
+   <h2 class="rev">Cosa si frigge <span data-edit="t15" data-edit-label="Text — oggi">oggi</span></h2>
+   <p class="note"><span class="it" data-edit="t16" data-edit-label="Text — Il coppo si compone a voce, al banco —…">Il coppo si compone a voce, al banco — i prezzi sono esposti al chiosco.</span> <em class="tr" data-edit="t17" data-edit-label="Text — Build your cone at the counter — price…">Build your cone at the counter — prices are posted at the kiosk.</em></p>
   </div>
   <div class="fgrid">
-   <div class="fitem rev"><div class="blk">Panelle</div><p>le frittelle di ceci, da sole o nel pane</p></div>
-   <div class="fitem rev"><div class="blk">Crocché</div><p>patate, menta e buccia croccante</p></div>
-   <div class="fitem rev"><div class="blk">Arancine</div><p>alla carne e non solo, dalla vetrina calda</p></div>
-   <div class="fitem rev"><div class="blk">Rascatura</div><p>il fritto povero che i palermitani conoscono</p></div>
-   <div class="fitem rev"><div class="blk">Pane e panelle</div><p>la mafalda al sesamo, riempita al momento</p></div>
-   <div class="fitem rev"><div class="blk">Arancinette dolci</div><p>la sorpresa zuccherata di fine giro</p></div>
+   <div class="fitem rev"><div class="blk" data-edit="t18" data-edit-label="Text — Panelle">Panelle</div><p data-edit="t19" data-edit-label="Text — le frittelle di ceci, da sole o nel pa…">le frittelle di ceci, da sole o nel pane</p></div>
+   <div class="fitem rev"><div class="blk" data-edit="t20" data-edit-label="Text — Crocché">Crocché</div><p data-edit="t21" data-edit-label="Text — patate, menta e buccia croccante">patate, menta e buccia croccante</p></div>
+   <div class="fitem rev"><div class="blk" data-edit="t22" data-edit-label="Text — Arancine">Arancine</div><p data-edit="t23" data-edit-label="Text — alla carne e non solo, dalla vetrina c…">alla carne e non solo, dalla vetrina calda</p></div>
+   <div class="fitem rev"><div class="blk" data-edit="t24" data-edit-label="Text — Rascatura">Rascatura</div><p data-edit="t25" data-edit-label="Text — il fritto povero che i palermitani con…">il fritto povero che i palermitani conoscono</p></div>
+   <div class="fitem rev"><div class="blk" data-edit="t26" data-edit-label="Text — Pane e panelle">Pane e panelle</div><p data-edit="t27" data-edit-label="Text — la mafalda al sesamo, riempita al mome…">la mafalda al sesamo, riempita al momento</p></div>
+   <div class="fitem rev"><div class="blk" data-edit="t28" data-edit-label="Text — Arancinette dolci">Arancinette dolci</div><p data-edit="t29" data-edit-label="Text — la sorpresa zuccherata di fine giro">la sorpresa zuccherata di fine giro</p></div>
   </div>
-  <p class="cfoot">Colazione dei fritti dalle <b>7 del mattino</b> — come si usa solo a Palermo.</p>
+  <p class="cfoot">Colazione dei fritti dalle <b data-edit="t30" data-edit-label="Text — 7 del mattino">7 del mattino</b> — come si usa solo a Palermo.</p>
  </div>
 </section>
 
 <div class="wrap">
 <section class="bibite">
- <span class="k"><span class="it">Listino bibite</span><span class="tr">Drinks board</span></span>
- <h2 class="rev">Prezzi veri, dal listino</h2>
- <p class="note"><span class="it">Dal nostro listino esposto — sì, la birra piccola costa un euro.</span> <em class="tr">From our posted board — yes, the small beer is one euro.</em></p>
+ <span class="k"><span class="it" data-edit="t31" data-edit-label="Text — Listino bibite">Listino bibite</span><span class="tr" data-edit="t32" data-edit-label="Text — Drinks board">Drinks board</span></span>
+ <h2 class="rev" data-edit="t33" data-edit-label="Title — Prezzi veri, dal listino">Prezzi veri, dal listino</h2>
+ <p class="note"><span class="it" data-edit="t34" data-edit-label="Text — Dal nostro listino esposto — sì, la bi…">Dal nostro listino esposto — sì, la birra piccola costa un euro.</span> <em class="tr" data-edit="t35" data-edit-label="Text — From our posted board — yes, the small…">From our posted board — yes, the small beer is one euro.</em></p>
  <div class="tgrid">
-  <div class="tik rev"><span class="nm">Gazzosa</span><b>€ 0,70</b></div>
-  <div class="tik rev"><span class="nm">Acqua piccola</span><b>€ 0,80</b></div>
-  <div class="tik rev"><span class="nm">Coca Cola · Chinotto · Aranciata</span><b>€ 1,00</b></div>
-  <div class="tik rev"><span class="nm">Birra piccola</span><b>€ 1,00</b></div>
-  <div class="tik rev"><span class="nm">Thè limone o pesca · Succo</span><b>€ 1,00</b></div>
-  <div class="tik rev"><span class="nm">Birra grande · Acqua grande</span><b>€ 1,50</b></div>
-  <div class="tik rev"><span class="nm">Aranciata bottiglia grande</span><b>€ 2,00</b></div>
-  <div class="tik rev"><span class="nm">Coca Cola bottiglia grande</span><b>€ 2,50</b></div>
+  <div class="tik rev"><span class="nm" data-edit="t36" data-edit-label="Text — Gazzosa">Gazzosa</span><b data-edit="t37" data-edit-label="Text — € 0,70">€ 0,70</b></div>
+  <div class="tik rev"><span class="nm" data-edit="t38" data-edit-label="Text — Acqua piccola">Acqua piccola</span><b data-edit="t39" data-edit-label="Text — € 0,80">€ 0,80</b></div>
+  <div class="tik rev"><span class="nm" data-edit="t40" data-edit-label="Text — Coca Cola · Chinotto · Aranciata">Coca Cola · Chinotto · Aranciata</span><b data-edit="t41" data-edit-label="Text — € 1,00">€ 1,00</b></div>
+  <div class="tik rev"><span class="nm" data-edit="t42" data-edit-label="Text — Birra piccola">Birra piccola</span><b data-edit="t43" data-edit-label="Text — € 1,00">€ 1,00</b></div>
+  <div class="tik rev"><span class="nm" data-edit="t44" data-edit-label="Text — Thè limone o pesca · Succo">Thè limone o pesca · Succo</span><b data-edit="t45" data-edit-label="Text — € 1,00">€ 1,00</b></div>
+  <div class="tik rev"><span class="nm" data-edit="t46" data-edit-label="Text — Birra grande · Acqua grande">Birra grande · Acqua grande</span><b data-edit="t47" data-edit-label="Text — € 1,50">€ 1,50</b></div>
+  <div class="tik rev"><span class="nm" data-edit="t48" data-edit-label="Text — Aranciata bottiglia grande">Aranciata bottiglia grande</span><b data-edit="t49" data-edit-label="Text — € 2,00">€ 2,00</b></div>
+  <div class="tik rev"><span class="nm" data-edit="t50" data-edit-label="Text — Coca Cola bottiglia grande">Coca Cola bottiglia grande</span><b data-edit="t51" data-edit-label="Text — € 2,50">€ 2,50</b></div>
  </div>
 </section>
 
 <section class="high">
- <span class="k"><span class="it">Dalla vetrina</span><span class="tr">From the hot case</span></span>
- <h2 class="rev">Le tre mosse giuste</h2>
+ <span class="k"><span class="it" data-edit="t52" data-edit-label="Text — Dalla vetrina">Dalla vetrina</span><span class="tr" data-edit="t53" data-edit-label="Text — From the hot case">From the hot case</span></span>
+ <h2 class="rev" data-edit="t54" data-edit-label="Title — Le tre mosse giuste">Le tre mosse giuste</h2>
  <div class="hgrid">
-  <div class="hcard rev"><img src="img/04.jpg" alt="Arancine in vetrina"><div class="hb"><h3>L'arancina</h3><p>"Got the arancina which was great" — la vetrina parla da sola.</p></div></div>
-  <div class="hcard rev"><img src="img/03.jpg" alt="Pane e panelle"><div class="hb"><h3>Pane e panelle</h3><p>La mafalda al sesamo con le panelle calde, mangiata in piedi.</p></div></div>
-  <div class="hcard rev"><img src="img/05.jpg" alt="Arancinette dolci"><div class="hb"><h3>Il finale dolce</h3><p>Arancinette zuccherate sulla maiolica gialla del chiosco.</p></div></div>
+  <div class="hcard rev"><img src="img/04.jpg" alt="Arancine in vetrina"><div class="hb"><h3 data-edit="t55" data-edit-label="Heading — L'arancina">L'arancina</h3><p data-edit="t56" data-edit-label="Text — 'Got the arancina which was great' — l…">"Got the arancina which was great" — la vetrina parla da sola.</p></div></div>
+  <div class="hcard rev"><img src="img/03.jpg" alt="Pane e panelle"><div class="hb"><h3 data-edit="t57" data-edit-label="Heading — Pane e panelle">Pane e panelle</h3><p data-edit="t58" data-edit-label="Text — La mafalda al sesamo con le panelle ca…">La mafalda al sesamo con le panelle calde, mangiata in piedi.</p></div></div>
+  <div class="hcard rev"><img src="img/05.jpg" alt="Arancinette dolci"><div class="hb"><h3 data-edit="t59" data-edit-label="Heading — Il finale dolce">Il finale dolce</h3><p data-edit="t60" data-edit-label="Text — Arancinette zuccherate sulla maiolica …">Arancinette zuccherate sulla maiolica gialla del chiosco.</p></div></div>
  </div>
 </section>
 </div>
 
 <section class="revs">
  <div class="wrap">
-  <span class="k"><span class="it">Dicono di noi</span><span class="tr">What guests say</span></span>
-  <h2 class="rev">Dalle recensioni Google</h2>
+  <span class="k"><span class="it" data-edit="t61" data-edit-label="Text — Dicono di noi">Dicono di noi</span><span class="tr" data-edit="t62" data-edit-label="Text — What guests say">What guests say</span></span>
+  <h2 class="rev" data-edit="t63" data-edit-label="Title — Dalle recensioni Google">Dalle recensioni Google</h2>
   <div class="rgrid">
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"The first food we had when we arrived in Sicily was here — and we made sure to visit again before leaving. Excellent taste, affordable."</p><div class="who">Amari Rae Pulido · Google</div></div>
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Perfect for a quick beer and lunch. The Rascatura were really tasty, the Arancina — meat and more."</p><div class="who">James Redfern · Google</div></div>
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Really nice food. Got the arancina which was great."</p><div class="who">Steven Barrowman · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t64" data-edit-label="Text — 'The first food we had when we arrived…">"The first food we had when we arrived in Sicily was here — and we made sure to visit again before leaving. Excellent taste, affordable."</p><div class="who" data-edit="t65" data-edit-label="Text — Amari Rae Pulido · Google">Amari Rae Pulido · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t66" data-edit-label="Text — 'Perfect for a quick beer and lunch. T…">"Perfect for a quick beer and lunch. The Rascatura were really tasty, the Arancina — meat and more."</p><div class="who" data-edit="t67" data-edit-label="Text — James Redfern · Google">James Redfern · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t68" data-edit-label="Text — 'Really nice food. Got the arancina wh…">"Really nice food. Got the arancina which was great."</p><div class="who" data-edit="t69" data-edit-label="Text — Steven Barrowman · Google">Steven Barrowman · Google</div></div>
   </div>
-  <p class="gbadge">★ <b>4,5 / 5</b> — 255 recensioni su Google</p>
+  <p class="gbadge">★ <b data-edit="t70" data-edit-label="Text — 4,5 / 5">4,5 / 5</b> — 255 recensioni su Google</p>
  </div>
 </section>
 
 <section class="visit wrap">
  <div class="rev">
-  <span class="k"><span class="it">Orari</span><span class="tr">Hours</span></span>
-  <h2>Dalle 7 del mattino</h2>
+  <span class="k"><span class="it" data-edit="t71" data-edit-label="Text — Orari">Orari</span><span class="tr" data-edit="t72" data-edit-label="Text — Hours">Hours</span></span>
+  <h2 data-edit="t73" data-edit-label="Title — Dalle 7 del mattino">Dalle 7 del mattino</h2>
   <table class="hours">
-   <tr><td><span class="it">Lunedì – Venerdì</span><span class="tr">Mon – Fri</span></td><td data-edit="h-week">7:00 – 19:30</td></tr>
-   <tr><td><span class="it">Sabato</span><span class="tr">Saturday</span></td><td data-edit="h-sat">7:00 – 18:00</td></tr>
-   <tr><td><span class="it">Domenica</span><span class="tr">Sunday</span></td><td data-edit="h-sun">Chiuso · Closed</td></tr>
+   <tr><td><span class="it" data-edit="t74" data-edit-label="Text — Lunedì – Venerdì">Lunedì – Venerdì</span><span class="tr" data-edit="t75" data-edit-label="Text — Mon – Fri">Mon – Fri</span></td><td data-edit="h-week">7:00 – 19:30</td></tr>
+   <tr><td><span class="it" data-edit="t76" data-edit-label="Text — Sabato">Sabato</span><span class="tr" data-edit="t77" data-edit-label="Text — Saturday">Saturday</span></td><td data-edit="h-sat">7:00 – 18:00</td></tr>
+   <tr><td><span class="it" data-edit="t78" data-edit-label="Text — Domenica">Domenica</span><span class="tr" data-edit="t79" data-edit-label="Text — Sunday">Sunday</span></td><td data-edit="h-sun">Chiuso · Closed</td></tr>
   </table>
  </div>
  <div class="rev">
-  <span class="k"><span class="it">Dove siamo</span><span class="tr">Find us</span></span>
-  <h2>Palmeri 4</h2>
+  <span class="k"><span class="it" data-edit="t80" data-edit-label="Text — Dove siamo">Dove siamo</span><span class="tr" data-edit="t81" data-edit-label="Text — Find us">Find us</span></span>
+  <h2 data-edit="t82" data-edit-label="Title — Palmeri 4">Palmeri 4</h2>
   <p class="adr" data-edit="addr">Via Niccolò Palmeri 4, 90133 Palermo</p>
-  <p><span class="it">Ordinate su WhatsApp e il coppo vi aspetta caldo.</span> <em class="tr">Order on WhatsApp and your cone waits for you hot.</em></p>
-  <a class="btn" href="https://wa.me/393298398377?text=Ciao%21%20Vorrei%20ordinare%20alla%20Friggitoria%20Dal%201947" rel="noopener" target="_blank">💬 WhatsApp</a>
+  <p><span class="it" data-edit="t83" data-edit-label="Text — Ordinate su WhatsApp e il coppo vi asp…">Ordinate su WhatsApp e il coppo vi aspetta caldo.</span> <em class="tr" data-edit="t84" data-edit-label="Text — Order on WhatsApp and your cone waits …">Order on WhatsApp and your cone waits for you hot.</em></p>
+  <a class="btn" href="https://wa.me/393298398377?text=Ciao%21%20Vorrei%20ordinare%20alla%20Friggitoria%20Dal%201947" rel="noopener" target="_blank" data-edit="t85" data-edit-label="Button / link — 💬 WhatsApp">💬 WhatsApp</a>
   <a class="btn call" href="tel:+393298398377">📞 <span data-edit="phone">329 839 8377</span></a>
-  <a class="btn o" href="https://maps.google.com/?q=Antica+Friggitoria+Dal+1947+Palermo" rel="noopener" target="_blank">Apri in Maps</a>
+  <a class="btn o" href="https://maps.google.com/?q=Antica+Friggitoria+Dal+1947+Palermo" rel="noopener" target="_blank" data-edit="t86" data-edit-label="Button / link — Apri in Maps">Apri in Maps</a>
  </div>
 </section>
 
@@ -236,7 +236,7 @@ html:not(.en) .tr{display:none!important}
  <div class="fin">Antica Friggitoria Dal 1947 · Via Niccolò Palmeri 4, Palermo · <span data-edit="phone2">329 839 8377</span></div>
 </footer>
 
-<div class="bar"><a class="wa" href="https://wa.me/393298398377?text=Ciao%21%20Vorrei%20ordinare%20alla%20Friggitoria%20Dal%201947" rel="noopener" target="_blank">💬 WHATSAPP</a><a class="call" href="tel:+393298398377">☎ <span class="it">CHIAMA</span><span class="tr">CALL</span></a><a class="ig" href="https://instagram.com/dal1947anticafriggitoria" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.4"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg></a><a class="map" href="https://maps.google.com/?q=Antica+Friggitoria+Dal+1947+Palermo" rel="noopener" target="_blank">➜ <span class="it">MAPPA</span><span class="tr">MAP</span></a></div>
+<div class="bar"><a class="wa" href="https://wa.me/393298398377?text=Ciao%21%20Vorrei%20ordinare%20alla%20Friggitoria%20Dal%201947" rel="noopener" target="_blank" data-edit="t87" data-edit-label="Button / link — 💬 WHATSAPP">💬 WHATSAPP</a><a class="call" href="tel:+393298398377">☎ <span class="it" data-edit="t88" data-edit-label="Text — CHIAMA">CHIAMA</span><span class="tr" data-edit="t89" data-edit-label="Text — CALL">CALL</span></a><a class="ig" href="https://instagram.com/dal1947anticafriggitoria" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.4"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg></a><a class="map" href="https://maps.google.com/?q=Antica+Friggitoria+Dal+1947+Palermo" rel="noopener" target="_blank">➜ <span class="it" data-edit="t90" data-edit-label="Text — MAPPA">MAPPA</span><span class="tr" data-edit="t91" data-edit-label="Text — MAP">MAP</span></a></div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});

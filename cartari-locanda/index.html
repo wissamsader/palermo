@@ -123,31 +123,31 @@ html:not(.en) .tr{display:none!important}
 </head>
 <body>
 
-<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it">EN</span><span class="tr">IT</span></button>
+<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it" data-edit="t1" data-edit-label="Text — EN">EN</span><span class="tr" data-edit="t2" data-edit-label="Text — IT">IT</span></button>
 <header>
  <div class="bg"></div><div class="veil"></div>
  <div class="hin">
-  <span class="hcart">Via dei Cartari 1 · Palermo</span>
-  <h1>Cartari <em>locanda</em></h1>
-  <p class="hsub"><span class="it">Cucina siciliana di mercato e vini scritti col gesso, nella strada dove Palermo faceva la carta.</span> <em class="tr">Market-driven Sicilian cooking and chalk-written wines, on the old papermakers' street.</em></p>
+  <span class="hcart" data-edit="t3" data-edit-label="Text — Via dei Cartari 1 · Palermo">Via dei Cartari 1 · Palermo</span>
+  <h1>Cartari <em data-edit="t4" data-edit-label="Text — locanda">locanda</em></h1>
+  <p class="hsub"><span class="it" data-edit="t5" data-edit-label="Text — Cucina siciliana di mercato e vini scr…">Cucina siciliana di mercato e vini scritti col gesso, nella strada dove Palermo faceva la carta.</span> <em class="tr" data-edit="t6" data-edit-label="Text — Market-driven Sicilian cooking and cha…">Market-driven Sicilian cooking and chalk-written wines, on the old papermakers' street.</em></p>
   <div class="hmeta">
    <span>★ <b data-edit="rating">4,7</b> — <span data-edit="revcount">424</span> recensioni</span>
-   <span>Solo la sera · Evenings only</span>
+   <span data-edit="t7" data-edit-label="Text — Solo la sera · Evenings only">Solo la sera · Evenings only</span>
   </div>
  </div>
 </header>
 
 <section class="story wrap">
  <div class="rev">
-  <span class="k"><span class="it">La casa</span><span class="tr">The house</span></span>
-  <h2>Carta gialla,<br><em>gesso bianco</em></h2>
-  <p class="it">Via dei Cartari era la strada dei mastri cartai. Noi la carta la mettiamo ancora in tavola — quella gialla, da bottega — e il menù lo scriviamo col gesso: la lavagna cambia con il mercato di Palermo, ogni giorno.</p>
-  <p class="en tr">Via dei Cartari was the papermakers' street. We still lay paper on the table — the yellow butcher kind — and write the menu in chalk: the board follows Palermo's markets, every day.</p>
-  <p>Piatti semplici e rifiniti, pasta fresca, pescato e verdure di stagione. E una cantina che parla siciliano: Etna, Nero d'Avola, bolle artigianali.</p>
+  <span class="k"><span class="it" data-edit="t8" data-edit-label="Text — La casa">La casa</span><span class="tr" data-edit="t9" data-edit-label="Text — The house">The house</span></span>
+  <h2>Carta gialla,<br><em data-edit="t10" data-edit-label="Text — gesso bianco">gesso bianco</em></h2>
+  <p class="it" data-edit="t11" data-edit-label="Text — Via dei Cartari era la strada dei mast…">Via dei Cartari era la strada dei mastri cartai. Noi la carta la mettiamo ancora in tavola — quella gialla, da bottega — e il menù lo scriviamo col gesso: la lavagna cambia con il mercato di Palermo, ogni giorno.</p>
+  <p class="en tr" data-edit="t12" data-edit-label="Text — Via dei Cartari was the papermakers' s…">Via dei Cartari was the papermakers' street. We still lay paper on the table — the yellow butcher kind — and write the menu in chalk: the board follows Palermo's markets, every day.</p>
+  <p data-edit="t13" data-edit-label="Text — Piatti semplici e rifiniti, pasta fres…">Piatti semplici e rifiniti, pasta fresca, pescato e verdure di stagione. E una cantina che parla siciliano: Etna, Nero d'Avola, bolle artigianali.</p>
  </div>
  <figure class="sfig rev">
   <img src="img/02.jpg" alt="La lavagna dei vini scritta col gesso">
-  <figcaption>la lavagna dei vini — scritta a mano, come la carta comanda</figcaption>
+  <figcaption data-edit="t14" data-edit-label="Caption — la lavagna dei vini — scritta a mano, …">la lavagna dei vini — scritta a mano, come la carta comanda</figcaption>
  </figure>
 </section>
 
@@ -155,47 +155,47 @@ html:not(.en) .tr{display:none!important}
 <section class="board">
  <div class="wrap">
   <div class="bhead">
-   <span class="k" style="color:#e8c9a0">Dalla lavagna · From the chalkboard</span>
-   <h2 class="rev">I vini, col gesso</h2>
-   <p class="note"><span class="it">Bottiglie reali dalla nostra lavagna — la lista gira spesso, il gesso si cancella.</span> <em class="tr">Real bottles from our board — it turns often, chalk erases.</em></p>
+   <span class="k" style="color:#e8c9a0" data-edit="t15" data-edit-label="Text — Dalla lavagna · From the chalkboard">Dalla lavagna · From the chalkboard</span>
+   <h2 class="rev" data-edit="t16" data-edit-label="Title — I vini, col gesso">I vini, col gesso</h2>
+   <p class="note"><span class="it" data-edit="t17" data-edit-label="Text — Bottiglie reali dalla nostra lavagna —…">Bottiglie reali dalla nostra lavagna — la lista gira spesso, il gesso si cancella.</span> <em class="tr" data-edit="t18" data-edit-label="Text — Real bottles from our board — it turns…">Real bottles from our board — it turns often, chalk erases.</em></p>
   </div>
   <div class="bgrid">
    <div class="bcol rossi rev">
-    <h3>Rossi ↓</h3>
-    <div class="wi"><span>CDC Blend<i>Nero d'Avola / Syrah</i></span><b>25</b></div>
-    <div class="wi"><span>CDC Adenzia Rosso</span><b>30</b></div>
-    <div class="wi"><span>Tenuta Ferrata<i>Etna Rosso</i></span><b>30</b></div>
-    <div class="wi"><span>Pietro Pulizzi<i>Vitrarolo</i></span><b>40</b></div>
+    <h3 data-edit="t19" data-edit-label="Heading — Rossi ↓">Rossi ↓</h3>
+    <div class="wi"><span>CDC Blend<i data-edit="t20" data-edit-label="Text — Nero d'Avola / Syrah">Nero d'Avola / Syrah</i></span><b data-edit="t21" data-edit-label="Text — 25">25</b></div>
+    <div class="wi"><span data-edit="t22" data-edit-label="Text — CDC Adenzia Rosso">CDC Adenzia Rosso</span><b data-edit="t23" data-edit-label="Text — 30">30</b></div>
+    <div class="wi"><span>Tenuta Ferrata<i data-edit="t24" data-edit-label="Text — Etna Rosso">Etna Rosso</i></span><b data-edit="t25" data-edit-label="Text — 30">30</b></div>
+    <div class="wi"><span>Pietro Pulizzi<i data-edit="t26" data-edit-label="Text — Vitrarolo">Vitrarolo</i></span><b data-edit="t27" data-edit-label="Text — 40">40</b></div>
    </div>
    <div class="bcol bolle rev">
-    <h3>Bolle ↓</h3>
-    <div class="wi"><span>Bartolomiol<i>Prior millesimato</i></span><b>25</b></div>
-    <div class="wi"><span>Solouva<i>Franciacorta Pas Dosé</i></span><b>45</b></div>
-    <div class="wi"><span>Tenuta Ferrata<i>Metodo Classico Rosé</i></span><b>50</b></div>
+    <h3 data-edit="t28" data-edit-label="Heading — Bolle ↓">Bolle ↓</h3>
+    <div class="wi"><span>Bartolomiol<i data-edit="t29" data-edit-label="Text — Prior millesimato">Prior millesimato</i></span><b data-edit="t30" data-edit-label="Text — 25">25</b></div>
+    <div class="wi"><span>Solouva<i data-edit="t31" data-edit-label="Text — Franciacorta Pas Dosé">Franciacorta Pas Dosé</i></span><b data-edit="t32" data-edit-label="Text — 45">45</b></div>
+    <div class="wi"><span>Tenuta Ferrata<i data-edit="t33" data-edit-label="Text — Metodo Classico Rosé">Metodo Classico Rosé</i></span><b data-edit="t34" data-edit-label="Text — 50">50</b></div>
    </div>
    <div class="bcol bianchi rev">
-    <h3>Bianchi ↓</h3>
-    <div class="wi"><span>CDC Bianco<i>Grillo / Chardonnay / Inzolia</i></span><b>25</b></div>
-    <div class="wi"><span>Pietro Pulizzi<i>Grillo</i></span><b>26</b></div>
-    <div class="wi"><span>Tenuta Ferrata<i>Etna Bianco &amp; Rosato</i></span><b>26</b></div>
-    <div class="wi"><span>Necotium<i>Malvasia</i></span><b>26</b></div>
+    <h3 data-edit="t35" data-edit-label="Heading — Bianchi ↓">Bianchi ↓</h3>
+    <div class="wi"><span>CDC Bianco<i data-edit="t36" data-edit-label="Text — Grillo / Chardonnay / Inzolia">Grillo / Chardonnay / Inzolia</i></span><b data-edit="t37" data-edit-label="Text — 25">25</b></div>
+    <div class="wi"><span>Pietro Pulizzi<i data-edit="t38" data-edit-label="Text — Grillo">Grillo</i></span><b data-edit="t39" data-edit-label="Text — 26">26</b></div>
+    <div class="wi"><span>Tenuta Ferrata<i data-edit="t40" data-edit-label="Text — Etna Bianco &amp; Rosato">Etna Bianco &amp; Rosato</i></span><b data-edit="t41" data-edit-label="Text — 26">26</b></div>
+    <div class="wi"><span>Necotium<i data-edit="t42" data-edit-label="Text — Malvasia">Malvasia</i></span><b data-edit="t43" data-edit-label="Text — 26">26</b></div>
    </div>
   </div>
-  <p class="bfoot"><span class="it">quasi tutto anche al calice, 6–7 € —</span> <em class="tr">most by the glass too</em></p>
+  <p class="bfoot"><span class="it" data-edit="t44" data-edit-label="Text — quasi tutto anche al calice, 6–7 € —">quasi tutto anche al calice, 6–7 € —</span> <em class="tr" data-edit="t45" data-edit-label="Text — most by the glass too">most by the glass too</em></p>
  </div>
 </section>
 <div class="deckle inv" style="background-color:var(--board)"></div>
 
 <div class="wrap">
 <section class="cucina">
- <span class="k"><span class="it">La cucina</span><span class="tr">The kitchen</span></span>
- <h2 class="rev">La lavagna del giorno</h2>
- <p class="it">Il menù non è stampato: sta sulla lavagna e segue le stagioni — antipasti, pasta fresca, pescato e carni del giorno. I prezzi li trovate scritti accanto, col gesso.</p>
- <p class="en tr">The menu isn't printed: it lives on the board and follows the seasons — the day's prices are chalked right beside each dish.</p>
+ <span class="k"><span class="it" data-edit="t46" data-edit-label="Text — La cucina">La cucina</span><span class="tr" data-edit="t47" data-edit-label="Text — The kitchen">The kitchen</span></span>
+ <h2 class="rev" data-edit="t48" data-edit-label="Title — La lavagna del giorno">La lavagna del giorno</h2>
+ <p class="it" data-edit="t49" data-edit-label="Text — Il menù non è stampato: sta sulla lava…">Il menù non è stampato: sta sulla lavagna e segue le stagioni — antipasti, pasta fresca, pescato e carni del giorno. I prezzi li trovate scritti accanto, col gesso.</p>
+ <p class="en tr" data-edit="t50" data-edit-label="Text — The menu isn't printed: it lives on th…">The menu isn't printed: it lives on the board and follows the seasons — the day's prices are chalked right beside each dish.</p>
  <div class="cgrid">
-  <div class="ccard rev"><img src="img/07.jpg" alt="Busiate con carciofi e ricotta"><div class="cb"><h3>Pasta fresca</h3><p>Busiate al torchio, carciofi e ricotta al pepe nero — quando il mercato le porta.</p></div></div>
-  <div class="ccard rev"><img src="img/04.jpg" alt="Polpettine in umido"><div class="cb"><h3>Cucina di casa</h3><p>Polpettine in umido con patate, servite nella ceramica siciliana.</p></div></div>
-  <div class="ccard rev"><img src="img/06.jpg" alt="Tavola con tagliatelle e calice"><div class="cb"><h3>Piatto &amp; calice</h3><p>Ogni piatto ha il suo vino: il servizio ve lo racconta e ci prende sempre.</p></div></div>
+  <div class="ccard rev"><img src="img/07.jpg" alt="Busiate con carciofi e ricotta"><div class="cb"><h3 data-edit="t51" data-edit-label="Heading — Pasta fresca">Pasta fresca</h3><p data-edit="t52" data-edit-label="Text — Busiate al torchio, carciofi e ricotta…">Busiate al torchio, carciofi e ricotta al pepe nero — quando il mercato le porta.</p></div></div>
+  <div class="ccard rev"><img src="img/04.jpg" alt="Polpettine in umido"><div class="cb"><h3 data-edit="t53" data-edit-label="Heading — Cucina di casa">Cucina di casa</h3><p data-edit="t54" data-edit-label="Text — Polpettine in umido con patate, servit…">Polpettine in umido con patate, servite nella ceramica siciliana.</p></div></div>
+  <div class="ccard rev"><img src="img/06.jpg" alt="Tavola con tagliatelle e calice"><div class="cb"><h3 data-edit="t55" data-edit-label="Heading — Piatto &amp; calice">Piatto &amp; calice</h3><p data-edit="t56" data-edit-label="Text — Ogni piatto ha il suo vino: il servizi…">Ogni piatto ha il suo vino: il servizio ve lo racconta e ci prende sempre.</p></div></div>
  </div>
 </section>
 
@@ -204,48 +204,48 @@ html:not(.en) .tr{display:none!important}
   <img src="img/03.jpg" alt="Insalata di mare con gambero rosso">
   <img src="img/05.jpg" alt="Pasta fresca del giorno">
  </div>
- <p class="gcap"><span class="it">crudo di mare, pasta al torchio, carta gialla sotto —</span> <em class="tr">the yellow paper underneath, always</em></p>
+ <p class="gcap"><span class="it" data-edit="t57" data-edit-label="Text — crudo di mare, pasta al torchio, carta…">crudo di mare, pasta al torchio, carta gialla sotto —</span> <em class="tr" data-edit="t58" data-edit-label="Text — the yellow paper underneath, always">the yellow paper underneath, always</em></p>
 </section>
 </div>
 
 <section class="revs">
  <div class="wrap">
-  <span class="k"><span class="it">Dicono di noi</span><span class="tr">What guests say</span></span>
-  <h2 class="rev">Dalle recensioni Google</h2>
+  <span class="k"><span class="it" data-edit="t59" data-edit-label="Text — Dicono di noi">Dicono di noi</span><span class="tr" data-edit="t60" data-edit-label="Text — What guests say">What guests say</span></span>
+  <h2 class="rev" data-edit="t61" data-edit-label="Title — Dalle recensioni Google">Dalle recensioni Google</h2>
   <div class="rgrid">
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Best meal in Palermo! Food was refined yet simple, and the wine recommendations were spot on."</p><div class="who">Tom Low · Google</div></div>
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Local Sicilian food cooked fresh. The menu board is filled with tasty seasonal options."</p><div class="who">Matthew Drinkall · Google</div></div>
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"We walked by and thought it looked quite perfect! Pasta dishes were EXCELLENT — wine from Etna, icing on the cake."</p><div class="who">Kerry Armstrong · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t62" data-edit-label="Text — 'Best meal in Palermo! Food was refine…">"Best meal in Palermo! Food was refined yet simple, and the wine recommendations were spot on."</p><div class="who" data-edit="t63" data-edit-label="Text — Tom Low · Google">Tom Low · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t64" data-edit-label="Text — 'Local Sicilian food cooked fresh. The…">"Local Sicilian food cooked fresh. The menu board is filled with tasty seasonal options."</p><div class="who" data-edit="t65" data-edit-label="Text — Matthew Drinkall · Google">Matthew Drinkall · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t66" data-edit-label="Text — 'We walked by and thought it looked qu…">"We walked by and thought it looked quite perfect! Pasta dishes were EXCELLENT — wine from Etna, icing on the cake."</p><div class="who" data-edit="t67" data-edit-label="Text — Kerry Armstrong · Google">Kerry Armstrong · Google</div></div>
   </div>
-  <p class="gbadge">★ <b>4,7 / 5</b> — 424 recensioni su Google</p>
+  <p class="gbadge">★ <b data-edit="t68" data-edit-label="Text — 4,7 / 5">4,7 / 5</b> — 424 recensioni su Google</p>
  </div>
 </section>
 
 <section class="visit wrap">
  <div class="rev">
-  <span class="k"><span class="it">Orari</span><span class="tr">Hours</span></span>
-  <h2>Si cena, si beve</h2>
+  <span class="k"><span class="it" data-edit="t69" data-edit-label="Text — Orari">Orari</span><span class="tr" data-edit="t70" data-edit-label="Text — Hours">Hours</span></span>
+  <h2 data-edit="t71" data-edit-label="Title — Si cena, si beve">Si cena, si beve</h2>
   <table class="hours">
-   <tr><td><span class="it">Lunedì – Mercoledì</span><span class="tr">Mon – Wed</span></td><td data-edit="h-monwed">18:00 – 24:00</td></tr>
-   <tr><td><span class="it">Giovedì</span><span class="tr">Thursday</span></td><td data-edit="h-thu">19:00 – 24:00</td></tr>
-   <tr><td><span class="it">Venerdì – Sabato</span><span class="tr">Fri – Sat</span></td><td data-edit="h-frisat">19:00 – 01:00</td></tr>
-   <tr><td><span class="it">Domenica</span><span class="tr">Sunday</span></td><td data-edit="h-sun">Chiuso · Closed</td></tr>
+   <tr><td><span class="it" data-edit="t72" data-edit-label="Text — Lunedì – Mercoledì">Lunedì – Mercoledì</span><span class="tr" data-edit="t73" data-edit-label="Text — Mon – Wed">Mon – Wed</span></td><td data-edit="h-monwed">18:00 – 24:00</td></tr>
+   <tr><td><span class="it" data-edit="t74" data-edit-label="Text — Giovedì">Giovedì</span><span class="tr" data-edit="t75" data-edit-label="Text — Thursday">Thursday</span></td><td data-edit="h-thu">19:00 – 24:00</td></tr>
+   <tr><td><span class="it" data-edit="t76" data-edit-label="Text — Venerdì – Sabato">Venerdì – Sabato</span><span class="tr" data-edit="t77" data-edit-label="Text — Fri – Sat">Fri – Sat</span></td><td data-edit="h-frisat">19:00 – 01:00</td></tr>
+   <tr><td><span class="it" data-edit="t78" data-edit-label="Text — Domenica">Domenica</span><span class="tr" data-edit="t79" data-edit-label="Text — Sunday">Sunday</span></td><td data-edit="h-sun">Chiuso · Closed</td></tr>
   </table>
  </div>
  <div class="rev">
-  <span class="k"><span class="it">Dove siamo</span><span class="tr">Find us</span></span>
-  <h2>Via dei Cartari 1</h2>
+  <span class="k"><span class="it" data-edit="t80" data-edit-label="Text — Dove siamo">Dove siamo</span><span class="tr" data-edit="t81" data-edit-label="Text — Find us">Find us</span></span>
+  <h2 data-edit="t82" data-edit-label="Title — Via dei Cartari 1">Via dei Cartari 1</h2>
   <p class="adr" data-edit="addr">Via dei Cartari 1, 90133 Palermo — a due passi dal Cassaro e dalla Cala</p>
-  <p><span class="it">Siamo piccoli: un messaggio su WhatsApp e il tavolo è vostro.</span> <em class="tr">We're small — one WhatsApp message and the table is yours.</em></p>
-  <a class="btn" href="https://wa.me/393487430818?text=Ciao%21%20Vorrei%20prenotare%20un%20tavolo%20da%20Cartari%20Locanda" rel="noopener" target="_blank">💬 WhatsApp</a>
+  <p><span class="it" data-edit="t83" data-edit-label="Text — Siamo piccoli: un messaggio su WhatsAp…">Siamo piccoli: un messaggio su WhatsApp e il tavolo è vostro.</span> <em class="tr" data-edit="t84" data-edit-label="Text — We're small — one WhatsApp message and…">We're small — one WhatsApp message and the table is yours.</em></p>
+  <a class="btn" href="https://wa.me/393487430818?text=Ciao%21%20Vorrei%20prenotare%20un%20tavolo%20da%20Cartari%20Locanda" rel="noopener" target="_blank" data-edit="t85" data-edit-label="Button / link — 💬 WhatsApp">💬 WhatsApp</a>
   <a class="btn call" href="tel:+393487430818">📞 <span data-edit="phone">348 743 0818</span></a>
-  <a class="btn o" href="https://maps.google.com/?q=Cartari+Locanda+Palermo" rel="noopener" target="_blank">Apri in Maps</a>
+  <a class="btn o" href="https://maps.google.com/?q=Cartari+Locanda+Palermo" rel="noopener" target="_blank" data-edit="t86" data-edit-label="Button / link — Apri in Maps">Apri in Maps</a>
  </div>
 </section>
 
 <footer>Cartari Locanda · Via dei Cartari 1, Palermo · <span data-edit="phone2">348 743 0818</span></footer>
 
-<div class="bar"><a class="wa" href="https://wa.me/393487430818?text=Ciao%21%20Vorrei%20prenotare%20un%20tavolo%20da%20Cartari%20Locanda" rel="noopener" target="_blank"><i>✎</i>WhatsApp</a><a class="call" href="tel:+393487430818"><i>✆</i><span class="it">Chiama</span><span class="tr">Call</span></a><a class="ig" href="https://instagram.com/cartari_locanda" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.4"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg></a><a class="map" href="https://maps.google.com/?q=Cartari+Locanda+Palermo" rel="noopener" target="_blank"><i>⚘</i><span class="it">Mappa</span><span class="tr">Map</span></a></div>
+<div class="bar"><a class="wa" href="https://wa.me/393487430818?text=Ciao%21%20Vorrei%20prenotare%20un%20tavolo%20da%20Cartari%20Locanda" rel="noopener" target="_blank"><i>✎</i>WhatsApp</a><a class="call" href="tel:+393487430818"><i>✆</i><span class="it" data-edit="t87" data-edit-label="Text — Chiama">Chiama</span><span class="tr" data-edit="t88" data-edit-label="Text — Call">Call</span></a><a class="ig" href="https://instagram.com/cartari_locanda" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.2"/><circle cx="12" cy="12" r="4.4"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg></a><a class="map" href="https://maps.google.com/?q=Cartari+Locanda+Palermo" rel="noopener" target="_blank"><i>⚘</i><span class="it" data-edit="t89" data-edit-label="Text — Mappa">Mappa</span><span class="tr" data-edit="t90" data-edit-label="Text — Map">Map</span></a></div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});

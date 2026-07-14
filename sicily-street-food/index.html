@@ -122,16 +122,16 @@ html:not(.en) .tr{display:none!important}
 </head>
 <body>
 
-<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it">EN</span><span class="tr">IT</span></button>
+<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it" data-edit="t1" data-edit-label="Text — EN">EN</span><span class="tr" data-edit="t2" data-edit-label="Text — IT">IT</span></button>
 <header>
  <div class="bg"></div><div class="veil"></div>
  <div class="hin">
-  <span class="crate">Mercato di Ballarò · Palermo</span>
-  <h1>Sicily <span>Street Food</span></h1>
-  <p class="hsub"><span class="it">Trattoria di pesce fra le bancarelle di Ballarò: il pescato arriva dal mercato ogni mattina, la frittura esce nel coppo.</span> <em class="tr">A fresh-fish trattoria tucked between the market stalls.</em></p>
+  <span class="crate" data-edit="t3" data-edit-label="Text — Mercato di Ballarò · Palermo">Mercato di Ballarò · Palermo</span>
+  <h1>Sicily <span data-edit="t4" data-edit-label="Text — Street Food">Street Food</span></h1>
+  <p class="hsub"><span class="it" data-edit="t5" data-edit-label="Text — Trattoria di pesce fra le bancarelle d…">Trattoria di pesce fra le bancarelle di Ballarò: il pescato arriva dal mercato ogni mattina, la frittura esce nel coppo.</span> <em class="tr" data-edit="t6" data-edit-label="Text — A fresh-fish trattoria tucked between …">A fresh-fish trattoria tucked between the market stalls.</em></p>
   <div class="hmeta">
    <span>★ <b data-edit="rating">4,8</b> — <span data-edit="revcount">601</span> recensioni</span>
-   <span>Pescato del giorno · Daily catch</span>
+   <span data-edit="t7" data-edit-label="Text — Pescato del giorno · Daily catch">Pescato del giorno · Daily catch</span>
   </div>
  </div>
 </header>
@@ -139,56 +139,56 @@ html:not(.en) .tr{display:none!important}
 
 <section class="story wrap">
  <div class="rev">
-  <span class="k"><span class="it">Il banco</span><span class="tr">The counter</span></span>
-  <h2>Il mercato<br><em>decide il menù</em></h2>
-  <p class="it">Triglie, scampi, cozze e astici sul ghiaccio tritato: il nostro banco si riempie ogni mattina con quello che Ballarò offre. Quello che vedete sul ghiaccio è quello che trovate nel piatto.</p>
-  <p class="en tr">Red mullet, scampi, mussels and lobster on crushed ice: our counter fills each morning with whatever Ballarò brings in. What you see on the ice is what lands on your plate.</p>
-  <p>Fuori, i tavolini stanno in mezzo al teatro del mercato — il posto più siciliano dove mangiare un'arancina di mare.</p>
+  <span class="k"><span class="it" data-edit="t8" data-edit-label="Text — Il banco">Il banco</span><span class="tr" data-edit="t9" data-edit-label="Text — The counter">The counter</span></span>
+  <h2>Il mercato<br><em data-edit="t10" data-edit-label="Text — decide il menù">decide il menù</em></h2>
+  <p class="it" data-edit="t11" data-edit-label="Text — Triglie, scampi, cozze e astici sul gh…">Triglie, scampi, cozze e astici sul ghiaccio tritato: il nostro banco si riempie ogni mattina con quello che Ballarò offre. Quello che vedete sul ghiaccio è quello che trovate nel piatto.</p>
+  <p class="en tr" data-edit="t12" data-edit-label="Text — Red mullet, scampi, mussels and lobste…">Red mullet, scampi, mussels and lobster on crushed ice: our counter fills each morning with whatever Ballarò brings in. What you see on the ice is what lands on your plate.</p>
+  <p data-edit="t13" data-edit-label="Text — Fuori, i tavolini stanno in mezzo al t…">Fuori, i tavolini stanno in mezzo al teatro del mercato — il posto più siciliano dove mangiare un'arancina di mare.</p>
  </div>
  <figure class="ifig rev">
   <img src="img/06.jpg" alt="Il banco del pesce sul ghiaccio">
-  <span class="tag">arrivato stamattina ✓</span>
+  <span class="tag" data-edit="t14" data-edit-label="Text — arrivato stamattina ✓">arrivato stamattina ✓</span>
  </figure>
 </section>
 
 <section class="menu">
  <div class="wrap">
   <div class="mhead">
-   <span class="k" style="color:#8fd0e8">Il menù · In 4 lingue al tavolo</span>
-   <h2 class="rev">Prezzi veri, dal menù</h2>
-   <p class="note"><span class="it">Prezzi reali dal nostro menù stampato — il pescato del giorno va a mercato.</span> <em class="tr">Real printed-menu prices; daily catch priced at the counter.</em></p>
+   <span class="k" style="color:#8fd0e8" data-edit="t15" data-edit-label="Text — Il menù · In 4 lingue al tavolo">Il menù · In 4 lingue al tavolo</span>
+   <h2 class="rev" data-edit="t16" data-edit-label="Title — Prezzi veri, dal menù">Prezzi veri, dal menù</h2>
+   <p class="note"><span class="it" data-edit="t17" data-edit-label="Text — Prezzi reali dal nostro menù stampato …">Prezzi reali dal nostro menù stampato — il pescato del giorno va a mercato.</span> <em class="tr" data-edit="t18" data-edit-label="Text — Real printed-menu prices; daily catch …">Real printed-menu prices; daily catch priced at the counter.</em></p>
   </div>
   <div class="mgrid">
    <div class="mcrate rev">
-    <h3>Antipasti</h3>
-    <div class="mi"><span class="nm">Caponata siciliana<i>gli ortaggi della nostra terra in agrodolce</i></span><b>€ 8</b></div>
-    <div class="mi"><span class="nm">Frittura di panelle e crocché<i>10 pezzi, nel coppo di carta</i></span><b>€ 8</b></div>
-    <div class="mi"><span class="nm">Cozze scoppiate<i>pepe nero e limone</i></span><b>€ 10</b></div>
-    <div class="mi"><span class="nm">Zuppa di cozze</span><b>€ 12</b></div>
-    <div class="mi"><span class="nm">Frittura di calamari e gamberi</span><b>€ 16</b></div>
+    <h3 data-edit="t19" data-edit-label="Heading — Antipasti">Antipasti</h3>
+    <div class="mi"><span class="nm">Caponata siciliana<i data-edit="t20" data-edit-label="Text — gli ortaggi della nostra terra in agro…">gli ortaggi della nostra terra in agrodolce</i></span><b data-edit="t21" data-edit-label="Text — € 8">€ 8</b></div>
+    <div class="mi"><span class="nm">Frittura di panelle e crocché<i data-edit="t22" data-edit-label="Text — 10 pezzi, nel coppo di carta">10 pezzi, nel coppo di carta</i></span><b data-edit="t23" data-edit-label="Text — € 8">€ 8</b></div>
+    <div class="mi"><span class="nm">Cozze scoppiate<i data-edit="t24" data-edit-label="Text — pepe nero e limone">pepe nero e limone</i></span><b data-edit="t25" data-edit-label="Text — € 10">€ 10</b></div>
+    <div class="mi"><span class="nm" data-edit="t26" data-edit-label="Text — Zuppa di cozze">Zuppa di cozze</span><b data-edit="t27" data-edit-label="Text — € 12">€ 12</b></div>
+    <div class="mi"><span class="nm" data-edit="t28" data-edit-label="Text — Frittura di calamari e gamberi">Frittura di calamari e gamberi</span><b data-edit="t29" data-edit-label="Text — € 16">€ 16</b></div>
    </div>
    <div class="mcrate rev">
-    <span class="spec">House special</span>
-    <h3>Primi piatti</h3>
-    <div class="mi"><span class="nm">Pasta con le cozze ★<i>cozze e pomodorini — la specialità della casa</i></span><b>€ 14</b></div>
-    <div class="mi"><span class="nm">Pasta alla trapanese<i>pomodoro crudo, aglio e basilico</i></span><b>€ 10</b></div>
-    <div class="mi"><span class="nm">Pasta all'anciova<i>acciughe, pinoli, uva passa e pangrattato</i></span><b>€ 11</b></div>
-    <div class="mi"><span class="nm">Pasta alla Norma<i>melanzane fritte e ricotta salata</i></span><b>€ 12</b></div>
-    <div class="mi"><span class="nm">Pasta con pesce spada e melanzane</span><b>€ 13</b></div>
+    <span class="spec" data-edit="t30" data-edit-label="Text — House special">House special</span>
+    <h3 data-edit="t31" data-edit-label="Heading — Primi piatti">Primi piatti</h3>
+    <div class="mi"><span class="nm">Pasta con le cozze ★<i data-edit="t32" data-edit-label="Text — cozze e pomodorini — la specialità del…">cozze e pomodorini — la specialità della casa</i></span><b data-edit="t33" data-edit-label="Text — € 14">€ 14</b></div>
+    <div class="mi"><span class="nm">Pasta alla trapanese<i data-edit="t34" data-edit-label="Text — pomodoro crudo, aglio e basilico">pomodoro crudo, aglio e basilico</i></span><b data-edit="t35" data-edit-label="Text — € 10">€ 10</b></div>
+    <div class="mi"><span class="nm">Pasta all'anciova<i data-edit="t36" data-edit-label="Text — acciughe, pinoli, uva passa e pangratt…">acciughe, pinoli, uva passa e pangrattato</i></span><b data-edit="t37" data-edit-label="Text — € 11">€ 11</b></div>
+    <div class="mi"><span class="nm">Pasta alla Norma<i data-edit="t38" data-edit-label="Text — melanzane fritte e ricotta salata">melanzane fritte e ricotta salata</i></span><b data-edit="t39" data-edit-label="Text — € 12">€ 12</b></div>
+    <div class="mi"><span class="nm" data-edit="t40" data-edit-label="Text — Pasta con pesce spada e melanzane">Pasta con pesce spada e melanzane</span><b data-edit="t41" data-edit-label="Text — € 13">€ 13</b></div>
    </div>
   </div>
-  <p class="mfoot"><span class="it">Coperto € 1,50 · Lista allergeni alla cassa ·</span> <em class="tr">Allergen list at the cash desk</em></p>
+  <p class="mfoot"><span class="it" data-edit="t42" data-edit-label="Text — Coperto € 1,50 · Lista allergeni alla …">Coperto € 1,50 · Lista allergeni alla cassa ·</span> <em class="tr" data-edit="t43" data-edit-label="Text — Allergen list at the cash desk">Allergen list at the cash desk</em></p>
  </div>
 </section>
 
 <div class="wrap">
 <section class="high">
- <span class="k"><span class="it">Dal banco alla tavola</span><span class="tr">Counter to table</span></span>
- <h2 class="rev">Tre cose da non perdere</h2>
+ <span class="k"><span class="it" data-edit="t44" data-edit-label="Text — Dal banco alla tavola">Dal banco alla tavola</span><span class="tr" data-edit="t45" data-edit-label="Text — Counter to table">Counter to table</span></span>
+ <h2 class="rev" data-edit="t46" data-edit-label="Title — Tre cose da non perdere">Tre cose da non perdere</h2>
  <div class="hgrid">
-  <div class="hcard rev"><img src="img/04.jpg" alt="Pasta con le cozze"><div class="hb"><h3>Pasta con le cozze</h3><p>La specialità della casa, servita in mezzo al mercato — <span class="pz">€ 14</span></p></div></div>
-  <div class="hcard rev"><img src="img/03.jpg" alt="Frittura di calamari e gamberi"><div class="hb"><h3>Frittura del giorno</h3><p>Calamari e gamberi sul piatto di maiolica, limone di Sicilia — <span class="pz">€ 16</span></p></div></div>
-  <div class="hcard rev"><img src="img/05.jpg" alt="Pasta alla Norma con panelle"><div class="hb"><h3>Norma &amp; panelle</h3><p>La Norma con ricotta salata, e il coppo di panelle e crocché — <span class="pz">€ 12 + € 8</span></p></div></div>
+  <div class="hcard rev"><img src="img/04.jpg" alt="Pasta con le cozze"><div class="hb"><h3 data-edit="t47" data-edit-label="Heading — Pasta con le cozze">Pasta con le cozze</h3><p>La specialità della casa, servita in mezzo al mercato — <span class="pz" data-edit="t48" data-edit-label="Text — € 14">€ 14</span></p></div></div>
+  <div class="hcard rev"><img src="img/03.jpg" alt="Frittura di calamari e gamberi"><div class="hb"><h3 data-edit="t49" data-edit-label="Heading — Frittura del giorno">Frittura del giorno</h3><p>Calamari e gamberi sul piatto di maiolica, limone di Sicilia — <span class="pz" data-edit="t50" data-edit-label="Text — € 16">€ 16</span></p></div></div>
+  <div class="hcard rev"><img src="img/05.jpg" alt="Pasta alla Norma con panelle"><div class="hb"><h3 data-edit="t51" data-edit-label="Heading — Norma &amp; panelle">Norma &amp; panelle</h3><p>La Norma con ricotta salata, e il coppo di panelle e crocché — <span class="pz" data-edit="t52" data-edit-label="Text — € 12 + € 8">€ 12 + € 8</span></p></div></div>
  </div>
 </section>
 
@@ -197,46 +197,46 @@ html:not(.en) .tr{display:none!important}
   <img src="img/07.jpg" alt="Frittura di gamberi e calamari">
   <img src="img/08.jpg" alt="I tavolini nel mercato di Ballarò">
  </div>
- <p class="gcap"><span class="it">i tavolini stanno dentro il mercato —</span> <em class="tr">your table sits inside the market</em></p>
+ <p class="gcap"><span class="it" data-edit="t53" data-edit-label="Text — i tavolini stanno dentro il mercato —">i tavolini stanno dentro il mercato —</span> <em class="tr" data-edit="t54" data-edit-label="Text — your table sits inside the market">your table sits inside the market</em></p>
 </section>
 </div>
 
 <section class="revs">
  <div class="wrap">
-  <span class="k"><span class="it">Dicono di noi</span><span class="tr">What guests say</span></span>
-  <h2 class="rev">Dalle recensioni Google</h2>
+  <span class="k"><span class="it" data-edit="t55" data-edit-label="Text — Dicono di noi">Dicono di noi</span><span class="tr" data-edit="t56" data-edit-label="Text — What guests say">What guests say</span></span>
+  <h2 class="rev" data-edit="t57" data-edit-label="Title — Dalle recensioni Google">Dalle recensioni Google</h2>
   <div class="rgrid">
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"The seafood was incredibly fresh, and the whole experience felt truly authentic Sicilian. I loved sitting outside taking in the hustle and bustle."</p><div class="who">Kevin · Google</div></div>
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Panella and crocchè, then the catch of the day — a fantastic crustacean scampi."</p><div class="who">Larinda Cole · Google</div></div>
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"They procure fresh fish daily from the market and prepare everything cleanly and deliciously."</p><div class="who">Ben Xue · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t58" data-edit-label="Text — 'The seafood was incredibly fresh, and…">"The seafood was incredibly fresh, and the whole experience felt truly authentic Sicilian. I loved sitting outside taking in the hustle and bustle."</p><div class="who" data-edit="t59" data-edit-label="Text — Kevin · Google">Kevin · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t60" data-edit-label="Text — 'Panella and crocchè, then the catch o…">"Panella and crocchè, then the catch of the day — a fantastic crustacean scampi."</p><div class="who" data-edit="t61" data-edit-label="Text — Larinda Cole · Google">Larinda Cole · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t62" data-edit-label="Text — 'They procure fresh fish daily from th…">"They procure fresh fish daily from the market and prepare everything cleanly and deliciously."</p><div class="who" data-edit="t63" data-edit-label="Text — Ben Xue · Google">Ben Xue · Google</div></div>
   </div>
-  <p class="gbadge">★ <b>4,8 / 5</b> — 601 recensioni su Google</p>
+  <p class="gbadge">★ <b data-edit="t64" data-edit-label="Text — 4,8 / 5">4,8 / 5</b> — 601 recensioni su Google</p>
  </div>
 </section>
 
 <section class="visit wrap">
  <div class="rev">
-  <span class="k"><span class="it">Il ritmo</span><span class="tr">Our rhythm</span></span>
-  <h2>Freschi ogni giorno</h2>
+  <span class="k"><span class="it" data-edit="t65" data-edit-label="Text — Il ritmo">Il ritmo</span><span class="tr" data-edit="t66" data-edit-label="Text — Our rhythm">Our rhythm</span></span>
+  <h2 data-edit="t67" data-edit-label="Title — Freschi ogni giorno">Freschi ogni giorno</h2>
   <div class="fresh">
-   <span class="hand">"pescato del giorno = orario del mercato"</span>
-   <p><span class="it">Il banco segue il mercato di Ballarò: per l'orario di oggi scriveteci su WhatsApp — rispondiamo subito.</span> <em class="tr">Our counter follows the market: message us on WhatsApp for today's hours.</em></p>
+   <span class="hand" data-edit="t68" data-edit-label="Text — 'pescato del giorno = orario del merca…">"pescato del giorno = orario del mercato"</span>
+   <p><span class="it" data-edit="t69" data-edit-label="Text — Il banco segue il mercato di Ballarò: …">Il banco segue il mercato di Ballarò: per l'orario di oggi scriveteci su WhatsApp — rispondiamo subito.</span> <em class="tr" data-edit="t70" data-edit-label="Text — Our counter follows the market: messag…">Our counter follows the market: message us on WhatsApp for today's hours.</em></p>
   </div>
  </div>
  <div class="rev">
-  <span class="k"><span class="it">Dove siamo</span><span class="tr">Find us</span></span>
-  <h2>Dentro Ballarò</h2>
+  <span class="k"><span class="it" data-edit="t71" data-edit-label="Text — Dove siamo">Dove siamo</span><span class="tr" data-edit="t72" data-edit-label="Text — Find us">Find us</span></span>
+  <h2 data-edit="t73" data-edit-label="Title — Dentro Ballarò">Dentro Ballarò</h2>
   <p class="adr" data-edit="addr">Via Dalmazio Birago 17, 90134 Palermo — mercato di Ballarò</p>
-  <p><span class="it">Un messaggio e vi teniamo il tavolo fra le bancarelle.</span> <em class="tr">One message and we'll hold your table between the stalls.</em></p>
-  <a class="btn" href="https://wa.me/393273581227?text=Ciao%21%20Vorrei%20un%20tavolo%20da%20Sicily%20Street%20Food" rel="noopener" target="_blank">💬 WhatsApp</a>
+  <p><span class="it" data-edit="t74" data-edit-label="Text — Un messaggio e vi teniamo il tavolo fr…">Un messaggio e vi teniamo il tavolo fra le bancarelle.</span> <em class="tr" data-edit="t75" data-edit-label="Text — One message and we'll hold your table …">One message and we'll hold your table between the stalls.</em></p>
+  <a class="btn" href="https://wa.me/393273581227?text=Ciao%21%20Vorrei%20un%20tavolo%20da%20Sicily%20Street%20Food" rel="noopener" target="_blank" data-edit="t76" data-edit-label="Button / link — 💬 WhatsApp">💬 WhatsApp</a>
   <a class="btn call" href="tel:+393273581227">📞 <span data-edit="phone">327 358 1227</span></a>
-  <a class="btn o" href="https://maps.google.com/?q=Sicily+Street+Food+Seafood+Trattoria+Palermo" rel="noopener" target="_blank">Apri in Maps</a>
+  <a class="btn o" href="https://maps.google.com/?q=Sicily+Street+Food+Seafood+Trattoria+Palermo" rel="noopener" target="_blank" data-edit="t77" data-edit-label="Button / link — Apri in Maps">Apri in Maps</a>
  </div>
 </section>
 
 <footer>Sicily Street Food — Seafood Trattoria · Via Dalmazio Birago 17, Ballarò, Palermo · <span data-edit="phone2">327 358 1227</span></footer>
 
-<div class="bar"><a class="wa" href="https://wa.me/393273581227?text=Ciao%21%20Vorrei%20un%20tavolo%20da%20Sicily%20Street%20Food" rel="noopener" target="_blank">WHATSAPP</a><a class="call" href="tel:+393273581227">☎ <span class="it">CHIAMA</span><span class="tr">CALL</span></a><a class="map" href="https://maps.google.com/?q=Sicily+Street+Food+Seafood+Trattoria+Palermo" rel="noopener" target="_blank">⚓ <span class="it">MAPPA</span><span class="tr">MAP</span></a></div>
+<div class="bar"><a class="wa" href="https://wa.me/393273581227?text=Ciao%21%20Vorrei%20un%20tavolo%20da%20Sicily%20Street%20Food" rel="noopener" target="_blank" data-edit="t78" data-edit-label="Button / link — WHATSAPP">WHATSAPP</a><a class="call" href="tel:+393273581227">☎ <span class="it" data-edit="t79" data-edit-label="Text — CHIAMA">CHIAMA</span><span class="tr" data-edit="t80" data-edit-label="Text — CALL">CALL</span></a><a class="map" href="https://maps.google.com/?q=Sicily+Street+Food+Seafood+Trattoria+Palermo" rel="noopener" target="_blank">⚓ <span class="it" data-edit="t81" data-edit-label="Text — MAPPA">MAPPA</span><span class="tr" data-edit="t82" data-edit-label="Text — MAP">MAP</span></a></div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});

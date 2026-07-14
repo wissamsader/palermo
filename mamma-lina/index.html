@@ -124,16 +124,16 @@ html:not(.en) .tr{display:none!important}
 </head>
 <body>
 
-<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it">EN</span><span class="tr">IT</span></button>
+<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it" data-edit="t1" data-edit-label="Text — EN">EN</span><span class="tr" data-edit="t2" data-edit-label="Text — IT">IT</span></button>
 <header>
  <div class="bg"></div><div class="veil"></div>
  <div class="hin">
-  <span class="tovaglia">Via Venezia 40 · Palermo</span>
-  <h1>Mamma Lina</h1>
-  <p class="hsub"><span class="it">Friggitoria e gastronomia all'antica: la tovaglia a quadretti, l'arco giallo e la cucina di chef Rita — come una volta.</span> <em class="tr">Old-style fry shop &amp; home kitchen, checked tablecloths included.</em></p>
+  <span class="tovaglia" data-edit="t3" data-edit-label="Text — Via Venezia 40 · Palermo">Via Venezia 40 · Palermo</span>
+  <h1 data-edit="t4" data-edit-label="Big title — Mamma Lina">Mamma Lina</h1>
+  <p class="hsub"><span class="it" data-edit="t5" data-edit-label="Text — Friggitoria e gastronomia all'antica: …">Friggitoria e gastronomia all'antica: la tovaglia a quadretti, l'arco giallo e la cucina di chef Rita — come una volta.</span> <em class="tr" data-edit="t6" data-edit-label="Text — Old-style fry shop &amp; home kitchen,…">Old-style fry shop &amp; home kitchen, checked tablecloths included.</em></p>
   <div class="hmeta">
    <span>★ <b data-edit="rating">4,9</b> — <span data-edit="revcount">80</span> recensioni</span>
-   <span>Tutti i giorni · 10:00 – 22:00</span>
+   <span data-edit="t7" data-edit-label="Text — Tutti i giorni · 10:00 – 22:00">Tutti i giorni · 10:00 – 22:00</span>
   </div>
  </div>
 </header>
@@ -141,11 +141,11 @@ html:not(.en) .tr{display:none!important}
 
 <section class="story wrap">
  <div class="rev">
-  <span class="k"><span class="it">La cucina</span><span class="tr">The kitchen</span></span>
-  <h2>La cucina di <span class="hand">Rita</span></h2>
-  <p class="it">"All'antica" qui non è una posa: è la pasta del giorno scritta a mano, la parmigiana che esce quando è pronta, i fritti fatti nell'ordine in cui li chiedete. In cucina c'è Rita — i clienti la nominano per nome nelle recensioni.</p>
-  <p class="en tr">"All'antica" is no pose here: today's pasta written by hand, parmigiana served when it's ready, and Rita in the kitchen — guests thank her by name in the reviews.</p>
-  <p>Dentro, l'arco giallo e le tovagliette a quadretti rossi. Fuori, i tavolini in strada come si usava.</p>
+  <span class="k"><span class="it" data-edit="t8" data-edit-label="Text — La cucina">La cucina</span><span class="tr" data-edit="t9" data-edit-label="Text — The kitchen">The kitchen</span></span>
+  <h2>La cucina di <span class="hand" data-edit="t10" data-edit-label="Text — Rita">Rita</span></h2>
+  <p class="it" data-edit="t11" data-edit-label="Text — 'All'antica' qui non è una posa: è la …">"All'antica" qui non è una posa: è la pasta del giorno scritta a mano, la parmigiana che esce quando è pronta, i fritti fatti nell'ordine in cui li chiedete. In cucina c'è Rita — i clienti la nominano per nome nelle recensioni.</p>
+  <p class="en tr" data-edit="t12" data-edit-label="Text — 'All'antica' is no pose here: today's …">"All'antica" is no pose here: today's pasta written by hand, parmigiana served when it's ready, and Rita in the kitchen — guests thank her by name in the reviews.</p>
+  <p data-edit="t13" data-edit-label="Text — Dentro, l'arco giallo e le tovagliette…">Dentro, l'arco giallo e le tovagliette a quadretti rossi. Fuori, i tavolini in strada come si usava.</p>
  </div>
  <figure class="sfig rev"><img src="img/05.jpg" alt="L'insegna in maiolica di Mamma Lina"></figure>
 </section>
@@ -153,98 +153,98 @@ html:not(.en) .tr{display:none!important}
 <section class="menu">
  <div class="wrap in">
   <div class="mhead">
-   <span class="k"><span class="it">Il menù di casa</span><span class="tr">The house menu</span></span>
-   <h2 class="rev">Tre ricettari, <span class="hand">un banco</span></h2>
-   <p class="note"><span class="it">Il nostro menù è una lista di piatti, non di numeri: i prezzi del giorno ve li dice Rita al banco.</span> <em class="tr">Our board lists dishes, not numbers — the day's prices come from Rita at the counter.</em></p>
+   <span class="k"><span class="it" data-edit="t14" data-edit-label="Text — Il menù di casa">Il menù di casa</span><span class="tr" data-edit="t15" data-edit-label="Text — The house menu">The house menu</span></span>
+   <h2 class="rev">Tre ricettari, <span class="hand" data-edit="t16" data-edit-label="Text — un banco">un banco</span></h2>
+   <p class="note"><span class="it" data-edit="t17" data-edit-label="Text — Il nostro menù è una lista di piatti, …">Il nostro menù è una lista di piatti, non di numeri: i prezzi del giorno ve li dice Rita al banco.</span> <em class="tr" data-edit="t18" data-edit-label="Text — Our board lists dishes, not numbers — …">Our board lists dishes, not numbers — the day's prices come from Rita at the counter.</em></p>
   </div>
   <div class="rgrid3">
    <div class="rcp rev">
-    <h3>Panineria</h3>
+    <h3 data-edit="t19" data-edit-label="Heading — Panineria">Panineria</h3>
     <ul>
-     <li>Pane con panelle</li>
-     <li>Pane con crocchè</li>
-     <li>Pane con melanzane</li>
-     <li>Paninetti con milza</li>
-     <li>Pane cunzatu<i>il pane conzato della tradizione</i></li>
-     <li>Cartoccio</li>
+     <li data-edit="t20" data-edit-label="List item — Pane con panelle">Pane con panelle</li>
+     <li data-edit="t21" data-edit-label="List item — Pane con crocchè">Pane con crocchè</li>
+     <li data-edit="t22" data-edit-label="List item — Pane con melanzane">Pane con melanzane</li>
+     <li data-edit="t23" data-edit-label="List item — Paninetti con milza">Paninetti con milza</li>
+     <li>Pane cunzatu<i data-edit="t24" data-edit-label="Text — il pane conzato della tradizione">il pane conzato della tradizione</i></li>
+     <li data-edit="t25" data-edit-label="List item — Cartoccio">Cartoccio</li>
     </ul>
    </div>
    <div class="rcp rev">
-    <h3>Friggitoria</h3>
+    <h3 data-edit="t26" data-edit-label="Heading — Friggitoria">Friggitoria</h3>
     <ul>
-     <li>Arancine</li>
-     <li>Cotoletta panata</li>
-     <li>Pesce spada panato</li>
-     <li>Frittura di pesce</li>
-     <li>Pastellati di verdure</li>
+     <li data-edit="t27" data-edit-label="List item — Arancine">Arancine</li>
+     <li data-edit="t28" data-edit-label="List item — Cotoletta panata">Cotoletta panata</li>
+     <li data-edit="t29" data-edit-label="List item — Pesce spada panato">Pesce spada panato</li>
+     <li data-edit="t30" data-edit-label="List item — Frittura di pesce">Frittura di pesce</li>
+     <li data-edit="t31" data-edit-label="List item — Pastellati di verdure">Pastellati di verdure</li>
     </ul>
    </div>
    <div class="rcp rev">
-    <h3>Gastronomia</h3>
+    <h3 data-edit="t32" data-edit-label="Heading — Gastronomia">Gastronomia</h3>
     <ul>
-     <li>Pasta Mamma Lina<i>quella della casa</i></li>
-     <li>Pasta espressa di giornata</li>
-     <li>Lasagna classica · di verdure</li>
-     <li>Parmigiana di melanzane</li>
-     <li>Salsiccia o carne con patate al forno</li>
-     <li>Peperoni ripieni · Caponata</li>
+     <li>Pasta Mamma Lina<i data-edit="t33" data-edit-label="Text — quella della casa">quella della casa</i></li>
+     <li data-edit="t34" data-edit-label="List item — Pasta espressa di giornata">Pasta espressa di giornata</li>
+     <li data-edit="t35" data-edit-label="List item — Lasagna classica · di verdure">Lasagna classica · di verdure</li>
+     <li data-edit="t36" data-edit-label="List item — Parmigiana di melanzane">Parmigiana di melanzane</li>
+     <li data-edit="t37" data-edit-label="List item — Salsiccia o carne con patate al forno">Salsiccia o carne con patate al forno</li>
+     <li data-edit="t38" data-edit-label="List item — Peperoni ripieni · Caponata">Peperoni ripieni · Caponata</li>
     </ul>
    </div>
   </div>
   <div class="mfoot rev">
-   <span class="hand">"come una volta"</span>
-   <p><span class="it">La lavagna è bilingue, italiano e inglese — chiedete pure.</span> <em class="tr">The board speaks Italian and English — just ask.</em></p>
+   <span class="hand" data-edit="t39" data-edit-label="Text — 'come una volta'">"come una volta"</span>
+   <p><span class="it" data-edit="t40" data-edit-label="Text — La lavagna è bilingue, italiano e ingl…">La lavagna è bilingue, italiano e inglese — chiedete pure.</span> <em class="tr" data-edit="t41" data-edit-label="Text — The board speaks Italian and English —…">The board speaks Italian and English — just ask.</em></p>
   </div>
  </div>
 </section>
 
 <div class="wrap">
 <section class="high">
- <span class="k"><span class="it">Dalla tovaglia a quadretti</span><span class="tr">From the checked table</span></span>
- <h2 class="rev">I piatti di <span class="hand">oggi</span></h2>
+ <span class="k"><span class="it" data-edit="t42" data-edit-label="Text — Dalla tovaglia a quadretti">Dalla tovaglia a quadretti</span><span class="tr" data-edit="t43" data-edit-label="Text — From the checked table">From the checked table</span></span>
+ <h2 class="rev">I piatti di <span class="hand" data-edit="t44" data-edit-label="Text — oggi">oggi</span></h2>
  <div class="hgrid">
-  <div class="hcard rev"><img src="img/03.jpg" alt="Pasta espressa di giornata"><div class="hb"><h3>La pasta espressa</h3><p>Cambia col giorno e col mercato — servita fuori, coi tavolini in strada e il parmigiano nella ciotola.</p></div></div>
-  <div class="hcard rev"><img src="img/04.jpg" alt="Parmigiana di melanzane"><div class="hb"><h3>La parmigiana</h3><p>Strati sottili, basilico e sugo di casa: il piatto che fa tornare i clienti.</p></div></div>
+  <div class="hcard rev"><img src="img/03.jpg" alt="Pasta espressa di giornata"><div class="hb"><h3 data-edit="t45" data-edit-label="Heading — La pasta espressa">La pasta espressa</h3><p data-edit="t46" data-edit-label="Text — Cambia col giorno e col mercato — serv…">Cambia col giorno e col mercato — servita fuori, coi tavolini in strada e il parmigiano nella ciotola.</p></div></div>
+  <div class="hcard rev"><img src="img/04.jpg" alt="Parmigiana di melanzane"><div class="hb"><h3 data-edit="t47" data-edit-label="Heading — La parmigiana">La parmigiana</h3><p data-edit="t48" data-edit-label="Text — Strati sottili, basilico e sugo di cas…">Strati sottili, basilico e sugo di casa: il piatto che fa tornare i clienti.</p></div></div>
  </div>
 </section>
 </div>
 
 <section class="revs">
  <div class="wrap">
-  <span class="k"><span class="it">Dicono di noi</span><span class="tr">What guests say</span></span>
-  <h2 class="rev">Dalle recensioni <span class="hand">Google</span></h2>
+  <span class="k"><span class="it" data-edit="t49" data-edit-label="Text — Dicono di noi">Dicono di noi</span><span class="tr" data-edit="t50" data-edit-label="Text — What guests say">What guests say</span></span>
+  <h2 class="rev">Dalle recensioni <span class="hand" data-edit="t51" data-edit-label="Text — Google">Google</span></h2>
   <div class="rgrid">
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Best food we had in Palermo and even friendlier staff! Chef Rita's food is amazing!"</p><div class="who">Alžbeta Zemanová · Google</div></div>
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Thank you for the excellent dinner — fresh, perfectly seasoned — and for the kind and welcoming attitude of the owners."</p><div class="who">Patrícia Šebíková · Google</div></div>
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Such a beautiful place!! Freshly cooked food and incredibly friendly people."</p><div class="who">Luise · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t52" data-edit-label="Text — 'Best food we had in Palermo and even …">"Best food we had in Palermo and even friendlier staff! Chef Rita's food is amazing!"</p><div class="who" data-edit="t53" data-edit-label="Text — Alžbeta Zemanová · Google">Alžbeta Zemanová · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t54" data-edit-label="Text — 'Thank you for the excellent dinner — …">"Thank you for the excellent dinner — fresh, perfectly seasoned — and for the kind and welcoming attitude of the owners."</p><div class="who" data-edit="t55" data-edit-label="Text — Patrícia Šebíková · Google">Patrícia Šebíková · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t56" data-edit-label="Text — 'Such a beautiful place!! Freshly cook…">"Such a beautiful place!! Freshly cooked food and incredibly friendly people."</p><div class="who" data-edit="t57" data-edit-label="Text — Luise · Google">Luise · Google</div></div>
   </div>
-  <p class="gbadge">★ <b>4,9 / 5</b> — 80 recensioni su Google</p>
+  <p class="gbadge">★ <b data-edit="t58" data-edit-label="Text — 4,9 / 5">4,9 / 5</b> — 80 recensioni su Google</p>
  </div>
 </section>
 
 <section class="visit wrap">
  <div class="rev">
-  <span class="k"><span class="it">Orari</span><span class="tr">Hours</span></span>
-  <h2>Aperti <span class="hand">ogni giorno</span></h2>
+  <span class="k"><span class="it" data-edit="t59" data-edit-label="Text — Orari">Orari</span><span class="tr" data-edit="t60" data-edit-label="Text — Hours">Hours</span></span>
+  <h2>Aperti <span class="hand" data-edit="t61" data-edit-label="Text — ogni giorno">ogni giorno</span></h2>
   <table class="hours">
-   <tr><td><span class="it">Lunedì – Domenica</span><span class="tr">Mon – Sun</span></td><td data-edit="h-week">10:00 – 22:00</td></tr>
-   <tr><td><span class="it">La cucina</span><span class="tr">The kitchen</span></td><td><span class="it">Orario continuato</span><span class="tr">Open all day</span></td></tr>
+   <tr><td><span class="it" data-edit="t62" data-edit-label="Text — Lunedì – Domenica">Lunedì – Domenica</span><span class="tr" data-edit="t63" data-edit-label="Text — Mon – Sun">Mon – Sun</span></td><td data-edit="h-week">10:00 – 22:00</td></tr>
+   <tr><td><span class="it" data-edit="t64" data-edit-label="Text — La cucina">La cucina</span><span class="tr" data-edit="t65" data-edit-label="Text — The kitchen">The kitchen</span></td><td><span class="it" data-edit="t66" data-edit-label="Text — Orario continuato">Orario continuato</span><span class="tr" data-edit="t67" data-edit-label="Text — Open all day">Open all day</span></td></tr>
   </table>
  </div>
  <div class="rev">
-  <span class="k"><span class="it">Dove siamo</span><span class="tr">Find us</span></span>
-  <h2>Via Venezia 40</h2>
+  <span class="k"><span class="it" data-edit="t68" data-edit-label="Text — Dove siamo">Dove siamo</span><span class="tr" data-edit="t69" data-edit-label="Text — Find us">Find us</span></span>
+  <h2 data-edit="t70" data-edit-label="Title — Via Venezia 40">Via Venezia 40</h2>
   <p class="adr" data-edit="addr">Via Venezia 40, 90133 Palermo — a due passi da Via Roma</p>
-  <p><span class="it">Scrivete su WhatsApp per il tavolo o per sapere la pasta di oggi.</span> <em class="tr">WhatsApp us for a table — or to ask what today's pasta is.</em></p>
-  <a class="btn" href="https://wa.me/393315916964?text=Ciao%21%20Vorrei%20un%20tavolo%20da%20Mamma%20Lina" rel="noopener" target="_blank">💬 WhatsApp</a>
+  <p><span class="it" data-edit="t71" data-edit-label="Text — Scrivete su WhatsApp per il tavolo o p…">Scrivete su WhatsApp per il tavolo o per sapere la pasta di oggi.</span> <em class="tr" data-edit="t72" data-edit-label="Text — WhatsApp us for a table — or to ask wh…">WhatsApp us for a table — or to ask what today's pasta is.</em></p>
+  <a class="btn" href="https://wa.me/393315916964?text=Ciao%21%20Vorrei%20un%20tavolo%20da%20Mamma%20Lina" rel="noopener" target="_blank" data-edit="t73" data-edit-label="Button / link — 💬 WhatsApp">💬 WhatsApp</a>
   <a class="btn call" href="tel:+393315916964">📞 <span data-edit="phone">331 591 6964</span></a>
-  <a class="btn o" href="https://maps.google.com/?q=Mamma+Lina+friggitoria+gastronomia+Palermo" rel="noopener" target="_blank">Apri in Maps</a>
+  <a class="btn o" href="https://maps.google.com/?q=Mamma+Lina+friggitoria+gastronomia+Palermo" rel="noopener" target="_blank" data-edit="t74" data-edit-label="Button / link — Apri in Maps">Apri in Maps</a>
  </div>
 </section>
 
 <footer>Mamma Lina — Friggitoria Gastronomia all'Antica · Via Venezia 40, Palermo · <span data-edit="phone2">331 591 6964</span></footer>
 
-<div class="bar"><a class="wa" href="https://wa.me/393315916964?text=Ciao%21%20Vorrei%20un%20tavolo%20da%20Mamma%20Lina" rel="noopener" target="_blank">💬 WhatsApp</a><a class="call" href="tel:+393315916964">📞 <span class="it">Chiama</span><span class="tr">Call</span></a><a class="map" href="https://maps.google.com/?q=Mamma+Lina+friggitoria+gastronomia+Palermo" rel="noopener" target="_blank">📍 <span class="it">Mappa</span><span class="tr">Map</span></a></div>
+<div class="bar"><a class="wa" href="https://wa.me/393315916964?text=Ciao%21%20Vorrei%20un%20tavolo%20da%20Mamma%20Lina" rel="noopener" target="_blank" data-edit="t75" data-edit-label="Button / link — 💬 WhatsApp">💬 WhatsApp</a><a class="call" href="tel:+393315916964">📞 <span class="it" data-edit="t76" data-edit-label="Text — Chiama">Chiama</span><span class="tr" data-edit="t77" data-edit-label="Text — Call">Call</span></a><a class="map" href="https://maps.google.com/?q=Mamma+Lina+friggitoria+gastronomia+Palermo" rel="noopener" target="_blank">📍 <span class="it" data-edit="t78" data-edit-label="Text — Mappa">Mappa</span><span class="tr" data-edit="t79" data-edit-label="Text — Map">Map</span></a></div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});

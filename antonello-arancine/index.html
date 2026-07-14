@@ -112,16 +112,16 @@ html:not(.en) .tr{display:none!important}
 </head>
 <body>
 
-<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it">EN</span><span class="tr">IT</span></button>
+<button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it" data-edit="t1" data-edit-label="Text — EN">EN</span><span class="tr" data-edit="t2" data-edit-label="Text — IT">IT</span></button>
 <header>
  <div class="bg"></div><div class="veil"></div>
  <div class="hin">
-  <span class="corona">✦ Un carretto · una specialità ✦</span>
-  <h1>Antonello <span>Street Food</span></h1>
-  <p class="hsub"><span class="it">Il carretto delle arancine a Porta di Castro: fritte al momento, una alla volta, davanti a voi.</span> <em class="tr">The arancina cart by Porta di Castro — fried to order, one at a time, right in front of you.</em></p>
+  <span class="corona" data-edit="t3" data-edit-label="Text — ✦ Un carretto · una specialità ✦">✦ Un carretto · una specialità ✦</span>
+  <h1>Antonello <span data-edit="t4" data-edit-label="Text — Street Food">Street Food</span></h1>
+  <p class="hsub"><span class="it" data-edit="t5" data-edit-label="Text — Il carretto delle arancine a Porta di …">Il carretto delle arancine a Porta di Castro: fritte al momento, una alla volta, davanti a voi.</span> <em class="tr" data-edit="t6" data-edit-label="Text — The arancina cart by Porta di Castro —…">The arancina cart by Porta di Castro — fried to order, one at a time, right in front of you.</em></p>
   <div class="hmeta">
    <span>★ <b data-edit="rating">4,9</b> — <span data-edit="revcount">114</span> recensioni</span>
-   <span>Tutti i giorni · 8:00 – 16:00</span>
+   <span data-edit="t7" data-edit-label="Text — Tutti i giorni · 8:00 – 16:00">Tutti i giorni · 8:00 – 16:00</span>
   </div>
  </div>
 </header>
@@ -129,11 +129,11 @@ html:not(.en) .tr{display:none!important}
 
 <section class="story wrap">
  <div class="rev">
-  <span class="k"><span class="it">Il carretto</span><span class="tr">The cart</span></span>
-  <h2>Una cosa sola,<br><em>fatta d'oro</em></h2>
-  <p class="it">Niente sala, niente menù lungo: un carretto, l'olio buono e il riso che diventa oro. Antonello frigge al momento — e se c'è da aspettare due minuti, è perché la vostra arancina non esiste ancora.</p>
-  <p class="en tr">No dining room, no long menu: one cart, good oil, and rice turned to gold. Antonello fries to order — if you wait two minutes, it's because your arancina doesn't exist yet.</p>
-  <p>I clienti lo scrivono da soli: la migliore di Palermo, meglio di certe insegne famose. E chi chiede, finisce pure a friggere in cucina con lui.</p>
+  <span class="k"><span class="it" data-edit="t8" data-edit-label="Text — Il carretto">Il carretto</span><span class="tr" data-edit="t9" data-edit-label="Text — The cart">The cart</span></span>
+  <h2>Una cosa sola,<br><em data-edit="t10" data-edit-label="Text — fatta d'oro">fatta d'oro</em></h2>
+  <p class="it" data-edit="t11" data-edit-label="Text — Niente sala, niente menù lungo: un car…">Niente sala, niente menù lungo: un carretto, l'olio buono e il riso che diventa oro. Antonello frigge al momento — e se c'è da aspettare due minuti, è perché la vostra arancina non esiste ancora.</p>
+  <p class="en tr" data-edit="t12" data-edit-label="Text — No dining room, no long menu: one cart…">No dining room, no long menu: one cart, good oil, and rice turned to gold. Antonello fries to order — if you wait two minutes, it's because your arancina doesn't exist yet.</p>
+  <p data-edit="t13" data-edit-label="Text — I clienti lo scrivono da soli: la migl…">I clienti lo scrivono da soli: la migliore di Palermo, meglio di certe insegne famose. E chi chiede, finisce pure a friggere in cucina con lui.</p>
  </div>
  <figure class="sfig rev">
   <img src="img/04.jpg" alt="L'arancina appena fritta">
@@ -143,22 +143,22 @@ html:not(.en) .tr{display:none!important}
 
 <section class="shrine">
  <div class="wrap">
-  <span class="k" style="color:var(--oro)">Dal cartello del carretto · From the cart's own sign</span>
-  <h2 class="rev">Le <span>arancine</span></h2>
-  <p class="note"><span class="it">Quello che c'è scritto sul vetro è quello che esce dall'olio.</span> <em class="tr">What's written on the glass is what comes out of the oil.</em></p>
+  <span class="k" style="color:var(--oro)" data-edit="t14" data-edit-label="Text — Dal cartello del carretto · From the c…">Dal cartello del carretto · From the cart's own sign</span>
+  <h2 class="rev">Le <span data-edit="t15" data-edit-label="Text — arancine">arancine</span></h2>
+  <p class="note"><span class="it" data-edit="t16" data-edit-label="Text — Quello che c'è scritto sul vetro è que…">Quello che c'è scritto sul vetro è quello che esce dall'olio.</span> <em class="tr" data-edit="t17" data-edit-label="Text — What's written on the glass is what co…">What's written on the glass is what comes out of the oil.</em></p>
   <div class="sgrid">
-   <div class="scard rev"><h3>Con carne</h3><p>Il ragù di casa dentro la crosta dorata — la regina del carretto.</p><b data-edit="p-carne">€ 1,50</b></div>
-   <div class="scard rev"><h3>Con burro</h3><p>Prosciutto e mozzarella filante, la più morbida delle due scuole.</p><b data-edit="p-burro">€ 1,50</b></div>
-   <div class="scard rev"><h3>Le mignon</h3><p>Piccole, da cesta e da catering — perfette a dozzine per le feste.</p><b>su ordinazione</b></div>
+   <div class="scard rev"><h3 data-edit="t18" data-edit-label="Heading — Con carne">Con carne</h3><p data-edit="t19" data-edit-label="Text — Il ragù di casa dentro la crosta dorat…">Il ragù di casa dentro la crosta dorata — la regina del carretto.</p><b data-edit="p-carne">€ 1,50</b></div>
+   <div class="scard rev"><h3 data-edit="t20" data-edit-label="Heading — Con burro">Con burro</h3><p data-edit="t21" data-edit-label="Text — Prosciutto e mozzarella filante, la pi…">Prosciutto e mozzarella filante, la più morbida delle due scuole.</p><b data-edit="p-burro">€ 1,50</b></div>
+   <div class="scard rev"><h3 data-edit="t22" data-edit-label="Heading — Le mignon">Le mignon</h3><p data-edit="t23" data-edit-label="Text — Piccole, da cesta e da catering — perf…">Piccole, da cesta e da catering — perfette a dozzine per le feste.</p><b data-edit="t24" data-edit-label="Text — su ordinazione">su ordinazione</b></div>
   </div>
-  <p class="sfoot">E dal banco: pane al sesamo, rosticceria e salumi — <b>si compone al momento</b>.</p>
+  <p class="sfoot">E dal banco: pane al sesamo, rosticceria e salumi — <b data-edit="t25" data-edit-label="Text — si compone al momento">si compone al momento</b>.</p>
  </div>
 </section>
 
 <section class="cat wrap">
  <div class="box rev">
-  <h2>Feste &amp; catering</h2>
-  <p><span class="it">Arancine e mignon su ordinazione per feste, uffici e ricorrenze — il numero è quello scritto sul carretto.</span> <em class="tr">Party trays to order — the number painted on the cart.</em></p>
+  <h2 data-edit="t26" data-edit-label="Title — Feste &amp; catering">Feste &amp; catering</h2>
+  <p><span class="it" data-edit="t27" data-edit-label="Text — Arancine e mignon su ordinazione per f…">Arancine e mignon su ordinazione per feste, uffici e ricorrenze — il numero è quello scritto sul carretto.</span> <em class="tr" data-edit="t28" data-edit-label="Text — Party trays to order — the number pain…">Party trays to order — the number painted on the cart.</em></p>
   <a class="tel" href="tel:+393290075058" data-edit="phone">329 007 5058</a>
  </div>
 </section>
@@ -168,44 +168,44 @@ html:not(.en) .tr{display:none!important}
  <img src="img/03.jpg" alt="Arancina nella carta">
  <img src="img/02.jpg" alt="Arancine appena fritte">
 </section>
-<p class="duocap"><span class="it">fritte al momento, nella carta —</span> <em class="tr">straight from the oil, into the paper</em></p>
+<p class="duocap"><span class="it" data-edit="t29" data-edit-label="Text — fritte al momento, nella carta —">fritte al momento, nella carta —</span> <em class="tr" data-edit="t30" data-edit-label="Text — straight from the oil, into the paper">straight from the oil, into the paper</em></p>
 </div>
 
 <section class="revs">
  <div class="wrap">
-  <span class="k"><span class="it">Dicono di noi</span><span class="tr">What guests say</span></span>
-  <h2 class="rev">Dalle recensioni Google</h2>
+  <span class="k"><span class="it" data-edit="t31" data-edit-label="Text — Dicono di noi">Dicono di noi</span><span class="tr" data-edit="t32" data-edit-label="Text — What guests say">What guests say</span></span>
+  <h2 class="rev" data-edit="t33" data-edit-label="Title — Dalle recensioni Google">Dalle recensioni Google</h2>
   <div class="rgrid">
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"In my opinion the best arancini in Palermo. Just a small cart but freshly made, lots of filling and a delicate crust!"</p><div class="who">Lisa G · Google</div></div>
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Freshly cooked authentic arancini at its best. The owner is such a nice guy — he took me to the kitchen to fry some fresh!"</p><div class="who">Abu Hasnat Md Rhydwan · Google</div></div>
-   <div class="rcard rev"><div class="stars">★★★★★</div><p>"Little stand but it's the best arancini so far — way better than the popular shop in Cefalù. Friendly service."</p><div class="who">Meme Z · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t34" data-edit-label="Text — 'In my opinion the best arancini in Pa…">"In my opinion the best arancini in Palermo. Just a small cart but freshly made, lots of filling and a delicate crust!"</p><div class="who" data-edit="t35" data-edit-label="Text — Lisa G · Google">Lisa G · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t36" data-edit-label="Text — 'Freshly cooked authentic arancini at …">"Freshly cooked authentic arancini at its best. The owner is such a nice guy — he took me to the kitchen to fry some fresh!"</p><div class="who" data-edit="t37" data-edit-label="Text — Abu Hasnat Md Rhydwan · Google">Abu Hasnat Md Rhydwan · Google</div></div>
+   <div class="rcard rev"><div class="stars">★★★★★</div><p data-edit="t38" data-edit-label="Text — 'Little stand but it's the best aranci…">"Little stand but it's the best arancini so far — way better than the popular shop in Cefalù. Friendly service."</p><div class="who" data-edit="t39" data-edit-label="Text — Meme Z · Google">Meme Z · Google</div></div>
   </div>
-  <p class="gbadge">★ <b>4,9 / 5</b> — 114 recensioni su Google</p>
+  <p class="gbadge">★ <b data-edit="t40" data-edit-label="Text — 4,9 / 5">4,9 / 5</b> — 114 recensioni su Google</p>
  </div>
 </section>
 
 <section class="visit wrap">
  <div class="rev">
-  <span class="k"><span class="it">Orari</span><span class="tr">Hours</span></span>
-  <h2>Sette giorni su sette</h2>
+  <span class="k"><span class="it" data-edit="t41" data-edit-label="Text — Orari">Orari</span><span class="tr" data-edit="t42" data-edit-label="Text — Hours">Hours</span></span>
+  <h2 data-edit="t43" data-edit-label="Title — Sette giorni su sette">Sette giorni su sette</h2>
   <table class="hours">
-   <tr><td><span class="it">Lunedì – Domenica</span><span class="tr">Mon – Sun</span></td><td data-edit="h-week">8:00 – 16:00</td></tr>
-   <tr><td>Il fritto</td><td>Al momento, finché c'è riso</td></tr>
+   <tr><td><span class="it" data-edit="t44" data-edit-label="Text — Lunedì – Domenica">Lunedì – Domenica</span><span class="tr" data-edit="t45" data-edit-label="Text — Mon – Sun">Mon – Sun</span></td><td data-edit="h-week">8:00 – 16:00</td></tr>
+   <tr><td data-edit="t46" data-edit-label="Menu / table — Il fritto">Il fritto</td><td data-edit="t47" data-edit-label="Menu / table — Al momento, finché c'è riso">Al momento, finché c'è riso</td></tr>
   </table>
  </div>
  <div class="rev">
-  <span class="k"><span class="it">Dove siamo</span><span class="tr">Find us</span></span>
-  <h2>Porta di Castro 62</h2>
+  <span class="k"><span class="it" data-edit="t48" data-edit-label="Text — Dove siamo">Dove siamo</span><span class="tr" data-edit="t49" data-edit-label="Text — Find us">Find us</span></span>
+  <h2 data-edit="t50" data-edit-label="Title — Porta di Castro 62">Porta di Castro 62</h2>
   <p class="adr" data-edit="addr">Via Porta di Castro 62, 90134 Palermo — dietro Palazzo Reale</p>
-  <p><span class="it">Al carretto non si prenota: si viene, si aspetta il giro d'olio, si mangia caldo. Per ordinazioni grandi c'è il telefono del catering.</span> <em class="tr">No bookings at the cart — walk up and eat it hot. For big orders, the catering line.</em></p>
+  <p><span class="it" data-edit="t51" data-edit-label="Text — Al carretto non si prenota: si viene, …">Al carretto non si prenota: si viene, si aspetta il giro d'olio, si mangia caldo. Per ordinazioni grandi c'è il telefono del catering.</span> <em class="tr" data-edit="t52" data-edit-label="Text — No bookings at the cart — walk up and …">No bookings at the cart — walk up and eat it hot. For big orders, the catering line.</em></p>
   <a class="btn" href="tel:+393290075058">📞 <span data-edit="phone2">329 007 5058</span></a>
-  <a class="btn o" href="https://maps.google.com/?q=Antonello+Street+Food+Arancine+Palermo" rel="noopener" target="_blank">Apri in Maps</a>
+  <a class="btn o" href="https://maps.google.com/?q=Antonello+Street+Food+Arancine+Palermo" rel="noopener" target="_blank" data-edit="t53" data-edit-label="Button / link — Apri in Maps">Apri in Maps</a>
  </div>
 </section>
 
 <footer>Antonello Street Food — Specialità Arancine · Via Porta di Castro 62, Palermo · ordinazioni <span data-edit="phone3">329 007 5058</span></footer>
 
-<div class="bar"><a class="call" href="tel:+393290075058">✆ <span class="it">ORDINAZIONI</span><span class="tr">TO ORDER</span></a><a class="map" href="https://maps.google.com/?q=Antonello+Street+Food+Arancine+Palermo" rel="noopener" target="_blank"><span class="it">Il carretto</span><span class="tr">The cart</span> ➤</a></div>
+<div class="bar"><a class="call" href="tel:+393290075058">✆ <span class="it" data-edit="t54" data-edit-label="Text — ORDINAZIONI">ORDINAZIONI</span><span class="tr" data-edit="t55" data-edit-label="Text — TO ORDER">TO ORDER</span></a><a class="map" href="https://maps.google.com/?q=Antonello+Street+Food+Arancine+Palermo" rel="noopener" target="_blank"><span class="it" data-edit="t56" data-edit-label="Text — Il carretto">Il carretto</span><span class="tr" data-edit="t57" data-edit-label="Text — The cart">The cart</span> ➤</a></div>
 
 <script>
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
