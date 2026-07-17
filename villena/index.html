@@ -122,7 +122,10 @@ html:not(.en) .tr{display:none!important}
 
 /*igbtn*/.bar a.ig{display:inline-flex;align-items:center;justify-content:center;padding:10px 12px}.bar a.ig svg{width:17px;height:17px;display:block}
 </style>
-</head>
+<style data-fx-orn>.crest{overflow:hidden}
+.crest::after{content:'';position:absolute;top:-20%;left:-70%;width:42%;height:140%;background:linear-gradient(105deg,transparent,rgba(250,248,240,.5),transparent);transform:skewX(-18deg);animation:fxglint 14s ease-in-out infinite}
+@keyframes fxglint{0%,86%{left:-70%}97%,100%{left:140%}}
+@media (prefers-reduced-motion: reduce){.crest::after{animation:none}}</style></head>
 <body>
 
 <button class="lgx" onclick="document.documentElement.classList.toggle('en')" aria-label="English / Italiano"><span class="it" data-edit="t1" data-edit-label="Text — EN">EN</span><span class="tr" data-edit="t2" data-edit-label="Text — IT">IT</span></button>
